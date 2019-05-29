@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c
+Line: 279
+assembly.ll line: 10245
+Stack: 
+	#000010245 in quotearg_buffer_restyled (buffer=43283632, buffersize=256, arg=50834048, argsize=18446744073709551615, quoting_style=6, flags=1, quote_these_too=50849816) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:279
+	#100011432 in quotearg_n_options (n=0, arg=50834048, argsize=18446744073709551615, options=50849808) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:704
+	#200009909 in quotearg_n_style (n=0, s=6, arg=50834048) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:751
+	#300009481 in quote_n (n=0, name=50834048) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:31
+	#400009491 in quote (name=50834048) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:39
+	#500004360 in tail_bytes (pretty_filename=50834048, fd, n_bytes, read_pos=50851312) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:1393
+	#600004177 in tail (filename=50834048, fd, n_units, read_pos=50851312) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:1521
+	#700020618 in main (=1, =40780800)
+Info: 
+	address: 50834049
+	next: object at 50834288 of size 8
+		MO763[8] addr [50834288]:  allocated at tail_bytes():  %current_pos = alloca i64, align 8
+	prev: object at 50834048 of size 1
+		MO715[1] addr [50834048]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

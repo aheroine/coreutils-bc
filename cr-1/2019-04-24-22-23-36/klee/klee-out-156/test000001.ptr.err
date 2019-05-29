@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 43
+assembly.ll line: 17578
+Stack: 
+	#000017578 in __fd_openat (basefd, pathname=65508512, flags=133376, mode=0) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:43
+	#100019111 in openat (fd, pathname=65508512, flags=133376) at /home/jl/deploy/klee22/runtime/POSIX/fd_32.c:90
+	#200001906 in fd_to_subdirp (fd_cwd, f=65508512, prev_errno=0, subdir_sb=63328496) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1187
+	#300000452 in remove_dir (fd_cwd, ds=46683104, dir=65508512, dir_st=63328496, x=50895648) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1388
+	#400004107 in __user_main (=1, =64785152)
+	#500015458 in __uClibc_main (argc=1, argv=64785152) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600017181 in macke_remove_dir_main (=1, =64785152)
+Info: 
+	address: 65508513
+	next: object at 65619792 of size 18
+		MO5[18] allocated at macke_remove_dir_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 65508512 of size 1
+		MO895[1] allocated at __user_main():  %12 = call i8* @malloc(i64 %11)

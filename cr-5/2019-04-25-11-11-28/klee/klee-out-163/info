@@ -1,0 +1,18 @@
+/home/jl/deploy/klee22/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-163 --search=sonar --sonar-target=function-call --sonar-target-info=__macke_error_vasnprintf --max-time=120 --max-instruction-time=12 --allow-external-sym-calls --libc=uclibc --max-memory=1000 --only-output-states-covering-new --optimize --disable-inlining --output-source=false --posix-runtime --watchdog --stats-write-interval=238 --istats-write-interval=238 --entry-point macke_rpl_vfprintf_main /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/bitcode/chain-rpl_vfprintf-vasnprintf.bc
+PID: 10487
+Started: 2019-04-25 11:31:17
+BEGIN searcher description
+SonarDeepSearcher
+END searcher description
+Finished: 2019-04-25 11:33:17
+Elapsed: 00:02:00
+KLEE: done: explored paths = 1202
+KLEE: done: avg. constructs per query = 3107
+KLEE: done: total queries = 7284
+KLEE: done: valid queries = 5789
+KLEE: done: invalid queries = 1495
+KLEE: done: query cex = 7284
+
+KLEE: done: total instructions = 14632
+KLEE: done: completed paths = 1202
+KLEE: done: generated tests = 47

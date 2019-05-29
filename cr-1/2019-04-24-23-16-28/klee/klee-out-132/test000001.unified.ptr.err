@@ -1,0 +1,9 @@
+Error: memory error: invalid pointer: free
+Stack: 
+	#000021205 in main (=1, =53422816)
+Info: 
+	address: 54172464
+	next: object at 140703493348288 of size 1536
+		MO81[1536] addr [140703493348288]:  (no allocation info)
+	prev: object at 54073696 of size 5
+		MO1000[5] addr [54073696]:  allocated at global:.str2966

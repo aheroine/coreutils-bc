@@ -1,0 +1,26 @@
+KLEE: KLEE: WATCHDOG: watching 2638
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-283"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 54737936)
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:828: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: WARNING ONCE: __macke_error_hash_pjw: MACKE: Summery for hash_pjw reached
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash-pjw.c:37: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash-pjw.c:40: divide by zero
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash-pjw.c:37: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+
+KLEE: done: total instructions = 99116
+KLEE: done: completed paths = 3140
+KLEE: done: generated tests = 10

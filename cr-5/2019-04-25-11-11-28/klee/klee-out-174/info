@@ -1,0 +1,17 @@
+/home/jl/deploy/klee22/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-174 --search=sonar --sonar-target=function-call --sonar-target-info=__macke_error_start_lines --max-time=120 --max-instruction-time=12 --allow-external-sym-calls --libc=uclibc --max-memory=1000 --only-output-states-covering-new --optimize --disable-inlining --output-source=false --posix-runtime --watchdog --stats-write-interval=238 --istats-write-interval=238 --entry-point macke_tail_lines_main /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/bitcode/chain-tail_lines-start_lines.bc
+PID: 30007
+Started: 2019-04-25 11:37:32
+BEGIN searcher description
+SonarDeepSearcher
+END searcher description
+Finished: 2019-04-25 11:37:32
+Elapsed: 00:00:00
+KLEE: done: explored paths = 1
+KLEE: done: total queries = 0
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 0
+KLEE: done: query cex = 0
+
+KLEE: done: total instructions = 1
+KLEE: done: completed paths = 1
+KLEE: done: generated tests = 0

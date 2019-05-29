@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c
+Line: 316
+assembly.ll line: 6865
+Stack: 
+	#000006865 in quotearg_buffer_restyled (buffer=32988544, buffersize=256, arg=37624832, argsize=18446744073709551615, quoting_style=8, flags=1, quote_these_too=37627736, left_quote=37600064, right_quote=37600784) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c:316
+	#100008168 in quotearg_n_options (n=0, arg=37624832, argsize=18446744073709551615, options=37627728) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c:797
+	#200006654 in quotearg_n_custom_mem (n=0, left_quote=37600064, right_quote=37600784, arg=37624832, argsize=18446744073709551615) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c:913
+	#300006628 in quotearg_n_custom (n=0, left_quote=37600064, right_quote=37600784, arg=37624832) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c:902
+	#400006670 in quotearg_custom (left_quote=37600064, right_quote=37600784, arg=37624832) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c:920
+	#500012304 in main (=1, =29002688)
+Info: 
+	address: 37600065
+	next: object at 37600272 of size 8
+		MO759[8] addr [37600272]:  allocated at quotearg_n_options():  %options.addr = alloca %struct.quoting_options*, align 8
+	prev: object at 37600064 of size 1
+		MO624[1] addr [37600064]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

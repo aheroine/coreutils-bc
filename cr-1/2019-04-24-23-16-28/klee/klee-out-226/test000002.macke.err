@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-44/test000001.unified.ptr.err
+Stack: 
+	#000000881 in __macke_error_same_name (argno0=66317152, argno1=67057776)
+	#100000239 in same_file_ok (src_name=66317152, src_sb=73707728, dst_name=67057776, dst_sb=60470288, x=65784704, return_now=59087552, unlink_src=68962416) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:643
+	#200000781 in __user_main (=1, =57025984)
+	#300003380 in __uClibc_main (argc=1, argv=57025984) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400004975 in macke_same_file_ok_main (=1, =57025984)

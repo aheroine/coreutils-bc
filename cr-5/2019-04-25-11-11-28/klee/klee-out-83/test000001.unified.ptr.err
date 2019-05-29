@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c
+Line: 1169
+assembly.ll line: 4106
+Stack: 
+	#000004106 in wd_hasher (entry1=48278000, tabsize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:1169
+	#100021032 in main (=1, =38224896)
+Info: 
+	address: 48278088
+	next: object at 48279120 of size 8
+		MO719[8] addr [48279120]:  allocated at main():  %argno1 = alloca i64
+	prev: object at 48278000 of size 1
+		MO715[1] addr [48278000]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

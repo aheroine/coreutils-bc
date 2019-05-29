@@ -1,0 +1,107 @@
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-63"
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-63 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/bitcode/symmains.bc_hash_delete_ChangeEntry.bc
+
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: __ctype_get_mb_cur_max
+KLEE: WARNING: undefined reference to function: __errno_location
+KLEE: WARNING: undefined reference to function: __fpending
+KLEE: WARNING: undefined reference to function: _obstack_begin
+KLEE: WARNING: undefined reference to function: _obstack_newchunk
+KLEE: WARNING: undefined reference to function: _setjmp
+KLEE: WARNING: undefined reference to function: atexit
+KLEE: WARNING: undefined reference to function: chmod
+KLEE: WARNING: undefined reference to function: chown
+KLEE: WARNING: undefined reference to function: close
+KLEE: WARNING: undefined reference to function: closedir
+KLEE: WARNING: undefined reference to function: dirfd
+KLEE: WARNING: undefined reference to function: dup
+KLEE: WARNING: undefined reference to function: euidaccess
+KLEE: WARNING: undefined reference to function: fchmod
+KLEE: WARNING: undefined reference to function: fchown
+KLEE: WARNING: undefined reference to function: fclose
+KLEE: WARNING: undefined reference to function: fcntl
+KLEE: WARNING: undefined reference to function: fdopendir
+KLEE: WARNING: undefined reference to function: ferror_unlocked
+KLEE: WARNING: undefined reference to function: fflush_unlocked
+KLEE: WARNING: undefined reference to function: fopen
+KLEE: WARNING: undefined reference to function: fprintf
+KLEE: WARNING: undefined reference to function: fputs_unlocked
+KLEE: WARNING: undefined reference to function: fstat
+KLEE: WARNING: undefined reference to function: fstatat
+KLEE: WARNING: undefined reference to function: ftruncate
+KLEE: WARNING: undefined reference to function: futimesat
+KLEE: WARNING: undefined reference to function: getchar
+KLEE: WARNING: undefined reference to function: getenv
+KLEE: WARNING: undefined reference to function: getopt_long
+KLEE: WARNING: undefined reference to function: group_member
+KLEE: WARNING: undefined reference to function: isatty
+KLEE: WARNING: undefined reference to function: iswprint
+KLEE: WARNING: undefined reference to function: lchown
+KLEE: WARNING: undefined reference to function: link
+KLEE: WARNING: undefined reference to function: longjmp
+KLEE: WARNING: undefined reference to function: lseek
+KLEE: WARNING: undefined reference to function: lstat
+KLEE: WARNING: undefined reference to function: mbrtowc
+KLEE: WARNING: undefined reference to function: mbsinit
+KLEE: WARNING: undefined reference to function: memcmp
+KLEE: WARNING: undefined reference to function: mkdir
+KLEE: WARNING: undefined reference to function: mkfifo
+KLEE: WARNING: undefined reference to function: mknod
+KLEE: WARNING: undefined reference to function: obstack_free
+KLEE: WARNING: undefined reference to function: open
+KLEE: WARNING: undefined reference to function: openat
+KLEE: WARNING: undefined reference to function: opendir
+KLEE: WARNING: undefined reference to variable: optarg
+KLEE: WARNING: undefined reference to variable: optind
+KLEE: WARNING: undefined reference to function: pathconf
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING: undefined reference to function: putc_unlocked
+KLEE: WARNING: undefined reference to function: putchar_unlocked
+KLEE: WARNING: undefined reference to function: read
+KLEE: WARNING: undefined reference to function: readdir
+KLEE: WARNING: undefined reference to function: readlink
+KLEE: WARNING: undefined reference to function: rename
+KLEE: WARNING: undefined reference to function: rewinddir
+KLEE: WARNING: undefined reference to function: setlocale
+KLEE: WARNING: undefined reference to function: stat
+KLEE: WARNING: undefined reference to variable: stderr
+KLEE: WARNING: undefined reference to variable: stdout
+KLEE: WARNING: undefined reference to function: strcmp
+KLEE: WARNING: undefined reference to function: strcpy
+KLEE: WARNING: undefined reference to function: strlen
+KLEE: WARNING: undefined reference to function: strncmp
+KLEE: WARNING: undefined reference to function: strndup
+KLEE: WARNING: undefined reference to function: symlink
+KLEE: WARNING: undefined reference to function: umask
+KLEE: WARNING: undefined reference to function: unlink
+KLEE: WARNING: undefined reference to function: unlinkat
+KLEE: WARNING: undefined reference to function: utimes
+KLEE: WARNING: undefined reference to function: vfprintf
+KLEE: WARNING: undefined reference to function: write
+KLEE: WARNING: undefined reference to function: error (UNSAFE)!
+0  klee            0x0000000000e5f672 llvm::sys::PrintStackTrace(_IO_FILE*) + 50
+1  klee            0x0000000000e5eec4
+2  libpthread.so.0 0x00007f1dcc30c890
+3  klee            0x0000000000f6f7e1 Cnf_ReadMsops + 257
+4  klee            0x0000000000f44725 Cnf_ManStart + 37
+5  klee            0x0000000000f446af Cnf_Derive + 239
+6  klee            0x0000000000f55c85 stp::ToCNFAIG::toCNF(stp::BBNodeAIG const&, Cnf_Dat_t_*&, std::unordered_map<stp::ASTNode, std::vector<unsigned int, std::allocator<unsigned int> >, stp::ASTNode::ASTNodeHasher, stp::ASTNode::ASTNodeEqual, std::allocator<std::pair<stp::ASTNode const, std::vector<unsigned int, std::allocator<unsigned int> > > > >&, bool, stp::BBNodeManagerAIG&) + 709
+7  klee            0x0000000000ef93d5 stp::ToSATAIG::bitblast(stp::ASTNode const&, bool) + 2101
+8  klee            0x0000000000ef9a23 stp::ToSATAIG::CallSAT(stp::SATSolver&, stp::ASTNode const&, bool) + 115
+9  klee            0x0000000000ed4200 stp::AbsRefine_CounterExample::CallSAT_ResultCheck(stp::SATSolver&, stp::ASTNode const&, stp::ASTNode const&, stp::ToSATBase*, bool) + 64
+10 klee            0x0000000000eb9ef8 stp::STP::TopLevelSTPAux(stp::SATSolver&, stp::ASTNode const&) + 8936
+11 klee            0x0000000000ebb2fa stp::STP::TopLevelSTP(stp::ASTNode const&, stp::ASTNode const&) + 218
+12 klee            0x0000000000e7ccb9 vc_query_with_timeout + 201
+13 klee            0x0000000000603804 STPSolverImpl::computeInitialValues(klee::Query const&, std::vector<klee::Array const*, std::allocator<klee::Array const*> > const&, std::vector<std::vector<unsigned char, std::allocator<unsigned char> >, std::allocator<std::vector<unsigned char, std::allocator<unsigned char> > > >&, bool&) + 2756
+14 klee            0x00000000005e6a4a CexCachingSolver::getAssignment(klee::Query const&, klee::Assignment*&) + 266
+15 klee            0x00000000005e7afc CexCachingSolver::computeValue(klee::Query const&, klee::ref<klee::Expr>&) + 364
+16 klee            0x00000000005f707b IndependentSolver::computeValue(klee::Query const&, klee::ref<klee::Expr>&) + 331
+17 klee            0x00000000006015e8 klee::Solver::getValue(klee::Query const&, klee::ref<klee::ConstantExpr>&) + 392
+18 klee            0x00000000005b9915 klee::TimingSolver::getValue(klee::ExecutionState const&, klee::ref<klee::Expr>, klee::ref<klee::ConstantExpr>&, bool) + 1845
+19 klee            0x000000000058756a klee::Executor::executeInstruction(klee::ExecutionState&, klee::KInstruction*) + 37450
+20 klee            0x000000000058da44 klee::Executor::run(klee::ExecutionState&) + 1300
+21 klee            0x000000000058fc68 klee::Executor::runFunctionAsMain(llvm::Function*, int, char**, char**) + 1896
+22 klee            0x000000000053ff5e main + 12670
+23 libc.so.6       0x00007f1dcb1bfb97 __libc_start_main + 231
+24 klee            0x0000000000551faa _start + 42
+ERROR: STP did not return successfully.  Most likely you forgot to run 'ulimit -s unlimited'

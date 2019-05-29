@@ -1,0 +1,84 @@
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/klee/klee-out-22"
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/klee/klee-out-22 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/bitcode/symmains.bc_next_prime_ChangeEntry.bc
+
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: __ctype_get_mb_cur_max
+KLEE: WARNING: undefined reference to function: __errno_location
+KLEE: WARNING: undefined reference to function: __fpending
+KLEE: WARNING: undefined reference to function: __freading
+KLEE: WARNING: undefined reference to function: atexit
+KLEE: WARNING: undefined reference to function: clearerr_unlocked
+KLEE: WARNING: undefined reference to function: close
+KLEE: WARNING: undefined reference to function: fclose
+KLEE: WARNING: undefined reference to function: fdopen
+KLEE: WARNING: undefined reference to function: feof_unlocked
+KLEE: WARNING: undefined reference to function: ferror
+KLEE: WARNING: undefined reference to function: ferror_unlocked
+KLEE: WARNING: undefined reference to function: fflush
+KLEE: WARNING: undefined reference to function: fflush_unlocked
+KLEE: WARNING: undefined reference to function: fgetc
+KLEE: WARNING: undefined reference to function: fileno
+KLEE: WARNING: undefined reference to function: fopen
+KLEE: WARNING: undefined reference to function: fprintf
+KLEE: WARNING: undefined reference to function: fputs
+KLEE: WARNING: undefined reference to function: fputs_unlocked
+KLEE: WARNING: undefined reference to function: fread
+KLEE: WARNING: undefined reference to function: fscanf
+KLEE: WARNING: undefined reference to function: fseeko
+KLEE: WARNING: undefined reference to function: fwrite_unlocked
+KLEE: WARNING: undefined reference to function: getc_unlocked
+KLEE: WARNING: undefined reference to function: getenv
+KLEE: WARNING: undefined reference to function: getopt_long
+KLEE: WARNING: undefined reference to function: iswprint
+KLEE: WARNING: undefined reference to function: lseek
+KLEE: WARNING: undefined reference to function: mbrtowc
+KLEE: WARNING: undefined reference to function: mbsinit
+KLEE: WARNING: undefined reference to function: memchr
+KLEE: WARNING: undefined reference to function: memcmp
+KLEE: WARNING: undefined reference to function: nl_langinfo
+KLEE: WARNING: undefined reference to function: open
+KLEE: WARNING: undefined reference to variable: optarg
+KLEE: WARNING: undefined reference to variable: optind
+KLEE: WARNING: undefined reference to function: posix_fadvise
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING: undefined reference to variable: program_invocation_name
+KLEE: WARNING: undefined reference to variable: program_invocation_short_name
+KLEE: WARNING: undefined reference to function: putchar_unlocked
+KLEE: WARNING: undefined reference to function: qsort
+KLEE: WARNING: undefined reference to function: setlocale
+KLEE: WARNING: undefined reference to variable: stderr
+KLEE: WARNING: undefined reference to variable: stdin
+KLEE: WARNING: undefined reference to variable: stdout
+KLEE: WARNING: undefined reference to function: strcmp
+KLEE: WARNING: undefined reference to function: strcpy
+KLEE: WARNING: undefined reference to function: strlen
+KLEE: WARNING: undefined reference to function: strncmp
+KLEE: WARNING: undefined reference to function: strndup
+KLEE: WARNING: undefined reference to function: strrchr
+KLEE: WARNING: undefined reference to function: strspn
+KLEE: WARNING: undefined reference to function: ungetc
+KLEE: WARNING: undefined reference to function: error (UNSAFE)!
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+0  klee            0x0000000000e5f672 llvm::sys::PrintStackTrace(_IO_FILE*) + 50
+1  klee            0x0000000000e5eec4
+2  libpthread.so.0 0x00007f9919550890
+3  libc.so.6       0x00007f9918420e97 gsignal + 199
+4  libc.so.6       0x00007f9918422801 abort + 321
+5  libstdc++.so.6  0x00007f9918e1684d __gnu_cxx::__verbose_terminate_handler() + 365
+6  libstdc++.so.6  0x00007f9918e146b6
+7  libstdc++.so.6  0x00007f9918e14701
+8  libstdc++.so.6  0x00007f9918e14919
+9  libstdc++.so.6  0x00007f9918e14ebc
+10 klee            0x00000000005935f5 std::vector<klee::ref<klee::Expr>, std::allocator<klee::ref<klee::Expr> > >::_M_insert_aux(__gnu_cxx::__normal_iterator<klee::ref<klee::Expr>*, std::vector<klee::ref<klee::Expr>, std::allocator<klee::ref<klee::Expr> > > >, klee::ref<klee::Expr> const&) + 309
+11 klee            0x000000000060dd8d klee::ConstraintManager::rewriteConstraints(klee::ExprVisitor&) + 1117
+12 klee            0x000000000060d48f klee::ConstraintManager::addConstraintInternal(klee::ref<klee::Expr>) + 671
+13 klee            0x000000000060e89d klee::ConstraintManager::addConstraint(klee::ref<klee::Expr>) + 205
+14 klee            0x000000000055cc78 klee::Executor::addConstraint(klee::ExecutionState&, klee::ref<klee::Expr>) + 312
+15 klee            0x0000000000565ee3 klee::Executor::fork(klee::ExecutionState&, klee::ref<klee::Expr>, bool) + 4291
+16 klee            0x000000000058052a klee::Executor::executeInstruction(klee::ExecutionState&, klee::KInstruction*) + 8714
+17 klee            0x000000000058da44 klee::Executor::run(klee::ExecutionState&) + 1300
+18 klee            0x000000000058fc68 klee::Executor::runFunctionAsMain(llvm::Function*, int, char**, char**) + 1896
+19 klee            0x000000000053ff5e main + 12670
+20 libc.so.6       0x00007f9918403b97 __libc_start_main + 231
+21 klee            0x0000000000551faa _start + 42

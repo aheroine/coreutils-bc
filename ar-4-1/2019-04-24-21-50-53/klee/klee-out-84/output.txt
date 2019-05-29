@@ -1,0 +1,32 @@
+KLEE: KLEE: WATCHDOG: watching 17850
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/ar-4-1/2019-04-24-21-50-53/klee/klee-out-84"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 61164832)
+KLEE: WARNING ONCE: __macke_error_quotearg_n_options: MACKE: Summery for quotearg_n_options reached
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:600: abort failure
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/xmalloc.c:62: concretized symbolic size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:326: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:249: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: WARNING ONCE: calling external: __ctype_b_loc()
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:280: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/ar-4-1/2019-04-24-21-50-53/klee/klee-out-81/test000002.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/ar-4-1/2019-04-24-21-50-53/klee/klee-out-81/test000001.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+
+KLEE: done: total instructions = 125487
+KLEE: done: completed paths = 9974
+KLEE: done: generated tests = 26

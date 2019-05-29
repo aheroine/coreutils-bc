@@ -1,0 +1,33 @@
+KLEE: KLEE: WATCHDOG: watching 24758
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-205"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 60087152)
+KLEE: WARNING ONCE: calling external: printf(44874048, 49706176, 66760032)
+KLEE: WARNING ONCE: __macke_error_quote: MACKE: Summery for quote reached
+`' -> `'KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-196/test000001.macke.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-196/test000003.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-196/test000002.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-16/test000001.unified.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:335: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: WARNING ONCE: calling external: __ctype_b_loc()
+ (backup: `')KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+
+`' -> `' (backup: `'') (backup: `'\f') (backup: `'\t') (backup: `'\n') (backup: `'\v') (backup: `') (backup: `') (backup: `') (backup: `'\a') (backup: `'\) (backup: `'\b') (backup: `'\) (backup: `'\r') (backup: `') (backup: `') (backup: `'\) (backup: `'\v\b') (backup: `'\t\a') (backup: `'\t\f') (backup: `'\t\v') (backup: `') (backup: `'\) (backup: `'\f) (backup: `'\) (backup: `') (backup: `'\v\v') (backup: `'\b\) (backup: `'\v\a') (backup: `'\r\v') (backup: `'\) (backup: `'\f\b')
+ (backup: `'\) (backup: `') (backup: `'\) (backup: `'\b\v') (backup: `'\v\f') (backup: `'\) (backup: `'\v\n') (backup: `'\t\) (backup: `'\n\f') (backup: `'\b\a') (backup: `'\n\r') (backup: `'\f\t') (backup: `'\) (backup: `'\f\)KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+ (backup: `'\) (backup: `'\f\f') (backup: `'\r\) (backup: `'\t\r') (backup: `') (backup: `'\b\f') (backup: `'\b\r') (backup: `'\n\a') (backup: `'\f\n') (backup: `'\f\a') (backup: `') (backup: `') (backup: `'\b\b') (backup: `') (backup: `'\f) (backup: `') (backup: `'\t\t') (backup: `'\b\t') (backup: `') (backup: `'\t\n') (backup: `'\) (backup: `'\r\r') (backup: `') (backup: `'\r\n') (backup: `') (backup: `'\b\n') (backup: `'\r\f') (backup: `') (backup: `'\f) (backup: `'\r\a') (backup: `') (backup: `') (backup: `'\v\) (backup: `'\f) (backup: `'\n\b') (backup: `'\v\r') (backup: `'\n\n') (backup: `') (backup: `') (backup: `') (backup: `') (backup: `') (backup: `'\a\) (backup: `'\t\b') (backup: `'\a\a') (backup: `'\f\r') (backup: `'\a\f') (backup: `'\n) (backup: `') (backup: `') (backup: `'\n\v') (backup: `') (backup: `') (backup: `'\t) (backup: `'\f\v') (backup: `'\v\t') (backup: `'\a\t') (backup: `') (backup: `'\n) (backup: `'\v) (backup: `'\r\b') (backup: `'\t) (backup: `'\n) (backup: `'\r\t') (backup: `')
+KLEE: done: total instructions = 78691
+KLEE: done: completed paths = 2840
+KLEE: done: generated tests = 14

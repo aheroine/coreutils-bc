@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c
+Line: 1102
+assembly.ll line: 3303
+Stack: 
+	#000003303 in tail_forever (f=58986208, n_files, sleep_interval) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:1102
+	#100017885 in main (=1, =55146864)
+Info: 
+	address: 58986356
+	next: object at 58997600 of size 4
+		MO864[4] addr [58997600]:  allocated at tail_forever():  %mode6 = alloca i32, align 4
+	prev: object at 58986208 of size 96
+		MO840[96] addr [58986208]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

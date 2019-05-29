@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c
+Line: 570
+assembly.ll line: 8241
+Stack: 
+	#000008241 in AD_ensure_initialized (ht) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:570
+	#100008208 in AD_mark_helper (ht, filename=39080144) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:586
+	#200008195 in AD_mark_as_unremovable (ds=39045792, filename=39041152) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:600
+	#300020995 in main (=1, =29188352)
+Info: 
+	address: (Add w64 18446744073709551584
+          (ReadLSB w64 200 argno0))
+	example: 12370169555311111051
+	range: [12370169555311111051, 12370169555311111051]
+	next: object at 140214731365312 of size 1536
+		MO81[1536] addr [140214731365312]:  (no allocation info)
+	prev: object at 39223504 of size 8
+		MO1056[8] addr [39223504]:  allocated at AD_mark_helper():  %ht.addr = alloca %struct.hash_table**, align 8

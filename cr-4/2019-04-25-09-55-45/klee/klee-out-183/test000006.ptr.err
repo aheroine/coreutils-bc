@@ -1,0 +1,11 @@
+Error: memory error: invalid pointer: free
+Stack: 
+	#000000383 in __user_main (=1, =26710016)
+	#100006522 in __uClibc_main (argc=1, argv=26710016) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#200006732 in macke_close_stream_main (=1, =26710016)
+Info: 
+	address: 27288720
+	next: object at 27329936 of size 17
+		MO76[17] allocated at macke_close_stream_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 27170000 of size 4
+		MO122[4] allocated at global:__exe_fs.3

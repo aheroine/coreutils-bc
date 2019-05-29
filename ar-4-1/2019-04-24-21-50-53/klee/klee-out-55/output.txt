@@ -1,0 +1,22 @@
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/ar-4-1/2019-04-24-21-50-53/klee/klee-out-55"
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/ar-4-1/2019-04-24-21-50-53/klee/klee-out-55 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/ar-4-1/2019-04-24-21-50-53/bitcode/symmains.bc_hash_get_n_buckets_used_ChangeEntry.bc
+
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+0  klee            0x0000000000e5f672 llvm::sys::PrintStackTrace(_IO_FILE*) + 50
+1  klee            0x0000000000e5eec4
+2  libpthread.so.0 0x00007f8cfdc21890
+3  libc.so.6       0x00007f8cfcaf1e97 gsignal + 199
+4  libc.so.6       0x00007f8cfcaf3801 abort + 321
+5  libstdc++.so.6  0x00007f8cfd4e784d __gnu_cxx::__verbose_terminate_handler() + 365
+6  libstdc++.so.6  0x00007f8cfd4e56b6
+7  libstdc++.so.6  0x00007f8cfd4e5701
+8  libstdc++.so.6  0x00007f8cfd4e5919
+9  libstdc++.so.6  0x00007f8cfd4e5ebc
+10 libstdc++.so.6  0x00007f8cfd4e5f19 operator new[](unsigned long) + 9
+11 klee            0x00000000005d5a32 klee::StatisticManager::useIndexedStats(unsigned int) + 82
+12 klee            0x00000000005b505f klee::StatsTracker::StatsTracker(klee::Executor&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool) + 719
+13 klee            0x000000000055af02 klee::Executor::setModule(llvm::Module*, klee::Interpreter::ModuleOptions const&) + 450
+14 klee            0x000000000053de5e main + 4222
+15 libc.so.6       0x00007f8cfcad4b97 __libc_start_main + 231
+16 klee            0x0000000000551faa _start + 42

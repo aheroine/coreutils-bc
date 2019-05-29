@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 1433
+assembly.ll line: 5176
+Stack: 
+	#000005176 in access (pathname=54547808) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:1433
+	#100007050 in euidaccess (pathname=54547808) at /home/jl/deploy/klee22/runtime/POSIX/stubs.c:212
+	#200000176 in overwrite_prompt (dst_name=54547808, dst_sb=65046064) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:800
+	#300000962 in __user_main (=1, =46149968)
+	#400003519 in __uClibc_main (argc=1, argv=46149968) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500005114 in macke_overwrite_prompt_main (=1, =46149968)
+Info: 
+	address: 54547812
+	next: object at 54556656 of size 33
+		MO30[33] allocated at macke_overwrite_prompt_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 54547808 of size 4
+		MO777[4] allocated at __user_main():  %5 = tail call i8* @malloc(i64 %4)

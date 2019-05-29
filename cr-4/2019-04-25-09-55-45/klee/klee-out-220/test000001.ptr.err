@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fcntl.c
+Line: 301
+assembly.ll line: 166
+Stack: 
+	#000000166 in rpl_fcntl (fd, action=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fcntl.c:301
+	#100000214 in __macke_error_rpl_fcntl (argno0)
+	#200000175 in dup_safer (fd) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/dup-safer.c:33
+	#300000192 in __user_main (=1, =80032976)
+	#400000562 in __uClibc_main (argc=1, argv=80032976) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500000772 in macke_dup_safer_main (=1, =80032976)
+Info: 
+	address: 71112272
+	next: object at 71220384 of size 4
+		MO97[4] allocated at global:__uClibc_init.been_there_done_that
+	prev: object at 71112272 of size 0
+		MO743[0] allocated at __macke_error_rpl_fcntl():  call void (i32, i32, ...)* @rpl_fcntl(i32 %argno0, i32 undef)

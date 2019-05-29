@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-143/test000004.ptr.err
+Stack: 
+	#000001108 in __macke_error_quotearg_n_style (argno1, argno2=66856544)
+	#100000200 in quotearg_style (s, arg=66856544) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:765
+	#200001029 in __user_main (=1, =62673904)
+	#300003746 in __uClibc_main (argc=1, argv=62673904) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400005318 in macke_quotearg_style_main (=1, =62673904)

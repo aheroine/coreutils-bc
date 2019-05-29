@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/c-strcasecmp.c
+Line: 38
+assembly.ll line: 15322
+Stack: 
+	#000015322 in c_strcasecmp (s1=39168656, s2=39169376) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/c-strcasecmp.c:38
+	#100016592 in main (=1, =35334512)
+Info: 
+	address: 39168657
+	next: object at 39169376 of size 1
+		MO851[1] addr [39169376]:  allocated at main():  %10 = call i8* @malloc(i64 %9)
+	prev: object at 39168656 of size 1
+		MO840[1] addr [39168656]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

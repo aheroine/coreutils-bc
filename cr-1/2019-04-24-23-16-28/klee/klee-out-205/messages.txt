@@ -1,0 +1,14 @@
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-196/test000001.macke.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-196/test000003.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-196/test000002.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-16/test000001.unified.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:335: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states

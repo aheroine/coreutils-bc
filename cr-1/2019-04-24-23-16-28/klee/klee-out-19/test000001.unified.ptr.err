@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 15691
+Stack: 
+	#000015691 in quotearg_buffer_restyled (buffer=42060544, buffersize=256, arg=42504544, argsize=18446744073709551615, quoting_style=5, o=42677904) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100015301 in quotearg_buffer (buffer=42060544, buffersize=256, arg=42504544, argsize=18446744073709551615, o=42677904) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200016725 in quotearg_n_options (n=0, arg=42504544, argsize=18446744073709551615, options=42677904) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300015448 in quotearg_n_style (n=0, s=5, arg=42504544) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:676
+	#400015140 in quote_n (n=0, name=42504544) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:32
+	#500015150 in quote (name=42504544) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:40
+	#600001584 in target_directory_operand (file=42504544) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/mv.c:172
+	#700019102 in main (=1, =32653680)
+Info: 
+	address: 42504545
+	next: object at 42505632 of size 8
+		MO1032[8] addr [42505632]:  allocated at quote_n():  %name.addr = alloca i8*, align 8
+	prev: object at 42504544 of size 1
+		MO1008[1] addr [42504544]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

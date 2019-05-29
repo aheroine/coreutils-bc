@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/vasnprintf.c
+Line: 277
+assembly.ll line: 16844
+Stack: 
+	#000016844 in decimal_point_char () at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/vasnprintf.c:277
+	#100020011 in main (=1, =24953952)
+Info: 
+	address: 139725186013144
+	next: object at 139725185915840 of size 1536
+		MO81[1536] addr [139725185915840]:  (no allocation info)
+	prev: object at 34974960 of size 8
+		MO708[8] addr [34974960]:  allocated at decimal_point_char():  %point = alloca i8*, align 8

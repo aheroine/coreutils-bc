@@ -1,0 +1,7 @@
+Error: memory error: invalid pointer: free
+Stack: 
+	#000012013 in main (=1, =44038400)
+Info: 
+	address: 43143536
+	next: object at 43150720 of size 29
+		MO8[29] addr [43150720]:  allocated at main():  call void @klee_mark_arg_symbolic(i32 %0, i8** %1)

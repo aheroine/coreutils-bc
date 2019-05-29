@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/mempcpy.c
+Line: 31
+assembly.ll line: 6623
+Stack: 
+	#000006623 in mempcpy379 (s1=46522080, s2, n) at /home/jl/deploy/klee-uclibc/libc/string/mempcpy.c:31
+	#100000637 in full_filename_ (ds.0.0.2.val, ds.0.0.3.val, filename=46137520) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:366
+	#200001932 in __macke_error_full_filename_ (argno0=45737744, argno1=46137520)
+	#300000428 in prompt (fd_cwd, ds=45737744, filename=46137520, sbuf=43020112, x=45796112, is_empty=47957632) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:887
+	#400000687 in remove_entry (fd_cwd, ds=45737744, filename=46137520, st=43020112, x=45796112, dp=66451392) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1023
+	#500001901 in __user_main (=1, =63616208)
+	#600007007 in __uClibc_main (argc=1, argv=63616208) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700008730 in macke_remove_entry_main (=1, =63616208)
+Info: 
+	address: (ReadLSB w64 16 argno1)
+	example: 0
+	range: [0, 18446744073709551615]
+	next: object at 42855488 of size 11
+		MO221[11] allocated at global:.str537

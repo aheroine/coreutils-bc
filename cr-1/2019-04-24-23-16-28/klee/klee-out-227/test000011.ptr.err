@@ -1,0 +1,13 @@
+Error: memory error: invalid pointer: klee_get_obj_size
+Stack: 
+	#000000549 in __macke_error_same_name (argno0, argno1)
+	#100000191 in triple_compare (x=49443008, y=51069648) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:850
+	#200000470 in __user_main (=1, =40281904)
+	#300003064 in __uClibc_main (argc=1, argv=40281904) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400004659 in macke_triple_compare_main (=1, =40281904)
+Info: 
+	address: (ReadLSB w64 0 argno0)
+	example: 0
+	range: [0, 18446744073709551615]
+	next: object at 35500208 of size 26
+		MO33[26] allocated at macke_triple_compare_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

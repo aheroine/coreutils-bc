@@ -1,0 +1,48 @@
+array argno0[216] : w32 -> w8 = symbolic
+array const_arr1[784] : w32 -> w8 = [0 0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+array macke_sizeof_argno0[4] : w32 -> w8 = symbolic
+array macke_sym_switch_clear_ungetc_buffer_preserving_position[4] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Sle 1
+              N0:(ReadLSB w32 0 macke_sizeof_argno0))
+         (Slt N0 1025)
+         (Eq false (Eq 4 N0))
+         (Eq false (Eq 16 N0))
+         (Eq false (Eq 128 N0))
+         (Eq false (Eq 2 N0))
+         (Eq false
+             (Eq 0
+                 (And w32 (ZExt w32 N1:(ReadLSB w16 0 argno0))
+                          35)))
+         (Eq false
+             (Eq 1
+                 (ReadLSB w32 0 macke_sym_switch_clear_ungetc_buffer_preserving_position)))
+         (Eq false
+             (Eq 0
+                 (And w32 (ReadLSB w32 0 argno0)
+                          256)))
+         (Eq false
+             (Eq N2:(ReadLSB w64 16 argno0)
+                 N3:(ReadLSB w64 8 argno0)))
+         (Eq false
+             (Eq 0 (And w16 N1 64)))
+         (Eq false
+             (Eq N4:(ReadLSB w64 24 argno0)
+                 N3))
+         (Ult N5:(ReadLSB w32 4 argno0)
+              32)
+         (Eq 0
+             (And w32 (ReadLSB w32 N6:(Extract w32 0 (Add w64 4
+                                                              (Mul w64 24 (SExt w64 N5)))) U0:[783=0, 782=0, 781=0, 780=0, 779=0, 778=0, 777=0, 776=0, 775=N7:(Read w8 3 model_version),
+                                                                                               774=N8:(Read w8 2 model_version),
+                                                                                               773=N9:(Read w8 1 model_version),
+                                                                                               772=N10:(Read w8 0 model_version)] @ const_arr1)
+                      1))
+         (Ult (Add w64 18446744073673783536 N3) 8)
+         (Eq 1
+             (Select w64 (Ult N11:(Sub w64 N4 N3) N12:(Sub w64 N2 N3))
+                         N11
+                         N12))]
+        false)

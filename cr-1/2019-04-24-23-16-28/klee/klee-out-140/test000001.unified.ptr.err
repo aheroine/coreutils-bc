@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 15691
+Stack: 
+	#000015691 in quotearg_buffer_restyled (buffer=42052320, buffersize=256, arg=42496336, argsize=18446744073709551615, quoting_style=5, o=42669248) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100015301 in quotearg_buffer (buffer=42052320, buffersize=256, arg=42496336, argsize=18446744073709551615, o=42669248) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200016725 in quotearg_n_options (n=0, arg=42496336, argsize=18446744073709551615, options=42669248) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300015448 in quotearg_n_style (n=0, s=5, arg=42496336) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:676
+	#400015140 in quote_n (n=0, name=42496336) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:32
+	#500015150 in quote (name=42496336) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:40
+	#600006371 in remember_created (file=42496336) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/cp-hash.c:111
+	#700021349 in main (=1, =41752960)
+Info: 
+	address: 42496337
+	next: object at 42497456 of size 1
+		MO1012[1] addr [42497456]:  allocated at remember_created():  %retval = alloca i1, align 1
+	prev: object at 42496336 of size 1
+		MO1008[1] addr [42496336]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

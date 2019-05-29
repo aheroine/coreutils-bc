@@ -1,0 +1,17 @@
+Error: concretized symbolic size
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c
+Line: 327
+assembly.ll line: 1812
+Stack: 
+	#000001812 in full_filename_ (ds.0.0.2.val, ds.0.0.3.val, filename=57123952) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:327
+	#100000473 in remove_dir (fd_cwd, ds=36021632, dir=57123952, dir_st=36814928, x=52212928) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1403
+	#200004106 in __user_main (=1, =52488256)
+	#300007543 in __uClibc_main (argc=1, argv=52488256) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400009266 in macke_remove_dir_main (=1, =52488256)
+Info: 
+  size expr: (Add w64 1
+                       (And w64 (Sub w64 (ReadLSB w64 24 argno1)
+                                         (ReadLSB w64 16 argno1))
+                                4294967295))
+  concretization : 1
+  unbound example: 16777217

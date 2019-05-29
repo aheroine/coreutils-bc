@@ -1,0 +1,54 @@
+array argno3[64] : w32 -> w8 = symbolic
+array macke_sizeof_argno0[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno1[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno3[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno4[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno5[4] : w32 -> w8 = symbolic
+array macke_sym_switch_copy_internal[4] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Sle 1
+              N0:(ReadLSB w32 0 macke_sizeof_argno0))
+         (Slt N0 1025)
+         (Eq false (Eq 4 N0))
+         (Eq false (Eq 16 N0))
+         (Eq false (Eq 128 N0))
+         (Eq false (Eq 2 N0))
+         (Sle 1
+              N1:(ReadLSB w32 0 macke_sizeof_argno1))
+         (Slt N1 1025)
+         (Eq false (Eq 4 N1))
+         (Eq false (Eq 16 N1))
+         (Eq false (Eq 128 N1))
+         (Eq false (Eq 2 N1))
+         (Sle 1
+              N2:(ReadLSB w32 0 macke_sizeof_argno3))
+         (Slt N2 1025)
+         (Eq false (Eq 4 N2))
+         (Eq false (Eq 16 N2))
+         (Eq false (Eq 128 N2))
+         (Eq false (Eq 2 N2))
+         (Sle 1
+              N3:(ReadLSB w32 0 macke_sizeof_argno4))
+         (Slt N3 1025)
+         (Eq false (Eq 4 N3))
+         (Eq false (Eq 16 N3))
+         (Eq false (Eq 128 N3))
+         (Eq false (Eq 2 N3))
+         (Sle 1
+              N4:(ReadLSB w32 0 macke_sizeof_argno5))
+         (Slt N4 1025)
+         (Eq false (Eq 4 N4))
+         (Eq false (Eq 16 N4))
+         (Eq false (Eq 128 N4))
+         (Eq false (Eq 2 N4))
+         (Ult (ReadLSB w32 0 argno3)
+              4)
+         (Eq 1
+             (ReadLSB w32 36 argno3))
+         (Eq 0
+             (And w8 (Read w8 14 argno3) 1))
+         (Eq 69
+             (ReadLSB w32 0 macke_sym_switch_copy_internal))]
+        false)

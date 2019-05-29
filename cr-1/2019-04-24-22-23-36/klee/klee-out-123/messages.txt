@@ -1,0 +1,12 @@
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/basename.c:39: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/basename.c:42: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states

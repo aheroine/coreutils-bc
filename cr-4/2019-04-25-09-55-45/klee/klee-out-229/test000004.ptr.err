@@ -1,0 +1,15 @@
+Error: memory error: invalid pointer: klee_get_obj_size
+Stack: 
+	#000002053 in __macke_error_dump_remainder (argno0, argno1)
+	#100000424 in check_fspec (fspec=48476384, wd, prev_wd=57409648) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:1304
+	#200001864 in __user_main (=1, =40577776)
+	#300006202 in __uClibc_main (argc=1, argv=40577776) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400009921 in macke_check_fspec_main (=1, =40577776)
+Info: 
+	address: (ReadLSB w64 0 argno0)
+	example: 37757696
+	range: [37757633, 37757839]
+	next: object at 38273808 of size 964
+		MO215[964] allocated at global:.str133
+	prev: object at 37757632 of size 208
+		MO163[208] allocated at global:exp10_table

@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 745
+assembly.ll line: 4163
+Stack: 
+	#000004163 in hash_find_entry (table=0, entry1=59142752, bucket_head=54101904, delete=false) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:745
+	#100003867 in hash_insert (table=0, entry1=59142752) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:916
+	#200002892 in remember_copied (name=48212848, ino=2, dev=2049) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/cp-hash.c:148
+	#300000903 in copy_internal (src_name=51418992, dst_name=48212848, new_dst, device, ancestors=51430192, x=51616800, command_line_arg, copy_into_self=73515952, rename_succeeded=53416688) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1351
+	#400005993 in __user_main (=1, =52762416)
+	#500009000 in __uClibc_main (argc=1, argv=52762416) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600010723 in macke_copy_internal_main (=1, =52762416)
+Info: 
+	address: 0
+	next: object at 47944864 of size 15
+		MO7[15] allocated at macke_copy_internal_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

@@ -1,0 +1,20 @@
+cr-1   mv #run_selective replay_selective 3600 7200 7200 &&\
+cr-1   rm #run_selective replay_selective 3600 7200 7200 &&\
+cr-3   cut 
+cr-4   tail #run_selective replay_selective 3600 7200 7200 &&\
+cr-5   tail #run_selective replay_selective 3600 7200 7200 &&\
+ar-5   cut #run_selective replay_selective 3600 7200 7200 &&\
+cr-7   seq #run_selective replay_selective 3600 7200 7200 &&\
+cr-8   seq #run_selective replay_selective 3600 7200 7200 &&\
+cr-10  cp #run_selective replay_selective 3600 7200 7200 &&\
+cr-11  cut #run_selective replay_selective 3600 7200 7200 &&\
+cr-12  cut #run_selective replay_selective 3600 7200 7200 &&\
+cr-13  ls #run_selective replay_selective 3600 7200 7200 &&\
+cr-14  ls #run_selective replay_selective 3600 7200 7200 &&\
+cr-15  du #run_selective replay_selective 3600 7200 7200 &&\
+cr-16  tail #run_selective replay_selective 3600 7200 7200 &&\
+cr-17  cut #run_selective replay_selective 3600 7200 7200 &&\
+ar-2   seq #run_selective replay_selective 3600 7200 7200 &&\
+ar-4-1 cut #run_selective replay_selective 3600 7200 7200 &&\
+cr-22  expr #run_selective replay_selective 3600 7200 7200
+

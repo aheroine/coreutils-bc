@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 43
+assembly.ll line: 13034
+Stack: 
+	#000013034 in fstatat (fd, path=42565552, buf=45817504) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:43
+	#100000695 in cache_fstatat (fd, file=42565552, st=45817504) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:174
+	#200000531 in write_protected_non_symlink (fd_cwd, file=42565552, ds=26562912, buf=45817504) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:762
+	#300001698 in __macke_error_write_protected_non_symlink (argno0, argno1=42565552, argno2=26562912, argno3=45817504)
+	#400000354 in prompt (fd_cwd, ds=26562912, filename=42565552, sbuf=45817504, x=47603936, mode, is_empty=38158480) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:851
+	#500001669 in __user_main (=1, =37550112)
+	#600010113 in __uClibc_main (argc=1, argv=37550112) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700011836 in macke_prompt_main (=1, =37550112)
+Info: 
+	address: 42565553
+	next: object at 42878064 of size 0
+		MO802[0] allocated at klee_init_fds():  %7 = call noalias i8* @malloc(i64 %6) #4, !dbg !5124
+	prev: object at 42565552 of size 1
+		MO847[1] allocated at __user_main():  %12 = call i8* @malloc(i64 %11)

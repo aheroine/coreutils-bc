@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/use/src/runtime/Intrinsic/memcpy.c
+Line: 17
+assembly.ll line: 12804
+Stack: 
+	#000012804 in memcpy (destaddr=36090768, srcaddr, len=16) at /home/jl/deploy/use/src/runtime/Intrinsic/memcpy.c:17
+	#100003255 in AD_pop_and_chdir (dirp=27984320, fdp=36089888, ds=36116896) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:464
+	#200011876 in main (=1, =28026688)
+Info: 
+	address: (Add w64 18446744073709551600
+          (ReadLSB w64 200 argno2))
+	example: 12370169555311111067
+	range: [12370169555311111067, 12370169555311111067]
+	next: object at 140482931334080 of size 1536
+		MO81[1536] addr [140482931334080]:  (no allocation info)
+	prev: object at 36116896 of size 496
+		MO662[496] addr [36116896]:  allocated at main():  %16 = call i8* @malloc(i64 %15)

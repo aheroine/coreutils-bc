@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/printf-parse.c
+Line: 133
+assembly.ll line: 3239
+Stack: 
+	#000003239 in printf_parse (format=70203824, d=80194736, a=74434448) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/printf-parse.c:133
+	#100000190 in vasnprintf (resultbuf=82313024, lengthp=77033056, format=70203824, args=65875968) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/vasnprintf.c:1484
+	#200004335 in __user_main (=1, =72080144)
+	#300006775 in __uClibc_main (argc=1, argv=72080144) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400008348 in macke_vasnprintf_main (=1, =72080144)
+Info: 
+	address: 70203825
+	next: object at 70241056 of size 18
+		MO36[18] allocated at macke_vasnprintf_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 70203824 of size 1
+		MO812[1] allocated at __user_main():  %13 = tail call i8* @malloc(i64 %12)

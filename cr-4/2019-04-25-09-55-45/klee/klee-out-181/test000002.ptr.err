@@ -1,0 +1,17 @@
+Error: check_memory_access: memory error
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 430
+assembly.ll line: 2186
+Stack: 
+	#000002186 in write (fd, buf, count) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:430
+	#100001888 in __stdio_WRITE (stream=36331888, buf, bufsize) at /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c:52
+	#200001436 in __stdio_wcommit (stream=36331888) at /home/jl/deploy/klee-uclibc/libc/stdio/_wcommit.c:25
+	#300001537 in fflush_unlocked (stream=36331888) at /home/jl/deploy/klee-uclibc/libc/stdio/fflush.c:125
+	#400000166 in rpl_fflush (stream=36331888) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fflush.c:152
+	#500000282 in __user_main (=1, =49835728)
+	#600001783 in __uClibc_main (argc=1, argv=49835728) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700001993 in macke_rpl_fflush_main (=1, =49835728)
+Info: 
+	address: 0
+	next: object at 35768080 of size 8
+		MO4[8] allocated at macke_rpl_fflush_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

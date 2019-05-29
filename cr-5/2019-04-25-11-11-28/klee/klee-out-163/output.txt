@@ -1,0 +1,25 @@
+KLEE: KLEE: WATCHDOG: watching 10487
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-163"
+Using STP solver backend
+KLEE: WARNING ONCE: function "vasnprintf" has inline asm
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 66516720)
+KLEE: WARNING ONCE: __macke_error_vasnprintf: MACKE: Summery for vasnprintf reached
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/printf-parse.c:133: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee22/runtime/POSIX/fd.c:430: check_memory_access: memory error
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c:83: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c:83: memory error: object read only
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+
+KLEE: done: total instructions = 14632
+KLEE: done: completed paths = 1202
+KLEE: done: generated tests = 47

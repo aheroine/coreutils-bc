@@ -1,0 +1,7 @@
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 59290192)
+KLEE: WARNING ONCE: __macke_error_quote: MACKE: Summery for quote reached
+KLEE: WARNING ONCE: calling external: __ctype_b_loc()
+KLEE: WARNING ONCE: calling external: vprintf(62451344, 59369424)

@@ -1,0 +1,133 @@
+array argno1[8] : w32 -> w8 = symbolic
+array argno2[128] : w32 -> w8 = symbolic
+array macke_sizeof_argno0[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno1[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno2[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno3[4] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Sle 1
+              N0:(ReadLSB w32 0 macke_sizeof_argno0))
+         (Slt N0 1025)
+         (Eq false (Eq 4 N0))
+         (Eq false (Eq 16 N0))
+         (Eq false (Eq 128 N0))
+         (Eq false (Eq 2 N0))
+         (Sle 1
+              N1:(ReadLSB w32 0 macke_sizeof_argno1))
+         (Slt N1 1025)
+         (Eq false (Eq 4 N1))
+         (Eq false (Eq 16 N1))
+         (Eq false (Eq 128 N1))
+         (Eq false (Eq 2 N1))
+         (Eq 128
+             (ReadLSB w32 0 macke_sizeof_argno2))
+         (Sle 1
+              N2:(ReadLSB w32 0 macke_sizeof_argno3))
+         (Slt N2 1025)
+         (Eq false (Eq 4 N2))
+         (Eq false (Eq 16 N2))
+         (Eq false (Eq 128 N2))
+         (Eq false (Eq 2 N2))
+         (Eq false
+             (Eq 0 N3:(Read w8 0 argno2)))
+         (Eq false (Eq 37 N3))
+         (Eq false
+             (Eq 0 N4:(Read w8 1 argno2)))
+         (Eq false (Eq 37 N4))
+         (Eq false
+             (Eq 0 N5:(Read w8 2 argno2)))
+         (Eq false (Eq 37 N5))
+         (Eq false
+             (Eq 0 N6:(Read w8 3 argno2)))
+         (Eq false (Eq 37 N6))
+         (Eq false
+             (Eq 0 N7:(Read w8 4 argno2)))
+         (Eq false (Eq 37 N7))
+         (Eq false
+             (Eq 0 N8:(Read w8 5 argno2)))
+         (Eq false (Eq 37 N8))
+         (Eq false
+             (Eq 0 N9:(Read w8 6 argno2)))
+         (Eq false (Eq 37 N9))
+         (Eq false
+             (Eq 0 N10:(Read w8 7 argno2)))
+         (Eq false (Eq 37 N10))
+         (Eq false
+             (Eq 0 N11:(Read w8 8 argno2)))
+         (Eq false (Eq 37 N11))
+         (Eq false
+             (Eq 0 N12:(Read w8 9 argno2)))
+         (Eq false (Eq 37 N12))
+         (Eq false
+             (Eq 0 N13:(Read w8 10 argno2)))
+         (Eq false (Eq 37 N13))
+         (Eq false
+             (Eq 0 N14:(Read w8 11 argno2)))
+         (Eq false (Eq 37 N14))
+         (Eq false
+             (Eq 0 N15:(Read w8 12 argno2)))
+         (Eq false (Eq 37 N15))
+         (Eq false
+             (Eq 0 N16:(Read w8 13 argno2)))
+         (Eq false (Eq 37 N16))
+         (Eq false
+             (Eq 0 N17:(Read w8 14 argno2)))
+         (Eq false (Eq 37 N17))
+         (Eq false
+             (Eq 0 N18:(Read w8 15 argno2)))
+         (Eq false (Eq 37 N18))
+         (Eq false
+             (Eq 0 N19:(Read w8 16 argno2)))
+         (Eq false (Eq 37 N19))
+         (Eq false
+             (Eq 0 N20:(Read w8 17 argno2)))
+         (Eq false (Eq 37 N20))
+         (Eq false
+             (Eq 0 N21:(Read w8 18 argno2)))
+         (Eq false (Eq 37 N21))
+         (Eq false
+             (Eq 0 N22:(Read w8 19 argno2)))
+         (Eq false (Eq 37 N22))
+         (Eq false
+             (Eq 0 N23:(Read w8 20 argno2)))
+         (Eq false (Eq 37 N23))
+         (Eq false
+             (Eq 0 N24:(Read w8 21 argno2)))
+         (Eq false (Eq 37 N24))
+         (Eq false
+             (Eq 0 N25:(Read w8 22 argno2)))
+         (Eq false (Eq 37 N25))
+         (Eq false
+             (Eq 0 N26:(Read w8 23 argno2)))
+         (Eq false (Eq 37 N26))
+         (Eq false
+             (Eq 0 N27:(Read w8 24 argno2)))
+         (Eq false (Eq 37 N27))
+         (Eq false
+             (Eq 0 N28:(Read w8 25 argno2)))
+         (Eq false (Eq 37 N28))
+         (Eq false
+             (Eq 0 N29:(Read w8 26 argno2)))
+         (Eq false (Eq 37 N29))
+         (Eq false
+             (Eq 0 N30:(Read w8 27 argno2)))
+         (Eq false (Eq 37 N30))
+         (Eq false
+             (Eq 0 N31:(Read w8 28 argno2)))
+         (Eq false (Eq 37 N31))
+         (Eq false
+             (Eq 0 N32:(Read w8 29 argno2)))
+         (Eq false (Eq 37 N32))
+         (Eq false
+             (Eq 0 N33:(Read w8 30 argno2)))
+         (Eq false (Eq 37 N33))
+         (Eq false
+             (Eq 0 N34:(Read w8 31 argno2)))
+         (Eq false (Eq 37 N34))
+         (Eq 0 (Read w8 32 argno2))
+         (Eq false
+             (Ult (ReadLSB w64 0 argno1)
+                  32))]
+        false)

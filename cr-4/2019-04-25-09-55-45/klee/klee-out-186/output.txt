@@ -1,0 +1,12 @@
+KLEE: KLEE: WATCHDOG: watching 31623
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-186"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+
+KLEE: done: total instructions = 1
+KLEE: done: completed paths = 1
+KLEE: done: generated tests = 0

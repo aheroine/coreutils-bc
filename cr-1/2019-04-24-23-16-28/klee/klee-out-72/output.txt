@@ -1,0 +1,108 @@
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-72"
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-72 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/bitcode/symmains.bc_lcm_ChangeEntry.bc
+
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: __ctype_get_mb_cur_max
+KLEE: WARNING: undefined reference to function: __errno_location
+KLEE: WARNING: undefined reference to function: __fpending
+KLEE: WARNING: undefined reference to function: _obstack_begin
+KLEE: WARNING: undefined reference to function: _obstack_newchunk
+KLEE: WARNING: undefined reference to function: _setjmp
+KLEE: WARNING: undefined reference to function: atexit
+KLEE: WARNING: undefined reference to function: chmod
+KLEE: WARNING: undefined reference to function: chown
+KLEE: WARNING: undefined reference to function: close
+KLEE: WARNING: undefined reference to function: closedir
+KLEE: WARNING: undefined reference to function: dirfd
+KLEE: WARNING: undefined reference to function: dup
+KLEE: WARNING: undefined reference to function: euidaccess
+KLEE: WARNING: undefined reference to function: fchmod
+KLEE: WARNING: undefined reference to function: fchown
+KLEE: WARNING: undefined reference to function: fclose
+KLEE: WARNING: undefined reference to function: fcntl
+KLEE: WARNING: undefined reference to function: fdopendir
+KLEE: WARNING: undefined reference to function: ferror_unlocked
+KLEE: WARNING: undefined reference to function: fflush_unlocked
+KLEE: WARNING: undefined reference to function: fopen
+KLEE: WARNING: undefined reference to function: fprintf
+KLEE: WARNING: undefined reference to function: fputs_unlocked
+KLEE: WARNING: undefined reference to function: fstat
+KLEE: WARNING: undefined reference to function: fstatat
+KLEE: WARNING: undefined reference to function: ftruncate
+KLEE: WARNING: undefined reference to function: futimesat
+KLEE: WARNING: undefined reference to function: getchar
+KLEE: WARNING: undefined reference to function: getenv
+KLEE: WARNING: undefined reference to function: getopt_long
+KLEE: WARNING: undefined reference to function: group_member
+KLEE: WARNING: undefined reference to function: isatty
+KLEE: WARNING: undefined reference to function: iswprint
+KLEE: WARNING: undefined reference to function: lchown
+KLEE: WARNING: undefined reference to function: link
+KLEE: WARNING: undefined reference to function: longjmp
+KLEE: WARNING: undefined reference to function: lseek
+KLEE: WARNING: undefined reference to function: lstat
+KLEE: WARNING: undefined reference to function: mbrtowc
+KLEE: WARNING: undefined reference to function: mbsinit
+KLEE: WARNING: undefined reference to function: memcmp
+KLEE: WARNING: undefined reference to function: mkdir
+KLEE: WARNING: undefined reference to function: mkfifo
+KLEE: WARNING: undefined reference to function: mknod
+KLEE: WARNING: undefined reference to function: obstack_free
+KLEE: WARNING: undefined reference to function: open
+KLEE: WARNING: undefined reference to function: openat
+KLEE: WARNING: undefined reference to function: opendir
+KLEE: WARNING: undefined reference to variable: optarg
+KLEE: WARNING: undefined reference to variable: optind
+KLEE: WARNING: undefined reference to function: pathconf
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING: undefined reference to function: putc_unlocked
+KLEE: WARNING: undefined reference to function: putchar_unlocked
+KLEE: WARNING: undefined reference to function: read
+KLEE: WARNING: undefined reference to function: readdir
+KLEE: WARNING: undefined reference to function: readlink
+KLEE: WARNING: undefined reference to function: rename
+KLEE: WARNING: undefined reference to function: rewinddir
+KLEE: WARNING: undefined reference to function: setlocale
+KLEE: WARNING: undefined reference to function: stat
+KLEE: WARNING: undefined reference to variable: stderr
+KLEE: WARNING: undefined reference to variable: stdout
+KLEE: WARNING: undefined reference to function: strcmp
+KLEE: WARNING: undefined reference to function: strcpy
+KLEE: WARNING: undefined reference to function: strlen
+KLEE: WARNING: undefined reference to function: strncmp
+KLEE: WARNING: undefined reference to function: strndup
+KLEE: WARNING: undefined reference to function: symlink
+KLEE: WARNING: undefined reference to function: umask
+KLEE: WARNING: undefined reference to function: unlink
+KLEE: WARNING: undefined reference to function: unlinkat
+KLEE: WARNING: undefined reference to function: utimes
+KLEE: WARNING: undefined reference to function: vfprintf
+KLEE: WARNING: undefined reference to function: write
+KLEE: WARNING: undefined reference to function: error (UNSAFE)!
+
+KLEE: done: total instructions = 55
+KLEE: done: completed paths = 2
+KLEE: done: generated tests = 0
+KLEE: data flow divergences discovered in concerned functions:
+function __main_old in level 9 founded 0 data divergence
+function do_move in level 7 founded 0 data divergence
+function macke_do_move_main in level 8 founded 0 data divergence
+function macke_klee_change_main in level 1 founded 0 data divergence
+function macke_movefile_main in level 9 founded 0 data divergence
+function macke_prompt_main in level 2 founded 0 data divergence
+function macke_remove_dir_main in level 5 founded 0 data divergence
+function macke_remove_entry_main in level 3 founded 0 data divergence
+function macke_rm_1_main in level 6 founded 0 data divergence
+function macke_rm_option_init_main in level 2 founded 0 data divergence
+function movefile in level 8 founded 0 data divergence
+function prompt in level 1 founded 0 data divergence
+function remove_cwd_entries in level 3 founded 0 data divergence
+function remove_dir in level 4 founded 0 data divergence
+function remove_entry in level 2 founded 0 data divergence
+function rm in level 6 founded 0 data divergence
+function rm_1 in level 5 founded 0 data divergence
+function rm_option_init in level 1 founded 0 data divergence
+KLEE: control flow divergences discovered:
+Total data divergences:0
+0   of data divergences are affected by control divergences
+Total control divergences:0

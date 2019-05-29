@@ -1,0 +1,22 @@
+Error: check_memory_access: memory error
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 430
+assembly.ll line: 10624
+Stack: 
+	#000010624 in write (fd, buf, count) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:430
+	#100009059 in __stdio_WRITE (stream=58613136, buf, bufsize) at /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c:52
+	#200006748 in __stdio_wcommit (stream=58613136) at /home/jl/deploy/klee-uclibc/libc/stdio/_wcommit.c:25
+	#300010278 in fseeko64 (stream=58613136, offset=0, whence) at /home/jl/deploy/klee-uclibc/libc/stdio/fseeko.c:44
+	#400010254 in fseek (stream=58613136, offset=0, whence) at /home/jl/deploy/klee-uclibc/libc/stdio/fseeko.c:28
+	#500009304 in __stdio_trans2w_o (stream=58613136) at /home/jl/deploy/klee-uclibc/libc/stdio/_trans2w.c:69
+	#600008512 in fwrite_unlocked (ptr=54838304, size=1, nmemb=0, stream=58613136) at /home/jl/deploy/klee-uclibc/libc/stdio/fwrite.c:23
+	#700000200 in rpl_vfprintf (fp=58613136, format=54721184, args=77861600) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/vfprintf.c:52
+	#800004396 in __user_main (=1, =67967872)
+	#900008858 in __uClibc_main (argc=1, argv=67967872) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#1000010431 in macke_rpl_vfprintf_main (=1, =67967872)
+Info: 
+	address: 18446744073709551615
+	next: object at 139907409169344 of size 1536
+		MO81[1536] (no allocation info)
+	prev: object at 80381120 of size 16
+		MO114[16] allocated at global:_ppfs_parsespec.spec_or_mask

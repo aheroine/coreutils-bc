@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c
+Line: 379
+assembly.ll line: 749
+Stack: 
+	#000000749 in quotearg_buffer_restyled (buffer=75106592, buffersize=256, arg=76644128, quoting_style=6, flags=1, quote_these_too=70327672) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:379
+	#100001026 in quotearg_n_options (arg=76644128, options=70327664) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:704
+	#200000309 in quotearg_n_style (arg=76644128) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:751
+	#300000293 in quote_n (name=76644128) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:31
+	#400000300 in quote (name=76644128) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:39
+	#500005359 in __macke_error_quote (argno0=76644128)
+	#600000223 in dump_remainder (pretty_filename=76644128, fd, n_bytes) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:411
+	#700005334 in __user_main (=1, =74951600)
+	#800008001 in __uClibc_main (argc=1, argv=74951600) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#900009574 in macke_dump_remainder_main (=1, =74951600)
+Info: 
+	address: 76644129
+	next: object at 77533008 of size 32
+		MO53[32] allocated at macke_dump_remainder_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 76644128 of size 1
+		MO778[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

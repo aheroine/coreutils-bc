@@ -1,0 +1,33 @@
+KLEE: KLEE: WATCHDOG: watching 4929
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-22-23-36/klee/klee-out-137"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: fdopendir
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 63547136)
+KLEE: ERROR: /home/jl/deploy/klee22/runtime/POSIX/fd.c:43: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee22/runtime/POSIX/fd.c:1433: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: WARNING ONCE: calling external: fdopendir(3)
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+KLEE: WARNING: unable to write output test case, losing it
+KLEE: WARNING: error opening file "test000003.early".  KLEE may have run out of file descriptors: try to increase the maximum number of open file descriptors by using ulimit (Error opening output file '/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-22-23-36/klee/klee-out-137/test000003.early': Too many open files).
+0  klee            0x0000000000e35be2 llvm::sys::PrintStackTrace(_IO_FILE*) + 50
+1  klee            0x0000000000e35434
+2  libpthread.so.0 0x00007f6266b99890
+3  klee            0x0000000000559fd7
+4  klee            0x0000000000561f5a klee::Executor::terminateStateEarly(klee::ExecutionState&, llvm::Twine const&) + 122
+5  klee            0x0000000000566532 klee::Executor::doDumpStates() + 162
+6  klee            0x0000000000571ccc klee::Executor::run(klee::ExecutionState&) + 1628
+7  klee            0x00000000005725e2 klee::Executor::runFunctionAsMain(llvm::Function*, int, char**, char**) + 1810
+8  klee            0x000000000054340a main + 10730
+9  libc.so.6       0x00007f626469db97 __libc_start_main + 231
+10 klee            0x0000000000557719 _start + 41
+KLEE: WARNING: KLEE: watchdog exiting (no child)
+

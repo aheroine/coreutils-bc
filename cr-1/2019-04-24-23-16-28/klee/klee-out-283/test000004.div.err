@@ -1,0 +1,12 @@
+Error: divide by zero
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash-pjw.c
+Line: 40
+assembly.ll line: 170
+Stack: 
+	#000002724 in klee_div_zero_check (z) at /home/jl/deploy/klee22/runtime/Intrinsic/klee_div_zero_check.c:14
+	#100000170 in hash_pjw (x, tablesize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash-pjw.c:40
+	#200000250 in __macke_error_hash_pjw (argno0, argno1)
+	#300000134 in triple_hash (x=67320784, table_size) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:828
+	#400000227 in __user_main (=1, =52314128)
+	#500000622 in __uClibc_main (argc=1, argv=52314128) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600000805 in macke_triple_hash_main (=1, =52314128)

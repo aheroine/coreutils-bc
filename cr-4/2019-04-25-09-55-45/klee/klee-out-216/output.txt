@@ -1,0 +1,17 @@
+KLEE: KLEE: WATCHDOG: watching 20563
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-216"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: inotify_add_watch
+KLEE: WARNING: undefined reference to function: inotify_rm_watch
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 56248272)
+KLEE: WARNING ONCE: silently concretizing (reason: floating point) expression (ReadLSB w64 0 argno2) to value 0 (/home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/hash.c:548)
+
+KLEE: done: total instructions = 5055
+KLEE: done: completed paths = 5
+KLEE: done: generated tests = 0

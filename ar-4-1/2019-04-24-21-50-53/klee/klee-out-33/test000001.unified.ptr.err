@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/hash.c
+Line: 745
+assembly.ll line: 4787
+Stack: 
+	#000004787 in hash_find_entry (table=0, entry1, bucket_head=39173520, delete=false) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/hash.c:745
+	#100004298 in hash_insert (table=0, entry1) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/hash.c:916
+	#200002247 in mark_range_start (i) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/src/cut.c:261
+	#300007574 in main (=1, =34729616)
+Info: 
+	address: 0
+	next: object at 34729616 of size 640
+		MO0[640] addr [34729616]:  allocated at main():  call void @klee_mark_arg_symbolic(i32 %0, i8** %1)

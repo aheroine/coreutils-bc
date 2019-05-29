@@ -1,0 +1,14 @@
+Error: memory error: object read only
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 1436
+assembly.ll line: 12344
+Stack: 
+	#000012344 in __fd_open (pathname, flags=2048, mode=0) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:1436
+	#100013436 in open (pathname, flags=2048) at /home/jl/deploy/klee22/runtime/POSIX/fd_32.c:76
+	#200001180 in open_safer (file, flags=2048) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/open-safer.c:45
+	#300000501 in recheck (f=27729184, blocking=false) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:944
+	#400002879 in __macke_error_recheck (argno0=27729184, argno1=false)
+	#500000278 in tail_forever (f=27729184, n_files, sleep_interval) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:1107
+	#600002850 in __user_main (=1, =47691280)
+	#700008462 in __uClibc_main (argc=1, argv=47691280) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800012181 in macke_tail_forever_main (=1, =47691280)

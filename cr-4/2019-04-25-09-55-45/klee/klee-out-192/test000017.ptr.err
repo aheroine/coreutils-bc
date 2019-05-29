@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strlen.c
+Line: 22
+assembly.ll line: 6761
+Stack: 
+	#000006761 in strlen (s) at /home/jl/deploy/klee-uclibc/libc/string/strlen.c:22
+	#100000347 in quotearg_buffer_restyled (buffer=0, buffersize=0, arg=28750240, argsize, quoting_style, flags, quote_these_too=29560904, left_quote, right_quote) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:320
+	#200001597 in __macke_error_quotearg_buffer_restyled (argno0=0, argno1=0, argno2=28750240, argno3, argno4, argno5, argno6=29560904, argno7, argno8)
+	#300000252 in quotearg_alloc_mem (arg=28750240, argsize, size=39648416, o=29560896) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:703
+	#400001559 in __user_main (=1, =42860512)
+	#500007378 in __uClibc_main (argc=1, argv=42860512) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600011097 in macke_quotearg_alloc_mem_main (=1, =42860512)
+Info: 
+	address: (ReadLSB w64 48 argno3)
+	example: 0
+	range: [0, 18446744073709551615]
+	next: object at 26624912 of size 31
+		MO42[31] allocated at macke_quotearg_alloc_mem_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

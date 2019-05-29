@@ -1,0 +1,4 @@
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-35 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/bitcode/symmains.bc_argmatch_invalid_ChangeEntry.bc
+
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:279: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location

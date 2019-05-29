@@ -1,0 +1,15 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c
+Line: 828
+assembly.ll line: 133
+Stack: 
+	#000000133 in triple_hash (x=67130336, table_size) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:828
+	#100000227 in __user_main (=1, =52314128)
+	#200000622 in __uClibc_main (argc=1, argv=52314128) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#300000805 in macke_triple_hash_main (=1, =52314128)
+Info: 
+	address: 67130336
+	next: object at 67353664 of size 72
+		MO146[72] allocated at global:.str1143
+	prev: object at 67130336 of size 1
+		MO741[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

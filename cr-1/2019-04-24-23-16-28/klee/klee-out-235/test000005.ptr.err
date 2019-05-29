@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 745
+assembly.ll line: 4161
+Stack: 
+	#000004161 in hash_find_entry (table, entry1=54493184, bucket_head=37298320, delete=false) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:745
+	#100003865 in hash_insert (table, entry1=54493184) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:916
+	#200002792 in record_file (ht, file=30546704, stats=43221024) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:946
+	#300000427 in copy_internal (src_name=30546704, dst_name=51874912, new_dst, device, ancestors=35680720, x=51041632, command_line_arg, copy_into_self=37428128, rename_succeeded=43496192) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1063
+	#400005991 in __user_main (=1, =35183600)
+	#500010158 in __uClibc_main (argc=1, argv=35183600) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600011881 in macke_copy_internal_main (=1, =35183600)
+Info: 
+	address: (ReadLSB w64 56 argno5)
+	example: 72340172838076673
+	range: [1, 18446744073709551615]
+	next: object at 30376512 of size 15
+		MO278[15] allocated at global:.str1

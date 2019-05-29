@@ -1,0 +1,15 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c
+Line: 1041
+assembly.ll line: 244
+Stack: 
+	#000000244 in tail_forever (f=45891808, n_files, sleep_interval) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:1041
+	#100006202 in __user_main (=1, =62844096)
+	#200009198 in __uClibc_main (argc=1, argv=62844096) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#300010771 in macke_tail_forever_main (=1, =62844096)
+Info: 
+	address: 45891976
+	next: object at 45960864 of size 240
+		MO128[240] allocated at global:_stdio_streams
+	prev: object at 45891808 of size 104
+		MO799[104] allocated at __user_main():  %6 = call i8* @malloc(i64 %5)

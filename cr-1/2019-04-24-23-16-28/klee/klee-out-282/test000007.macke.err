@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-255/test000004.ptr.err
+Stack: 
+	#000010226 in __macke_error_do_move (argno0=53105376, argno1=58255392, argno2=58299088)
+	#100000366 in movefile (source=53105376, dest=58255392, dest_is_dir, x=58299088) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/mv.c:288
+	#200009007 in __user_main (=1, =57743408)
+	#300014368 in __uClibc_main (argc=1, argv=57743408) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400016091 in macke_movefile_main (=1, =57743408)

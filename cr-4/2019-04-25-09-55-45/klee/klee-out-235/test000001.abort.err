@@ -1,0 +1,9 @@
+Error: abort failure
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c
+Line: 462
+assembly.ll line: 186
+Stack: 
+	#000000186 in xlseek (fd, offset, whence, filename=54497296) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:462
+	#100000317 in __user_main (=1, =53893744)
+	#200003059 in __uClibc_main (argc=1, argv=53893744) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#300004456 in macke_xlseek_main (=1, =53893744)

@@ -1,0 +1,18 @@
+/home/jl/deploy/klee22/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-275 --search=sonar --sonar-target=function-call --sonar-target-info=__macke_error_AD_stack_pop --max-time=120 --max-instruction-time=12 --allow-external-sym-calls --libc=uclibc --max-memory=1000 --only-output-states-covering-new --optimize --disable-inlining --output-source=false --posix-runtime --watchdog --stats-write-interval=238 --istats-write-interval=238 --entry-point macke_AD_stack_clear_main /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/bitcode/chain-AD_stack_clear-AD_stack_pop.bc
+PID: 9818
+Started: 2019-04-25 00:39:38
+BEGIN searcher description
+SonarDeepSearcher
+END searcher description
+Finished: 2019-04-25 00:41:52
+Elapsed: 00:02:14
+KLEE: done: explored paths = 172
+KLEE: done: avg. constructs per query = 1449
+KLEE: done: total queries = 888
+KLEE: done: valid queries = 200
+KLEE: done: invalid queries = 688
+KLEE: done: query cex = 888
+
+KLEE: done: total instructions = 3900
+KLEE: done: completed paths = 172
+KLEE: done: generated tests = 14

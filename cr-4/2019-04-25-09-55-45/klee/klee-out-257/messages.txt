@@ -1,0 +1,16 @@
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/string/strcmp.c:34: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:946: ASSERTION FAIL: valid_file_spec (f)
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee22/runtime/POSIX/fd.c:43: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee22/runtime/POSIX/fd.c:1436: memory error: object read only
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:1102: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee22/runtime/POSIX/fd.c:1444: memory error: object read only
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee22/runtime/POSIX/fd.c:1433: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states

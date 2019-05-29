@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/mempcpy.c
+Line: 31
+assembly.ll line: 9729
+Stack: 
+	#000009729 in mempcpy327 (s1=32619840, s2, n) at /home/jl/deploy/klee-uclibc/libc/string/mempcpy.c:31
+	#100000640 in full_filename_ (ds.0.0.2.val, ds.0.0.3.val, filename=42565552) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:366
+	#200000404 in prompt (fd_cwd, ds=26562912, filename=42565552, sbuf=45817504, x=47603936, mode, is_empty=38158480) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:866
+	#300001669 in __user_main (=1, =37550112)
+	#400010113 in __uClibc_main (argc=1, argv=37550112) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500011836 in macke_prompt_main (=1, =37550112)
+Info: 
+	address: (ReadLSB w64 16 argno1)
+	example: 0
+	range: [0, 18446744073709551615]
+	next: object at 24534656 of size 964
+		MO215[964] allocated at global:.str133

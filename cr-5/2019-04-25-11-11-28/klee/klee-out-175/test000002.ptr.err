@@ -1,0 +1,23 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strnlen.c
+Line: 30
+assembly.ll line: 6743
+Stack: 
+	#000006743 in strnlen (s=74635424, max=18446744073709551615) at /home/jl/deploy/klee-uclibc/libc/string/strnlen.c:30
+	#100005234 in _do_one_spec (stream=51246304, ppfs=62291632, count=59157280) at /home/jl/deploy/klee-uclibc/libc/stdio/_vfprintf.c:1679
+	#200004830 in vfprintf (stream=51246304, format=72818720, arg=69479584) at /home/jl/deploy/klee-uclibc/libc/stdio/_vfprintf.c:1919
+	#300004615 in vsnprintf (buf=63186976, size=2000, format=72818720, arg=69479584) at /home/jl/deploy/klee-uclibc/libc/stdio/vsnprintf.c:64
+	#400004577 in snprintf (buf=63186976, size=2000, format=72818720) at /home/jl/deploy/klee-uclibc/libc/stdio/snprintf.c:25
+	#500002137 in vasnprintf (resultbuf=63186976, lengthp=72885840, format=73269552, args=75803536) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/vasnprintf.c:5012
+	#600000286 in rpl_vfprintf (format=73269552, args=75803536) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/vfprintf.c:43
+	#700000156 in klee_compatible_error (status=0, format=73269552) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:97
+	#800000187 in xlseek (fd, offset, whence, filename=74635424) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:445
+	#900004491 in __user_main (=1, =67635904)
+	#1000006997 in __uClibc_main (argc=1, argv=67635904) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#1100008570 in macke_xlseek_main (=1, =67635904)
+Info: 
+	address: 74635425
+	next: object at 74635968 of size 0
+		MO746[0] allocated at klee_init_fds():  %7 = call noalias i8* @malloc(i64 %6) #1, !dbg !5571
+	prev: object at 74635424 of size 1
+		MO774[1] allocated at __user_main():  %11 = call i8* @malloc(i64 %10)

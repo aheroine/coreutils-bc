@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 1433
+assembly.ll line: 49204
+Stack: 
+	#000049204 in __fd_openat (basefd, pathname=77688944, flags=133376, mode=0) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:1433
+	#100050655 in openat (fd, pathname=77688944, flags=133376) at /home/jl/deploy/klee22/runtime/POSIX/fd_32.c:90
+	#200001917 in fd_to_subdirp (fd_cwd, f=77688944, prev_errno=0, subdir_sb=77407632) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1187
+	#300000463 in remove_dir (fd_cwd, ds=40583632, dir=77688944, dir_st=77407632, x=78336240) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1388
+	#400004118 in __user_main (=1, =57017488)
+	#500047002 in __uClibc_main (argc=1, argv=57017488) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600048725 in macke_remove_dir_main (=1, =57017488)
+Info: 
+	address: 77688948
+	next: object at 77722768 of size 8
+		MO12681[8] allocated at fd_to_subdirp():  %call = tail call i32 (i32, i8*, i32, ...)* @openat(i32 %fd_cwd, i8* %f, i32 133376, i32 0), !dbg !5112
+	prev: object at 77688944 of size 4
+		MO907[4] allocated at __user_main():  %12 = call i8* @malloc(i64 %11)

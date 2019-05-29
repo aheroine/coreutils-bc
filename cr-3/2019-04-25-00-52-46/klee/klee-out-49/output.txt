@@ -1,0 +1,251 @@
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/klee/klee-out-49"
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/klee/klee-out-49 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/bitcode/symmains.bc_set_fields_ChangeEntry.bc
+
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: __ctype_get_mb_cur_max
+KLEE: WARNING: undefined reference to function: __errno_location
+KLEE: WARNING: undefined reference to function: __fpending
+KLEE: WARNING: undefined reference to function: __freading
+KLEE: WARNING: undefined reference to function: atexit
+KLEE: WARNING: undefined reference to function: clearerr_unlocked
+KLEE: WARNING: undefined reference to function: close
+KLEE: WARNING: undefined reference to function: fclose
+KLEE: WARNING: undefined reference to function: fdopen
+KLEE: WARNING: undefined reference to function: feof_unlocked
+KLEE: WARNING: undefined reference to function: ferror
+KLEE: WARNING: undefined reference to function: ferror_unlocked
+KLEE: WARNING: undefined reference to function: fflush
+KLEE: WARNING: undefined reference to function: fflush_unlocked
+KLEE: WARNING: undefined reference to function: fgetc
+KLEE: WARNING: undefined reference to function: fileno
+KLEE: WARNING: undefined reference to function: fopen
+KLEE: WARNING: undefined reference to function: fprintf
+KLEE: WARNING: undefined reference to function: fputs
+KLEE: WARNING: undefined reference to function: fputs_unlocked
+KLEE: WARNING: undefined reference to function: fread
+KLEE: WARNING: undefined reference to function: fscanf
+KLEE: WARNING: undefined reference to function: fseeko
+KLEE: WARNING: undefined reference to function: fwrite_unlocked
+KLEE: WARNING: undefined reference to function: getc_unlocked
+KLEE: WARNING: undefined reference to function: getenv
+KLEE: WARNING: undefined reference to function: getopt_long
+KLEE: WARNING: undefined reference to function: iswprint
+KLEE: WARNING: undefined reference to function: lseek
+KLEE: WARNING: undefined reference to function: mbrtowc
+KLEE: WARNING: undefined reference to function: mbsinit
+KLEE: WARNING: undefined reference to function: memchr
+KLEE: WARNING: undefined reference to function: memcmp
+KLEE: WARNING: undefined reference to function: nl_langinfo
+KLEE: WARNING: undefined reference to function: open
+KLEE: WARNING: undefined reference to variable: optarg
+KLEE: WARNING: undefined reference to variable: optind
+KLEE: WARNING: undefined reference to function: posix_fadvise
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING: undefined reference to variable: program_invocation_name
+KLEE: WARNING: undefined reference to variable: program_invocation_short_name
+KLEE: WARNING: undefined reference to function: putchar_unlocked
+KLEE: WARNING: undefined reference to function: qsort
+KLEE: WARNING: undefined reference to function: setlocale
+KLEE: WARNING: undefined reference to variable: stderr
+KLEE: WARNING: undefined reference to variable: stdin
+KLEE: WARNING: undefined reference to variable: stdout
+KLEE: WARNING: undefined reference to function: strcmp
+KLEE: WARNING: undefined reference to function: strcpy
+KLEE: WARNING: undefined reference to function: strlen
+KLEE: WARNING: undefined reference to function: strncmp
+KLEE: WARNING: undefined reference to function: strndup
+KLEE: WARNING: undefined reference to function: strrchr
+KLEE: WARNING: undefined reference to function: strspn
+KLEE: WARNING: undefined reference to function: ungetc
+KLEE: WARNING: undefined reference to function: error (UNSAFE)!
+KLEE: Divergence Instruction: file:/home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c line: 408 test case id is: 1 
+
+KLEE: WARNING ONCE: calling external: __ctype_b_loc()
+KLEE: WARNING ONCE: calling external: error(0, 0, 31591360)
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: invalid byte, character or field list
+KLEE: WARNING ONCE: calling external: fprintf(140454134974080, 31604704, 0)
+Try '(null) --help' for more information.
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: invalid byte, character or field list
+Try '(null) --help' for more information.
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+6.merge state 0x1f2a450 0x1f18180 constraint conflict!
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+5. merge state 0x1f135b0 0x1f12800 constraint conflict!
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:419: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: invalid byte, character or field list
+Try '(null) --help' for more information.
+8.merge state 0x1f3c3a0 0x1f3b570 constraint conflict!
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: error occurs at the different locations in two versions
+old Info: Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c
+Line: 607
+assembly.ll line: 1857
+Stack: 
+	#000001857 in set_fields (fieldstr=31932448) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607
+	#100012307 in main (=1, =27002288)
+Info: 
+	address: 31932449
+	next: object at 31933536 of size 1
+		MO663[1] addr [31933536]:  allocated at set_fields():  %field_found = alloca i8, align 1
+	prev: object at 31932448 of size 1
+		MO653[1] addr [31932448]:  allocated at main():  %6 = call i8* @malloc(i64 %5)
+
+new Info: Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c
+Line: 607
+assembly.ll line: 1857
+Stack: 
+	#000001857 in set_fields (fieldstr=31932448) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607
+	#100012307 in main (=1, =27002288)
+Info: 
+	address: 31932449
+	next: object at 31933536 of size 1
+		MO663[1] addr [31933536]:  allocated at set_fields():  %field_found = alloca i8, align 1
+	prev: object at 31932448 of size 1
+		MO653[1] addr [31932448]:  allocated at main():  %6 = call i8* @malloc(i64 %5)
+
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+8.merge state 0x1f3c3a0 0x1f34780 constraint conflict!
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+8.merge state 0x1f3c3a0 0x1f2a450 constraint conflict!
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+8.merge state 0x1f3c3a0 0x1f135b0 constraint conflict!
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+5. merge state 0x1f0db50 0x1f0cfe0 constraint conflict!
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: invalid byte, character or field list
+Try '(null) --help' for more information.
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+6.merge state 0x1f4d1d0 0x1f1e980 constraint conflict!
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+5. merge state 0x1ee9970 0x1eea0d0 constraint conflict!
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: invalid byte, character or field list
+Try '(null) --help' for more information.
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+6.merge state 0x1f5bd70 0x1f53c20 constraint conflict!
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+5. merge state 0x1e83f70 0x1e7e290 constraint conflict!
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: invalid byte, character or field list
+Try '(null) --help' for more information.
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+6.merge state 0x1f6b270 0x1f63f30 constraint conflict!
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+5. merge state 0x1e7b3b0 0x1e7f8d0 constraint conflict!
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:419: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: invalid byte, character or field list
+Try '(null) --help' for more information.
+8.merge state 0x1f794d0 0x1f78860 constraint conflict!
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+6.merge state 0x1f794d0 0x1f72f50 constraint conflict!
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+8.merge state 0x1f794d0 0x1f71a00 constraint conflict!
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+8.merge state 0x1f794d0 0x1f6b270 constraint conflict!
+/home/jl/deploy/use/build/Release+Asserts/bin/klee: fields and positions are numbered from 1
+Try '(null) --help' for more information.
+8.merge state 0x1f794d0 0x1e7b3b0 constraint conflict!
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: error occurs at the different locations in two versions
+old Info: Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c
+Line: 419
+assembly.ll line: 1245
+Stack: 
+	#000001245 in set_fields (fieldstr=31932448) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:419
+	#100012307 in main (=1, =27002288)
+Info: 
+	address: 31932449
+	next: object at 31933536 of size 1
+		MO663[1] addr [31933536]:  allocated at set_fields():  %field_found = alloca i8, align 1
+	prev: object at 31932448 of size 1
+		MO653[1] addr [31932448]:  allocated at main():  %6 = call i8* @malloc(i64 %5)
+
+new Info: Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c
+Line: 607
+assembly.ll line: 1857
+Stack: 
+	#000001857 in set_fields (fieldstr=31932448) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:607
+	#100012307 in main (=1, =27002288)
+Info: 
+	address: 31932449
+	next: object at 31933536 of size 1
+		MO663[1] addr [31933536]:  allocated at set_fields():  %field_found = alloca i8, align 1
+	prev: object at 31932448 of size 1
+		MO653[1] addr [31932448]:  allocated at main():  %6 = call i8* @malloc(i64 %5)
+
+
+KLEE: done: total instructions = 1490
+KLEE: done: completed paths = 0
+KLEE: done: generated tests = 3
+KLEE: data flow divergences discovered in concerned functions:
+function __main_old in level 6 founded 0 data divergence
+function cut_bytes in level 3 founded 0 data divergence
+function cut_fields in level 3 founded 0 data divergence
+function cut_file in level 5 founded 0 data divergence
+function cut_stream in level 4 founded 0 data divergence
+function is_range_start_index in level 1 founded 0 data divergence
+function macke_cut_bytes_main in level 4 founded 0 data divergence
+function macke_cut_fields_main in level 4 founded 0 data divergence
+function macke_cut_file_main in level 6 founded 0 data divergence
+function macke_cut_stream_main in level 5 founded 0 data divergence
+function macke_is_range_start_index_main in level 2 founded 0 data divergence
+function macke_klee_change_main in level 1 founded 0 data divergence
+function macke_print_kth_main in level 3 founded 0 data divergence
+function main in level 2 founded 0 data divergence
+function print_kth in level 2 founded 0 data divergence
+function set_fields in level 1 founded 0 data divergence
+KLEE: control flow divergences discovered:
+1 control flow divergences are found at File /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c Line: 408
+Total data divergences:0
+0   of data divergences are affected by control divergences
+Total control divergences:1

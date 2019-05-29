@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 745
+assembly.ll line: 4161
+Stack: 
+	#000004161 in hash_find_entry (table=0, entry1=77024624, bucket_head=77023536, delete=false) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:745
+	#100003865 in hash_insert (table=0, entry1=77024624) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:916
+	#200002890 in remember_copied (name=57212032, ino=2, dev=2049) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/cp-hash.c:148
+	#300006019 in __macke_error_remember_copied (argno0=57212032, argno1=2, argno2=2049)
+	#400000901 in copy_internal (src_name=66927296, dst_name=57212032, new_dst, device, ancestors=78576464, x=54949712, command_line_arg, copy_into_self=54755968, rename_succeeded=56905056) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1351
+	#500005991 in __user_main (=1, =56410656)
+	#600008999 in __uClibc_main (argc=1, argv=56410656) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700010722 in macke_copy_internal_main (=1, =56410656)
+Info: 
+	address: 0
+	next: object at 51584512 of size 21
+		MO9[21] allocated at macke_copy_internal_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

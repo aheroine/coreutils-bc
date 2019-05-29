@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/localcharset.c
+Line: 542
+assembly.ll line: 10801
+Stack: 
+	#000010801 in locale_charset () at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/localcharset.c:542
+	#100009080 in gettext_quote (msgid=50968240, s=6) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/quotearg.c:219
+	#200007645 in quotearg_buffer_restyled (buffer=46277968, buffersize=256, arg=51269696, argsize, quoting_style=6, flags=1, quote_these_too=50967096, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/quotearg.c:312
+	#300008967 in quotearg_n_options (n=0, arg=51269696, argsize, options=50967088) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/quotearg.c:797
+	#400007475 in quote_n_mem (n=0, arg=51269696, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/quotearg.c:944
+	#500007488 in quote_mem (arg=51269696, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/quotearg.c:950
+	#600013432 in main (=1, =46339504)
+Info: 
+	address: 140232483350472
+	next: object at 140232483244992 of size 1536
+		MO81[1536] addr [140232483244992]:  (no allocation info)
+	prev: object at 51488128 of size 8
+		MO775[8] addr [51488128]:  allocated at gettext_quote():  %translation = alloca i8*, align 8

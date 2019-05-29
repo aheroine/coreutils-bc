@@ -1,0 +1,2 @@
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-11/test000001.unified.ptr.err
+KLEE: NOTE: now ignoring this error at this location

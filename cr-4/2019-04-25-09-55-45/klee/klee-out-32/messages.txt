@@ -1,0 +1,4 @@
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-32 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/bitcode/symmains.bc_quotearg_n_style_ChangeEntry.bc
+
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:770: abort failure
+KLEE: NOTE: now ignoring this error at this location

@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: state->magic == 9827862
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/cycle-check.c
+Line: 62
+assembly.ll line: 6092
+Stack: 
+	#000006092 in cycle_check (state=49250544, sb=49262896) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/cycle-check.c:62
+	#100011555 in main (=1, =41183104)

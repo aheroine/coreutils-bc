@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-11/test000001.unified.ptr.err
+Stack: 
+	#000000250 in __macke_error_emit_ancillary_info ()
+	#100000158 in usage (status) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:328
+	#200000229 in __user_main (=1, =34857424)
+	#300000863 in __uClibc_main (argc=1, argv=34857424) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400001283 in macke_usage_main (=1, =34857424)

@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 686
+assembly.ll line: 14080
+Stack: 
+	#000014080 in hash_free (table=50385024) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:686
+	#100021035 in main (=1, =41482864)
+Info: 
+	address: (Add w64 8
+          (ReadLSB w64 72 argno0))
+	example: 12370169555311111091
+	range: [12370169555311111091, 12370169555311111091]
+	next: object at 139983060638656 of size 1536
+		MO81[1536] addr [139983060638656]:  (no allocation info)
+	prev: object at 50388848 of size 8
+		MO1014[8] addr [50388848]:  allocated at hash_free():  %cursor = alloca %struct.hash_entry*, align 8

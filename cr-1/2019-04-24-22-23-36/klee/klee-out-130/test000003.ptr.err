@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/Intrinsic/memset.c
+Line: 14
+assembly.ll line: 14772
+Stack: 
+	#000014772 in memset (dst, s=255, count=16) at /home/jl/deploy/klee22/runtime/Intrinsic/memset.c:14
+	#100002550 in AD_push_initial (ds=26253088) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:638
+	#200004546 in __macke_error_AD_push_initial (argno0=26253088)
+	#300000441 in rm_1 (ds=26253088, filename=46072912, x=42262032) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1604
+	#400004520 in __user_main (=1, =38874896)
+	#500009484 in __uClibc_main (argc=1, argv=38874896) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600011207 in macke_rm_1_main (=1, =38874896)
+Info: 
+	address: (Add w64 16
+          (ReadLSB w64 200 argno0))
+	example: 26717968
+	range: [26717968, 26717971]
+	next: object at 26718480 of size 10
+		MO264[10] allocated at global:.str638
+	prev: object at 26717952 of size 11
+		MO263[11] allocated at global:.str537

@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-46/test000001.unified.ptr.err
+Stack: 
+	#000002317 in __macke_error_overwrite_prompt (argno0=69024240, argno1=73448896)
+	#100000259 in abandon_move (x=72961840, dst_name=69024240, dst_sb=73448896) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:979
+	#200001061 in __user_main (=1, =57673456)
+	#300005594 in __uClibc_main (argc=1, argv=57673456) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400007317 in macke_abandon_move_main (=1, =57673456)

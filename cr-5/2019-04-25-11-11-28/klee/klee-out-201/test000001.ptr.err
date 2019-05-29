@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c
+Line: 379
+assembly.ll line: 667
+Stack: 
+	#000000667 in quotearg_buffer_restyled (buffer=50805632, buffersize=256, arg=37788256, quoting_style=0, flags=1, quote_these_too=59813944) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:379
+	#100000944 in quotearg_n_options (arg=37788256, options=59813936) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:704
+	#200000213 in quotearg_char_mem (arg=37788256) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:780
+	#300000220 in quotearg_char (arg=37788256) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:786
+	#400001066 in __macke_error_quotearg_char (argno0=37788256)
+	#500000227 in quotearg_colon (arg=37788256) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:792
+	#600001041 in __user_main (=1, =49135056)
+	#700003641 in __uClibc_main (argc=1, argv=49135056) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800005213 in macke_quotearg_colon_main (=1, =49135056)
+Info: 
+	address: 37788257
+	next: object at 37817056 of size 8
+		MO197[8] allocated at global:.str3
+	prev: object at 37788256 of size 1
+		MO770[1] allocated at __user_main():  %5 = tail call i8* @malloc(i64 %4)

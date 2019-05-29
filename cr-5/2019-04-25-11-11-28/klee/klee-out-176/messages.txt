@@ -1,0 +1,6 @@
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-175/test000002.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/string/strnlen.c:30: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states

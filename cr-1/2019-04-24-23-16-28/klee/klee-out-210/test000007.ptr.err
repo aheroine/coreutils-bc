@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/mempcpy.c
+Line: 31
+assembly.ll line: 4692
+Stack: 
+	#000004692 in mempcpy379 (s1=53368880, s2, n) at /home/jl/deploy/klee-uclibc/libc/string/mempcpy.c:31
+	#100000654 in full_filename_ (ds.0.0.2.val, ds.0.0.3.val, filename=49866064) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:366
+	#200000443 in prompt (fd_cwd, ds=45665264, filename=49866064, sbuf=46713312, x=46184672, is_empty=45605456) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:880
+	#300000704 in remove_entry (fd_cwd, ds=45665264, filename=49866064, st=46713312, x=46184672, dp=48608800) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1023
+	#400001934 in __user_main (=1, =47727968)
+	#500005076 in __uClibc_main (argc=1, argv=47727968) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600006799 in macke_remove_entry_main (=1, =47727968)
+Info: 
+	address: (Add w64 1
+          (ReadLSB w64 16 argno1))
+	example: 42824786
+	range: [42824786, 42824786]
+	next: object at 42825184 of size 2
+		MO125[2] allocated at global:.str9300
+	prev: object at 42824784 of size 2
+		MO124[2] allocated at global:.str8299

@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/utimecmp.c
+Line: 88
+assembly.ll line: 17827
+Stack: 
+	#000017827 in dev_info_hash (x=59023904, table_size) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/utimecmp.c:88
+	#100021881 in main (=1, =49172848)
+Info: 
+	address: 59023904
+	next: object at 59025024 of size 8
+		MO1012[8] addr [59025024]:  allocated at main():  %argno1 = alloca i64
+	prev: object at 59023904 of size 1
+		MO1008[1] addr [59023904]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

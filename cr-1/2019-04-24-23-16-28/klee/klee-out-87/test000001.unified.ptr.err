@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 15691
+Stack: 
+	#000015691 in quotearg_buffer_restyled (buffer=35019680, buffersize=256, arg=35463680, argsize=18446744073709551615, quoting_style=5, o=35613312) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100015301 in quotearg_buffer (buffer=35019680, buffersize=256, arg=35463680, argsize=18446744073709551615, o=35613312) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200016725 in quotearg_n_options (n=0, arg=35463680, argsize=18446744073709551615, options=35613312) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300015448 in quotearg_n_style (n=0, s=5, arg=35463680) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:676
+	#400015140 in quote_n (n=0, name=35463680) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:32
+	#500015150 in quote (name=35463680) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:40
+	#600004278 in copy_reg (src_name=35463680, dst_name=35464400, x=35488112, dst_mode, omitted_permissions, new_dst=35488480, src_sb=35503632) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:288
+	#700020270 in main (=1, =34720496)
+Info: 
+	address: 35463681
+	next: object at 35463888 of size 1
+		MO1066[1] addr [35463888]:  allocated at copy_reg():  %retval = alloca i1, align 1
+	prev: object at 35463680 of size 1
+		MO1008[1] addr [35463680]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

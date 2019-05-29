@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/basename-lgpl.c
+Line: 39
+assembly.ll line: 2673
+Stack: 
+	#000002673 in last_component (name=56166368) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/basename-lgpl.c:39
+	#100010645 in main (=1, =47569856)
+Info: 
+	address: 56166369
+	next: object at 56167488 of size 8
+		MO628[8] addr [56167488]:  allocated at last_component():  %name.addr = alloca i8*, align 8
+	prev: object at 56166368 of size 1
+		MO624[1] addr [56166368]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

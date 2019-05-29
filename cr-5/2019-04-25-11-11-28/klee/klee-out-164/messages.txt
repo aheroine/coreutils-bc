@@ -1,0 +1,4 @@
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/version-etc.c:53: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states

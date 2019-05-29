@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 43
+assembly.ll line: 56585
+Stack: 
+	#000056585 in __fd_stat (path=81037344, buf=81542720) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:43
+	#100058422 in stat (path=81037344, buf=80925376) at /home/jl/deploy/klee22/runtime/POSIX/fd_32.c:106
+	#200000536 in copy_internal (src_name=81037344, dst_name=81121328, new_dst, device=0, ancestors=0, x=81175856, command_line_arg=true, copy_into_self=81251536, rename_succeeded=81265776) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1034
+	#300006274 in __macke_error_copy_internal (argno0=81037344, argno1=81121328, argno2, argno3=0, argno4=0, argno5=81175856, argno6=true, argno7=81251536, argno8=81265776)
+	#400000371 in copy (src_name=81037344, dst_name=81121328, nonexistent_dst, options=81175856, copy_into_self=81251536, rename_succeeded=81265776) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1951
+	#500006151 in __user_main (=1, =56964128)
+	#600053710 in __uClibc_main (argc=1, argv=56964128) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700055433 in macke_copy_main (=1, =56964128)
+Info: 
+	address: 81037345
+	next: object at 81121328 of size 1
+		MO978[1] allocated at __user_main():  %8 = call i8* @malloc(i64 %7)
+	prev: object at 81037344 of size 1
+		MO953[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

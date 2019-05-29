@@ -1,0 +1,19 @@
+Error: check_memory_access: memory error
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 430
+assembly.ll line: 3975
+Stack: 
+	#000003975 in write (fd, buf, count) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:430
+	#100003625 in __stdio_WRITE (stream=71547904, buf, bufsize) at /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c:52
+	#200003173 in __stdio_wcommit (stream=71547904) at /home/jl/deploy/klee-uclibc/libc/stdio/_wcommit.c:25
+	#300003274 in fflush_unlocked (stream=71547904) at /home/jl/deploy/klee-uclibc/libc/stdio/fflush.c:125
+	#400000217 in rpl_fflush (stream=71547904) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fflush.c:146
+	#500000366 in __macke_error_rpl_fflush (argno0=71547904)
+	#600000178 in rpl_fclose (fp=71547904) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fclose.c:71
+	#700000340 in __user_main (=1, =53941504)
+	#800003520 in __uClibc_main (argc=1, argv=53941504) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#900003730 in macke_rpl_fclose_main (=1, =53941504)
+Info: 
+	address: 0
+	next: object at 48303696 of size 29
+		MO8[29] allocated at macke_rpl_fclose_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/basename.c
+Line: 42
+assembly.ll line: 5871
+Stack: 
+	#000005871 in last_component (name=38818096) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/basename.c:42
+	#100011110 in main (=1, =38896864)
+Info: 
+	address: 38818097
+	next: object at 38860736 of size 20
+		MO3[20] addr [38860736]:  allocated at main():  call void @klee_mark_arg_symbolic(i32 %0, i8** %1)
+	prev: object at 38818096 of size 1
+		MO640[1] addr [38818096]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

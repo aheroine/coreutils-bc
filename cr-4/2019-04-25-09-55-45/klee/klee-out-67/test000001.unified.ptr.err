@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/hash.c
+Line: 526
+assembly.ll line: 9328
+Stack: 
+	#000009328 in check_tuning (table=54699984) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/hash.c:526
+	#100017494 in main (=1, =50866544)
+Info: 
+	address: (Add w64 8
+          (ReadLSB w64 40 argno0))
+	example: 12370169555311111091
+	range: [12370169555311111091, 12370169555311111091]
+	next: object at 140641976142784 of size 1536
+		MO81[1536] addr [140641976142784]:  (no allocation info)
+	prev: object at 54703808 of size 8
+		MO846[8] addr [54703808]:  allocated at check_tuning():  %tuning = alloca %struct.hash_tuning*, align 8

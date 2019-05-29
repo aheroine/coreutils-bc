@@ -1,0 +1,8 @@
+Error: ASSERTION FAIL: ((unsigned int) (co->backup_type) <= numbered_backups)
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c
+Line: 1919
+assembly.ll line: 2140
+Stack: 
+	#000002140 in valid_options (co=61167888) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1919
+	#100001844 in copy (src_name=61154512, dst_name=61155232, nonexistent_dst, options=61167888, copy_into_self=61153664, rename_succeeded=61157152) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1939
+	#200020432 in main (=1, =60410624)

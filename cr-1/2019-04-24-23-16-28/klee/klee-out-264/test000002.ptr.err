@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strlen.c
+Line: 22
+assembly.ll line: 14955
+Stack: 
+	#000014955 in strlen (s=56986016) at /home/jl/deploy/klee-uclibc/libc/string/strlen.c:22
+	#100000565 in write_protected_non_symlink (fd_cwd, file=56986016, ds=31601776, buf=57450336) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:817
+	#200000366 in prompt (fd_cwd, ds=31601776, filename=56986016, sbuf=57450336, x=33962080, is_empty=53344672) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:851
+	#300001965 in __macke_error_prompt (argno0, argno1=31601776, argno2=56986016, argno3=57450336, argno4=33962080, argno6=53344672)
+	#400000704 in remove_entry (fd_cwd, ds=31601776, filename=56986016, st=57450336, x=33962080, dp=39571328) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1023
+	#500001934 in __user_main (=1, =33682816)
+	#600015387 in __uClibc_main (argc=1, argv=33682816) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700017110 in macke_remove_entry_main (=1, =33682816)
+Info: 
+	address: 56986017
+	next: object at 57352304 of size 6
+		MO215[6] allocated at global:.str918
+	prev: object at 56986016 of size 1
+		MO855[1] allocated at __user_main():  %12 = call i8* @malloc(i64 %11)

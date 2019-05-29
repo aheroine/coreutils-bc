@@ -1,0 +1,62 @@
+array argno1[8] : w32 -> w8 = symbolic
+array argno2[16] : w32 -> w8 = symbolic
+array macke_sizeof_argno0[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno1[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno2[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno3[4] : w32 -> w8 = symbolic
+array macke_sym_switch_printf_fetchargs[4] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Sle 1
+              N0:(ReadLSB w32 0 macke_sizeof_argno0))
+         (Slt N0 1025)
+         (Eq false (Eq 4 N0))
+         (Eq false (Eq 16 N0))
+         (Eq false (Eq 128 N0))
+         (Eq false (Eq 2 N0))
+         (Sle 1
+              N1:(ReadLSB w32 0 macke_sizeof_argno1))
+         (Slt N1 1025)
+         (Eq false (Eq 4 N1))
+         (Eq false (Eq 16 N1))
+         (Eq false (Eq 128 N1))
+         (Eq false (Eq 2 N1))
+         (Eq 16
+             (ReadLSB w32 0 macke_sizeof_argno2))
+         (Sle 1
+              N2:(ReadLSB w32 0 macke_sizeof_argno3))
+         (Slt N2 1025)
+         (Eq false (Eq 4 N2))
+         (Eq false (Eq 16 N2))
+         (Eq false (Eq 128 N2))
+         (Eq false (Eq 2 N2))
+         (Eq false
+             (Eq 0 N3:(Read w8 0 argno2)))
+         (Eq false (Eq 37 N3))
+         (Eq false
+             (Eq 0 N4:(Read w8 1 argno2)))
+         (Eq false (Eq 37 N4))
+         (Eq false
+             (Eq 0 N5:(Read w8 2 argno2)))
+         (Eq false (Eq 37 N5))
+         (Eq false
+             (Eq 0 N6:(Read w8 3 argno2)))
+         (Eq false (Eq 37 N6))
+         (Eq false
+             (Eq 0 N7:(Read w8 4 argno2)))
+         (Eq false (Eq 37 N7))
+         (Eq 0 (Read w8 5 argno2))
+         (Eq false
+             (Eq 1
+                 (ReadLSB w32 0 macke_sym_switch_printf_fetchargs)))
+         (Ult N8:(ReadLSB w64 0 argno1)
+              5)
+         (Eq false (Eq 0 N8))
+         (Eq false
+             (Eq 5
+                 (Select w64 (Ult N9:(Select w64 (Slt 18446744073709551615 N8) (Shl w64 N8 1) 18446744073709551615)
+                                  5)
+                             5
+                             N9)))]
+        false)

@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 323
+Stack: 
+	#000000323 in quotearg_buffer_restyled (buffer=48813344, buffersize=256, arg=53807680, quoting_style=5, o=44781968) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100000224 in quotearg_buffer (buffer=48813344, buffersize=256, arg=53807680, o=44781968) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200000877 in quotearg_n_options (n=0, arg=53807680, options=44781968) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300000234 in quotearg_n_style (n=0, arg=53807680) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:676
+	#400001040 in __macke_error_quotearg_n_style (argno0=0, argno2=53807680)
+	#500000200 in argmatch_invalid (context=42337632, value=53807680, problem) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/argmatch.c:138
+	#600001013 in __user_main (=1, =44381248)
+	#700003707 in __uClibc_main (argc=1, argv=44381248) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800005302 in macke_argmatch_invalid_main (=1, =44381248)
+Info: 
+	address: 53807681
+	next: object at 53968528 of size 16
+		MO14[16] allocated at macke_argmatch_invalid_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 53807680 of size 1
+		MO804[1] allocated at __user_main():  %8 = call i8* @malloc(i64 %7)

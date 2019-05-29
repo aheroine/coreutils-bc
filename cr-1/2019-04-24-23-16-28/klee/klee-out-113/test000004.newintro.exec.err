@@ -1,0 +1,7 @@
+Error: external call with symbolic argument in new version: unlinkat
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c
+Line: 1071
+assembly.ll line: 10309
+Stack: 
+	#000010309 in remove_entry (fd_cwd, ds=41341552, filename=41336400, st=41358464, x=41360688, dp=35063360) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1071
+	#100020821 in main (=1, =31482112)

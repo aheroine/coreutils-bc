@@ -1,0 +1,24 @@
+KLEE: KLEE: WATCHDOG: watching 21194
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-262"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 62682752)
+KLEE: WARNING ONCE: __macke_error_quotearg_char_mem: MACKE: Summery for quotearg_char_mem reached
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:453: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: WARNING ONCE: calling external: __ctype_b_loc()
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:359: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:343: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+
+KLEE: done: total instructions = 264376
+KLEE: done: completed paths = 15018
+KLEE: done: generated tests = 14

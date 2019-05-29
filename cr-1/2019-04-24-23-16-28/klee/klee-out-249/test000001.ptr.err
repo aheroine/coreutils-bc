@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 43
+assembly.ll line: 6590
+Stack: 
+	#000006590 in __fd_open (pathname=52974224, flags=0, mode=0) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:43
+	#100008749 in open (pathname=52974224, flags=0) at /home/jl/deploy/klee22/runtime/POSIX/fd_32.c:76
+	#200001083 in open_safer (file=52974224, flags=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/open-safer.c:49
+	#300000272 in copy_reg (src_name=52974224, dst_name=64579840, x=52428832, dst_mode, omitted_permissions, new_dst=68452432, src_sb=53844336) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:285
+	#400001995 in __user_main (=1, =53437088)
+	#500004937 in __uClibc_main (argc=1, argv=53437088) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600006532 in macke_copy_reg_main (=1, =53437088)
+Info: 
+	address: 52974225
+	next: object at 52998192 of size 0
+		MO988[0] allocated at copy_reg():  %call = call i32 (i8*, i32, ...)* @open_safer(i8* %src_name, i32 0), !dbg !5663
+	prev: object at 52974224 of size 1
+		MO813[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c
+Line: 841
+assembly.ll line: 2111
+Stack: 
+	#000002111 in triple_hash_no_name (x=62423632, table_size) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:841
+	#100021337 in main (=1, =52572528)
+Info: 
+	address: 62423640
+	next: object at 62424752 of size 8
+		MO1012[8] addr [62424752]:  allocated at main():  %argno1 = alloca i64
+	prev: object at 62423632 of size 1
+		MO1008[1] addr [62423632]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

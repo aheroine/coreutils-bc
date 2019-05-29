@@ -1,0 +1,9 @@
+Error: ASSERTION FAIL: AD_stack_height (ds) == 1 + __extension__ ({ struct obstack const *__o = (&ds->len_stack); (unsigned) (__o->next_free - __o->object_base); }) / sizeof (size_t)
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c
+Line: 705
+assembly.ll line: 295
+Stack: 
+	#000000295 in AD_push (ds=73963120, dir=74164064, dir_sb_from_parent=67402192) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:705
+	#100001326 in __user_main (=1, =64074608)
+	#200004756 in __uClibc_main (argc=1, argv=64074608) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#300006351 in macke_AD_push_main (=1, =64074608)

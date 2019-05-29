@@ -1,0 +1,15 @@
+Error: memory error: object read only
+File: /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c
+Line: 83
+assembly.ll line: 9095
+Stack: 
+	#000009095 in __stdio_WRITE (stream=58613136, buf, bufsize) at /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c:83
+	#100006748 in __stdio_wcommit (stream=58613136) at /home/jl/deploy/klee-uclibc/libc/stdio/_wcommit.c:25
+	#200010278 in fseeko64 (stream=58613136, offset=0, whence) at /home/jl/deploy/klee-uclibc/libc/stdio/fseeko.c:44
+	#300010254 in fseek (stream=58613136, offset=0, whence) at /home/jl/deploy/klee-uclibc/libc/stdio/fseeko.c:28
+	#400009304 in __stdio_trans2w_o (stream=58613136) at /home/jl/deploy/klee-uclibc/libc/stdio/_trans2w.c:69
+	#500008512 in fwrite_unlocked (ptr=54838304, size=1, nmemb=0, stream=58613136) at /home/jl/deploy/klee-uclibc/libc/stdio/fwrite.c:23
+	#600000200 in rpl_vfprintf (fp=58613136, format=54721184, args=77861600) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/vfprintf.c:52
+	#700004396 in __user_main (=1, =67967872)
+	#800008858 in __uClibc_main (argc=1, argv=67967872) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#900010431 in macke_rpl_vfprintf_main (=1, =67967872)

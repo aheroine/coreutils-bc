@@ -1,0 +1,29 @@
+KLEE: KLEE: WATCHDOG: watching 26993
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-212"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 74922384)
+KLEE: WARNING ONCE: __macke_error_quote: MACKE: Summery for quote reached
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-196/test000002.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-196/test000001.macke.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:335: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: WARNING ONCE: calling external: __ctype_b_loc()
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+setting permissions for `'KLEE: WARNING ONCE: calling external: vprintf(56963312, 67933600)
+
+: Bad file descriptorsetting permissions for `'
+: Bad file descriptorKLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+
+KLEE: done: total instructions = 144541
+KLEE: done: completed paths = 4977
+KLEE: done: generated tests = 12

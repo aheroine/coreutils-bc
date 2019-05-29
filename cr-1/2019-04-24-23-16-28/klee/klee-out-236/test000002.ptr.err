@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strlen.c
+Line: 22
+assembly.ll line: 3015
+Stack: 
+	#000003015 in strlen (s=42589648) at /home/jl/deploy/klee-uclibc/libc/string/strlen.c:22
+	#100000198 in find_backup_file_name (file=42589648, backup_type) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/backupfile.c:270
+	#200000648 in __user_main (=1, =43286592)
+	#300003431 in __uClibc_main (argc=1, argv=43286592) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400005026 in macke_find_backup_file_name_main (=1, =43286592)
+Info: 
+	address: 42589649
+	next: object at 42606816 of size 0
+		MO756[0] allocated at klee_init_fds():  %7 = call noalias i8* @malloc(i64 %6) #2, !dbg !5673
+	prev: object at 42589648 of size 1
+		MO772[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

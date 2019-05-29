@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/hash.c
+Line: 423
+assembly.ll line: 7843
+Stack: 
+	#000007843 in hash_string (string=48593328, n_buckets) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/hash.c:423
+	#100021360 in main (=1, =38540288)
+Info: 
+	address: 48593329
+	next: object at 48593680 of size 1
+		MO727[1] addr [48593680]:  allocated at hash_string():  %ch = alloca i8, align 1
+	prev: object at 48593328 of size 1
+		MO715[1] addr [48593328]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

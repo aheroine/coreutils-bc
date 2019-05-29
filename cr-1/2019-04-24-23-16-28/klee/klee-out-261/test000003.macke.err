@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-104/test000001.unified.assert.err
+Stack: 
+	#000002521 in __macke_error_full_filename_ (argno0=50640560, argno1=52372432)
+	#100000186 in write_protected_non_symlink (fd_cwd, file=52372432, ds=50640560, buf=63567584) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:820
+	#200000460 in __user_main (=1, =43320272)
+	#300002865 in __uClibc_main (argc=1, argv=43320272) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400003048 in macke_write_protected_non_symlink_main (=1, =43320272)

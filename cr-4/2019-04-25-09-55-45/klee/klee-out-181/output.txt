@@ -1,0 +1,22 @@
+KLEE: KLEE: WATCHDOG: watching 23890
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-181"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 52962336)
+KLEE: WARNING ONCE: __macke_error_clear_ungetc_buffer_preserving_position: MACKE: Summery for clear_ungetc_buffer_preserving_position reached
+KLEE: ERROR: /home/jl/deploy/klee22/runtime/POSIX/fd.c:430: check_memory_access: memory error
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c:83: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c:83: memory error: object read only
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+
+KLEE: done: total instructions = 15121
+KLEE: done: completed paths = 1380
+KLEE: done: generated tests = 49

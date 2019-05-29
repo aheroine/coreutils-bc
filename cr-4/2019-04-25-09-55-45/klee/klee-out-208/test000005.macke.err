@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-205/test000005.ptr.err
+Stack: 
+	#000001851 in __macke_error_quote (argno0=40400816)
+	#100000235 in fremote (fd, name=40400816) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:896
+	#200001754 in __user_main (=1, =48121248)
+	#300005498 in __uClibc_main (argc=1, argv=48121248) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400009217 in macke_fremote_main (=1, =48121248)

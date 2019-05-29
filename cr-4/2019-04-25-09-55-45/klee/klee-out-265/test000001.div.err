@@ -1,0 +1,10 @@
+Error: divide by zero
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/hash.c
+Line: 494
+assembly.ll line: 142
+Stack: 
+	#000002701 in klee_div_zero_check (z) at /home/jl/deploy/klee22/runtime/Intrinsic/klee_div_zero_check.c:14
+	#100000142 in raw_hasher (data=52949872, n) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/hash.c:494
+	#200000203 in __user_main (=1, =64916320)
+	#300000586 in __uClibc_main (argc=1, argv=64916320) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400000796 in macke_raw_hasher_main (=1, =64916320)

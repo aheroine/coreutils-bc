@@ -1,0 +1,23 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 43
+assembly.ll line: 12231
+Stack: 
+	#000012231 in __fd_open (pathname, flags=2048, mode=0) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:43
+	#100013436 in open (pathname, flags=2048) at /home/jl/deploy/klee22/runtime/POSIX/fd_32.c:76
+	#200001180 in open_safer (file, flags=2048) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/open-safer.c:45
+	#300000501 in recheck (f=27729184, blocking=false) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:944
+	#400002879 in __macke_error_recheck (argno0=27729184, argno1=false)
+	#500000278 in tail_forever (f=27729184, n_files, sleep_interval) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:1107
+	#600002850 in __user_main (=1, =47691280)
+	#700008462 in __uClibc_main (argc=1, argv=47691280) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800012181 in macke_tail_forever_main (=1, =47691280)
+Info: 
+	address: (Add w64 1
+          (ReadLSB w64 0 argno0))
+	example: 38700559
+	range: [38700559, 38700559]
+	next: object at 38760672 of size 69
+		MO97[69] allocated at global:.str39
+	prev: object at 38700544 of size 15
+		MO184[15] allocated at global:spec_base

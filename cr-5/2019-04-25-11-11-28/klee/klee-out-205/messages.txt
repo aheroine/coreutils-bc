@@ -1,0 +1,24 @@
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-144/test000007.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-144/test000005.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-144/test000016.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-144/test000004.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-144/test000006.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:276: abort failure
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:379: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:303: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:294: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:279: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/string/memcmp.c:33: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states

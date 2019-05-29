@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-175/test000002.ptr.err
+Stack: 
+	#000005670 in __macke_error_xlseek (argno0, argno1, argno3=62358480)
+	#100000316 in file_lines (pretty_filename=62358480, fd, n_lines, start_pos, end_pos, read_pos=58375600) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:494
+	#200005554 in __user_main (=1, =57862384)
+	#300008280 in __uClibc_main (argc=1, argv=57862384) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400009853 in macke_file_lines_main (=1, =57862384)

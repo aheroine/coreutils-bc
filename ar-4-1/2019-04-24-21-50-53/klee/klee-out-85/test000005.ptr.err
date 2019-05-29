@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c
+Line: 260
+assembly.ll line: 347
+Stack: 
+	#000000347 in quotearg_buffer_restyled (buffer, buffersize, arg=34191536, argsize, quoting_style, o=42805664) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:260
+	#100000206 in quotearg_buffer (buffer, buffersize, arg=34191536, argsize, o=42805664) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:527
+	#200000883 in quotearg_n_options (n, arg=34191536, argsize, options=42805664) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:625
+	#300001047 in __macke_error_quotearg_n_options (argno0, argno1=34191536, argno2, argno3=42805664)
+	#400000216 in quotearg_n_style_mem (n, s, arg=34191536, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:675
+	#500001019 in __user_main (=1, =37754608)
+	#600004660 in __uClibc_main (argc=1, argv=37754608) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700006282 in macke_quotearg_n_style_mem_main (=1, =37754608)
+Info: 
+	address: 34191537
+	next: object at 34339792 of size 21
+		MO67[21] allocated at macke_quotearg_n_style_mem_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 34191536 of size 1
+		MO785[1] allocated at __user_main():  %9 = call i8* @malloc(i64 %8)

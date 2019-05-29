@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-214/test000001.macke.err
+Stack: 
+	#000002900 in __macke_error_tail_bytes (argno0=40907472, argno1, argno2, argno3=39936288)
+	#100000353 in tail (filename=40907472, fd, n_units, read_pos=39936288) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:1721
+	#200001983 in __user_main (=1, =58113744)
+	#300006602 in __uClibc_main (argc=1, argv=58113744) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400010321 in macke_tail_main (=1, =58113744)

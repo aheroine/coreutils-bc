@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 318
+Stack: 
+	#000000318 in quotearg_buffer_restyled (buffer=50679968, buffersize=256, arg=53288368, quoting_style=0, o=51463104) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100000210 in quotearg_buffer (buffer=50679968, buffersize=256, arg=53288368, o=51463104) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200000827 in quotearg_n_options (arg=53288368, options=51463104) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300000222 in quotearg_char (arg=53288368) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:699
+	#400000952 in __macke_error_quotearg_char (argno0=53288368)
+	#500000229 in quotearg_colon (arg=53288368) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:705
+	#600000929 in __user_main (=1, =59005728)
+	#700003473 in __uClibc_main (argc=1, argv=59005728) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800005068 in macke_quotearg_colon_main (=1, =59005728)
+Info: 
+	address: 53288369
+	next: object at 53436080 of size 17
+		MO103[17] allocated at global:.str137
+	prev: object at 53288368 of size 1
+		MO769[1] allocated at __user_main():  %5 = tail call i8* @malloc(i64 %4)

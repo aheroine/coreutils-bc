@@ -1,0 +1,15 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/printf-args.c
+Line: 42
+assembly.ll line: 17015
+Stack: 
+	#000017015 in printf_fetchargs (args=50154240, a=50154960) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/printf-args.c:42
+	#100019947 in main (=1, =40100960)
+Info: 
+	address: (ReadLSB w64 8 argno1)
+	example: 12370169555311111083
+	range: [12370169555311111083, 12370169555311111083]
+	next: object at 140514136636352 of size 1536
+		MO81[1536] addr [140514136636352]:  (no allocation info)
+	prev: object at 50154960 of size 16
+		MO726[16] addr [50154960]:  allocated at main():  %11 = call i8* @malloc(i64 %10)

@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c
+Line: 343
+assembly.ll line: 420
+Stack: 
+	#000000420 in quotearg_buffer_restyled (buffer=60987616, buffersize=256, arg=68292064, argsize, quoting_style=8, flags=1, quote_these_too=44795112, left_quote=45727328, right_quote=45771648) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:343
+	#100001027 in quotearg_n_options (arg=68292064, argsize, options=44795104) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#200000261 in quotearg_n_custom_mem (left_quote=45727328, right_quote=45771648, arg=68292064, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:913
+	#300001637 in __macke_error_quotearg_n_custom_mem (argno1=45727328, argno2=45771648, argno3=68292064, argno4)
+	#400000268 in quotearg_custom_mem (left_quote=45727328, right_quote=45771648, arg=68292064, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:927
+	#500001606 in __user_main (=1, =64944192)
+	#600005738 in __uClibc_main (argc=1, argv=64944192) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700009457 in macke_quotearg_custom_mem_main (=1, =64944192)
+Info: 
+	address: 68292065
+	next: object at 68542272 of size 15
+		MO7[15] allocated at macke_quotearg_custom_mem_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 68292064 of size 1
+		MO860[1] allocated at __user_main():  %11 = call i8* @malloc(i64 %10)

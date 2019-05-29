@@ -1,0 +1,4 @@
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:393: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:653: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location

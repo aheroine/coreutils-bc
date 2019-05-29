@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c
+Line: 316
+assembly.ll line: 337
+Stack: 
+	#000000337 in quotearg_buffer_restyled (buffer=0, buffersize=0, arg=60893696, argsize, quoting_style, flags, quote_these_too=68061368, left_quote, right_quote) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:316
+	#100000244 in quotearg_alloc_mem (arg=60893696, argsize, o=68061360) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:703
+	#200001569 in __macke_error_quotearg_alloc_mem (argno0=60893696, argno1, argno3=68061360)
+	#300000224 in quotearg_alloc (arg=60893696, argsize, o=68061360) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:686
+	#400001543 in __user_main (=1, =66463632)
+	#500005780 in __uClibc_main (argc=1, argv=66463632) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600009499 in macke_quotearg_alloc_main (=1, =66463632)
+Info: 
+	address: (Add w64 1
+          (ReadLSB w64 40 argno2))
+	example: 45380255
+	range: [45380255, 45380255]
+	next: object at 45380656 of size 11
+		MO153[11] allocated at global:__psfs_do_numeric.nan_inf_str
+	prev: object at 45380240 of size 15
+		MO152[15] allocated at global:spec_base

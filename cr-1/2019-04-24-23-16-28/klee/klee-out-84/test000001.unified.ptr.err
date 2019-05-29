@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 15691
+Stack: 
+	#000015691 in quotearg_buffer_restyled (buffer=65608800, buffersize=256, arg=66052976, argsize=18446744073709551615, quoting_style=5, o=65958544) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100015301 in quotearg_buffer (buffer=65608800, buffersize=256, arg=66052976, argsize=18446744073709551615, o=65958544) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200016725 in quotearg_n_options (n=0, arg=66052976, argsize=18446744073709551615, options=65958544) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300015448 in quotearg_n_style (n=0, s=5, arg=66052976) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:676
+	#400015140 in quote_n (n=0, name=66052976) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:32
+	#500015150 in quote (name=66052976) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:40
+	#600011266 in set_acl (name=66052976, desc, mode) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/acl.c:403
+	#700020202 in main (=1, =65309424)
+Info: 
+	address: 66052977
+	next: object at 66053072 of size 4
+		MO1051[4] addr [66053072]:  allocated at quote_n():  %n.addr = alloca i32, align 4
+	prev: object at 66052976 of size 1
+		MO1008[1] addr [66052976]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

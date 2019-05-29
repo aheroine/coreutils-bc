@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strlen.c
+Line: 22
+assembly.ll line: 2614
+Stack: 
+	#000002614 in strlen (s=40104128) at /home/jl/deploy/klee-uclibc/libc/string/strlen.c:22
+	#100000177 in write_protected_non_symlink (fd_cwd, file=40104128, ds=27287520, buf=34684608) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:817
+	#200000460 in __user_main (=1, =39779840)
+	#300002865 in __uClibc_main (argc=1, argv=39779840) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400003048 in macke_write_protected_non_symlink_main (=1, =39779840)
+Info: 
+	address: 40104129
+	next: object at 40120544 of size 58
+		MO45[58] allocated at macke_write_protected_non_symlink_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 40104128 of size 1
+		MO755[1] allocated at __user_main():  %7 = call i8* @malloc(i64 %6)

@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 657
+assembly.ll line: 247
+Stack: 
+	#000000247 in hash_free (table) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:657
+	#100000397 in __macke_error_hash_free (argno0)
+	#200000173 in AD_stack_pop (ds=33485648) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:394
+	#300000374 in __user_main (=1, =49513808)
+	#400001223 in __uClibc_main (argc=1, argv=49513808) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500001406 in macke_AD_stack_pop_main (=1, =49513808)
+Info: 
+	address: (ReadLSB w64 N0:(Extract w32 0 (Add w64 18446603605612162624
+                                         (ReadLSB w64 N1:(Extract w32 0 (Add w64 18446603605570681024
+                                                                                 (ReadLSB w64 200 argno0))) const_arr2))) const_arr5)
+	example: 4294967296
+	range: [4294967296, 4294967296]
+	next: object at 31219424 of size 97
+		MO1[97] allocated at macke_AD_stack_pop_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

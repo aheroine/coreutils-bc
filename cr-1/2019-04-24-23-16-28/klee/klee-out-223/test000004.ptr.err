@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strlen.c
+Line: 22
+assembly.ll line: 8494
+Stack: 
+	#000008494 in strlen (s=46249920) at /home/jl/deploy/klee-uclibc/libc/string/strlen.c:22
+	#100005804 in xstrdup (string=46249920) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/xmalloc.c:122
+	#200002881 in remember_copied (name=46249920, ino=2, dev=2049) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/cp-hash.c:144
+	#300000901 in copy_internal (src_name=43288592, dst_name=46249920, new_dst, device, ancestors=27666928, x=38391952, command_line_arg, copy_into_self=30459616, rename_succeeded=29161488) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1351
+	#400005991 in __user_main (=1, =27548112)
+	#500008941 in __uClibc_main (argc=1, argv=27548112) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600010664 in macke_copy_internal_main (=1, =27548112)
+Info: 
+	address: 46249921
+	next: object at 48558096 of size 18
+		MO31[18] allocated at macke_copy_internal_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 46249920 of size 1
+		MO402195[1] allocated at __user_main():  %8 = call i8* @malloc(i64 %7)

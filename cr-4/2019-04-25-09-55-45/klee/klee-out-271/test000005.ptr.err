@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strlen.c
+Line: 22
+assembly.ll line: 5166
+Stack: 
+	#000005166 in strlen (s=50251792) at /home/jl/deploy/klee-uclibc/libc/string/strlen.c:22
+	#100000360 in quotearg_buffer_restyled (buffer, buffersize, arg=51692752, quoting_style=8, flags=1, quote_these_too=49625016, left_quote=67033104, right_quote=50251792) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:320
+	#200001045 in quotearg_n_options (n, arg=51692752, options=49625008) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#300000270 in quotearg_n_custom_mem (n, left_quote=67033104, right_quote=50251792, arg=51692752) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:913
+	#400001683 in __macke_error_quotearg_n_custom_mem (argno0, argno1=67033104, argno2=50251792, argno3=51692752)
+	#500000259 in quotearg_n_custom (n, left_quote=67033104, right_quote=50251792, arg=51692752) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:902
+	#600001652 in __user_main (=1, =69924912)
+	#700005783 in __uClibc_main (argc=1, argv=69924912) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800009502 in macke_quotearg_n_custom_main (=1, =69924912)
+Info: 
+	address: 50251793
+	next: object at 50394400 of size 11
+		MO48[11] allocated at macke_quotearg_n_custom_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 50251792 of size 1
+		MO840[1] allocated at __user_main():  %10 = call i8* @malloc(i64 %9)

@@ -1,0 +1,18 @@
+/home/jl/deploy/klee22/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-195 --search=sonar --sonar-target=function-call --sonar-target-info=__macke_error_quote_n --max-time=120 --max-instruction-time=12 --allow-external-sym-calls --libc=uclibc --max-memory=1000 --only-output-states-covering-new --optimize --disable-inlining --output-source=false --posix-runtime --watchdog --stats-write-interval=238 --istats-write-interval=238 --entry-point macke_emit_verbose_main /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/bitcode/chain-emit_verbose-quote_n.bc
+PID: 19149
+Started: 2019-04-24 23:27:47
+BEGIN searcher description
+SonarDeepSearcher
+END searcher description
+Finished: 2019-04-24 23:29:48
+Elapsed: 00:02:01
+KLEE: done: explored paths = 4023
+KLEE: done: avg. constructs per query = 50
+KLEE: done: total queries = 899
+KLEE: done: valid queries = 110
+KLEE: done: invalid queries = 789
+KLEE: done: query cex = 899
+
+KLEE: done: total instructions = 140941
+KLEE: done: completed paths = 4023
+KLEE: done: generated tests = 10

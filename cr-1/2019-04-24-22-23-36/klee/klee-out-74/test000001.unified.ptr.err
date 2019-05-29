@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash-pjw.c
+Line: 37
+assembly.ll line: 5249
+Stack: 
+	#000005249 in hash_pjw (x=37839280, tablesize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash-pjw.c:37
+	#100012046 in main (=1, =37917936)
+Info: 
+	address: 37839281
+	next: object at 37881920 of size 122
+		MO97[122] addr [37881920]:  allocated at global:.str9
+	prev: object at 37839280 of size 1
+		MO640[1] addr [37839280]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

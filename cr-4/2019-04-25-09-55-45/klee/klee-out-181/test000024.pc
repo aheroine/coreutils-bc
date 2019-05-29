@@ -1,0 +1,44 @@
+array argno0[216] : w32 -> w8 = symbolic
+array macke_sizeof_argno0[4] : w32 -> w8 = symbolic
+array macke_sym_switch_clear_ungetc_buffer_preserving_position[4] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Sle 1
+              N0:(ReadLSB w32 0 macke_sizeof_argno0))
+         (Slt N0 1025)
+         (Eq false (Eq 4 N0))
+         (Eq false (Eq 16 N0))
+         (Eq false (Eq 128 N0))
+         (Eq false (Eq 2 N0))
+         (Eq false
+             (Eq 0
+                 (And w32 N1:(ZExt w32 N2:(ReadLSB w16 0 argno0))
+                          35)))
+         (Eq false
+             (Eq 1
+                 (ReadLSB w32 0 macke_sym_switch_clear_ungetc_buffer_preserving_position)))
+         (Eq false
+             (Eq 0
+                 (And w32 (ReadLSB w32 0 argno0)
+                          256)))
+         (Eq (ReadLSB w64 16 argno0)
+             (ReadLSB w64 8 argno0))
+         (Eq (ReadLSB w64 40 argno0)
+             N3:(ReadLSB w64 32 argno0))
+         (Eq false
+             (Eq 0
+                 (ReadLSB w64 72 argno0)))
+         (Eq 0 (And w16 N2 64))
+         (Eq 0
+             (Select w32 (Eq 0 N4:(And w32 N1 3))
+                         0
+                         (Add w32 4294967295 N4)))
+         (Slt (Select w32 (Slt (Shl w64 N5:(Sub w64 N3
+                                                    (ReadLSB w64 24 argno0))
+                                        32)
+                               0)
+                          (Sub w32 0 N6:(Extract w32 0 N5))
+                          N6)
+              0)]
+        false)

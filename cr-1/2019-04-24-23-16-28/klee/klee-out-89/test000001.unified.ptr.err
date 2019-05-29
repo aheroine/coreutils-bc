@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 15691
+Stack: 
+	#000015691 in quotearg_buffer_restyled (buffer=34524832, buffersize=256, arg=34968848, argsize=18446744073709551615, quoting_style=5, o=35055040) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100015301 in quotearg_buffer (buffer=34524832, buffersize=256, arg=34968848, argsize=18446744073709551615, o=35055040) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200016725 in quotearg_n_options (n=0, arg=34968848, argsize=18446744073709551615, options=35055040) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300015448 in quotearg_n_style (n=0, s=5, arg=34968848) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:676
+	#400015140 in quote_n (n=0, name=34968848) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:32
+	#500015150 in quote (name=34968848) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:40
+	#600005325 in copy_dir (src_name_in=34968848, dst_name_in=34969568, new_dst, src_sb=34989984, ancestors=35014224, x=35021600, copy_into_self=34982512) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:156
+	#700020334 in main (=1, =26065520)
+Info: 
+	address: 34968849
+	next: object at 34969296 of size 8
+		MO1086[8] addr [34969296]:  allocated at copy_dir():  %dst_name = alloca i8*, align 8
+	prev: object at 34968848 of size 1
+		MO1008[1] addr [34968848]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

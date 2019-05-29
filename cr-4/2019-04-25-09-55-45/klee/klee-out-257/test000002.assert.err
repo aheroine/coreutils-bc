@@ -1,0 +1,11 @@
+Error: ASSERTION FAIL: valid_file_spec (f)
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c
+Line: 946
+assembly.ll line: 513
+Stack: 
+	#000000513 in recheck (f=27729184, blocking=false) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:946
+	#100002879 in __macke_error_recheck (argno0=27729184, argno1=false)
+	#200000278 in tail_forever (f=27729184, n_files, sleep_interval) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:1107
+	#300002850 in __user_main (=1, =47691280)
+	#400008462 in __uClibc_main (argc=1, argv=47691280) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500012181 in macke_tail_forever_main (=1, =47691280)

@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c
+Line: 249
+assembly.ll line: 5559
+Stack: 
+	#000005559 in quotearg_buffer_restyled (buffer=28747808, buffersize=256, arg=28918848, argsize=18446744073709551615, quoting_style=5, o=28924784) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:249
+	#100005169 in quotearg_buffer (buffer=28747808, buffersize=256, arg=28918848, argsize=18446744073709551615, o=28924784) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:527
+	#200006593 in quotearg_n_options (n=0, arg=28918848, argsize=18446744073709551615, options=28924784) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:625
+	#300005316 in quotearg_n_style (n=0, s=5, arg=28918848) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:667
+	#400005008 in quote_n (n=0, name=28918848) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quote.c:32
+	#500005018 in quote (name=28918848) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quote.c:40
+	#600007474 in main (=1, =24477312)
+Info: 
+	address: 28918849
+	next: object at 28918912 of size 8
+		MO455[8] addr [28918912]:  allocated at quotearg_n_style():  %arg.addr = alloca i8*, align 8
+	prev: object at 28918848 of size 1
+		MO440[1] addr [28918848]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

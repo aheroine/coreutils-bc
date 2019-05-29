@@ -1,0 +1,7 @@
+Error: abort failure
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c
+Line: 462
+assembly.ll line: 4188
+Stack: 
+	#000004188 in xlseek (fd, offset, whence, filename=31801904) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:462
+	#100017129 in main (=1, =22602480)

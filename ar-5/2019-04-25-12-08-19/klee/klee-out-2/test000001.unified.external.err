@@ -1,0 +1,8 @@
+Error: failed external call: fseeko
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/fseeko.c
+Line: 152
+assembly.ll line: 9346
+Stack: 
+	#000009346 in rpl_fseeko (fp=55820624, offset=0, whence=1) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/fseeko.c:152
+	#100009214 in clear_ungetc_buffer_preserving_position (fp=55820624) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/fflush.c:44
+	#200010575 in main (=1, =47836352)

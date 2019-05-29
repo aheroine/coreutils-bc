@@ -1,0 +1,5 @@
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 46996304)
+KLEE: WARNING ONCE: calling external: printf(54501872, 0)
+KLEE: WARNING ONCE: __macke_error_emit_ancillary_info: MACKE: Summery for emit_ancillary_info reached

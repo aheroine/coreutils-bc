@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strlen.c
+Line: 22
+assembly.ll line: 2995
+Stack: 
+	#000002995 in strlen (s=43998368) at /home/jl/deploy/klee-uclibc/libc/string/strlen.c:22
+	#100000782 in xstrdup (string=43998368) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/xmalloc.c:122
+	#200000170 in remember_copied (name=43998368, ino, dev) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/cp-hash.c:144
+	#300000838 in __user_main (=1, =39513792)
+	#400003345 in __uClibc_main (argc=1, argv=39513792) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500004940 in macke_remember_copied_main (=1, =39513792)
+Info: 
+	address: 43998369
+	next: object at 44871584 of size 46
+		MO57[46] allocated at macke_remember_copied_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 43998368 of size 1
+		MO767[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

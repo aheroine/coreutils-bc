@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c
+Line: 279
+assembly.ll line: 334
+Stack: 
+	#000000334 in quotearg_buffer_restyled (buffer, buffersize, arg=52178064, quoting_style=6, flags=1, quote_these_too=63233544) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:279
+	#100000963 in quotearg_n_options (n, arg=52178064, options=63233536) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:704
+	#200000201 in quotearg_n_style (n, arg=52178064) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:751
+	#300001120 in __macke_error_quotearg_n_style (argno0, argno2=52178064)
+	#400000192 in quote_n (n, name=52178064) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:31
+	#500001095 in __user_main (=1, =50709872)
+	#600003753 in __uClibc_main (argc=1, argv=50709872) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700005325 in macke_quote_n_main (=1, =50709872)
+Info: 
+	address: 52178065
+	next: object at 52189040 of size 15
+		MO7[15] allocated at macke_quote_n_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 52178064 of size 1
+		MO775[1] allocated at __user_main():  %7 = call i8* @malloc(i64 %6)

@@ -1,0 +1,6 @@
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/hash.c:866: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/hash.c:877: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/hash.c:251: invalid function pointer
+KLEE: NOTE: now ignoring this error at this location

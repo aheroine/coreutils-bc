@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 746
+assembly.ll line: 4163
+Stack: 
+	#000004163 in hash_find_entry (table, entry1=44405680, bucket_head=47224768, delete=false) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:746
+	#100003865 in hash_insert (table, entry1=44405680) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:916
+	#200002792 in record_file (ht, file=43288592, stats=34457392) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:946
+	#300000427 in copy_internal (src_name=43288592, dst_name=46249920, new_dst, device, ancestors=27666928, x=38391952, command_line_arg, copy_into_self=30459616, rename_succeeded=29161488) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1063
+	#400005991 in __user_main (=1, =27548112)
+	#500008941 in __uClibc_main (argc=1, argv=27548112) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600010664 in macke_copy_internal_main (=1, =27548112)
+Info: 
+	address: (Add w64 48
+          (ReadLSB w64 56 argno5))
+	example: 140518711650128
+	range: [140518711650128, 140518711650128]
+	next: object at 140518670166976 of size 1536
+		MO81[1536] (no allocation info)
+	prev: object at 51508912 of size 18
+		MO77[18] allocated at macke_copy_internal_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

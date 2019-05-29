@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 43
+assembly.ll line: 55021
+Stack: 
+	#000055021 in __fd_open (pathname=64462864, flags=67584, mode=0) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:43
+	#100057826 in open (pathname=64462864, flags=67584) at /home/jl/deploy/klee22/runtime/POSIX/fd_32.c:76
+	#200050266 in opendir (name=64462864) at /home/jl/deploy/klee-uclibc/libc/misc/dirent/opendir.c:43
+	#300005013 in savedir (dir=64462864) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/savedir.c:120
+	#400002167 in copy_dir (src_name_in=64462864, dst_name_in=64467136, new_dst, src_sb=64446048, ancestors=64755248, x=64786736, copy_into_self=64862528) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:151
+	#500005856 in __user_main (=1, =49953680)
+	#600053128 in __uClibc_main (argc=1, argv=49953680) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700054851 in macke_copy_dir_main (=1, =49953680)
+Info: 
+	address: 64462865
+	next: object at 64467136 of size 1
+		MO971[1] allocated at __user_main():  %8 = call i8* @malloc(i64 %7)
+	prev: object at 64462864 of size 1
+		MO946[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

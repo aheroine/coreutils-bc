@@ -1,0 +1,11 @@
+Error: abort failure
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/src/cut.c
+Line: 280
+assembly.ll line: 142
+Stack: 
+	#000000142 in is_printable_field (i=0) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/src/cut.c:280
+	#100000280 in __macke_error_is_printable_field (argno0=0)
+	#200000116 in print_kth (k, range_start=66658320) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/src/cut.c:317
+	#300000266 in __user_main (=1, =57943264)
+	#400000576 in __uClibc_main (argc=1, argv=57943264) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500000786 in macke_print_kth_main (=1, =57943264)

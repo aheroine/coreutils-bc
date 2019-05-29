@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/src/cut.c
+Line: 274
+assembly.ll line: 2294
+Stack: 
+	#000002294 in mark_printable_field (i) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/src/cut.c:274
+	#100007584 in main (=1, =42426000)
+Info: 
+	address: (UDiv w64 (ReadLSB w64 0 argno0)
+           8)
+	example: 1546271194413888885
+	range: [1546271194413888885, 1546271194413888885]
+	next: object at 140266056084416 of size 1536
+		MO81[1536] addr [140266056084416]:  (no allocation info)
+	prev: object at 46861264 of size 8
+		MO439[8] addr [46861264]:  allocated at mark_printable_field():  %n = alloca i64, align 8

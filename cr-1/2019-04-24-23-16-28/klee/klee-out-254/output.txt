@@ -1,0 +1,1684 @@
+KLEE: KLEE: WATCHDOG: watching 16199
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-254"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 54926656)
+KLEE: ERROR: /home/jl/deploy/klee22/runtime/POSIX/fd.c:43: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee22/runtime/POSIX/fd.c:1433: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: WARNING ONCE: __macke_error_copy_internal: MACKE: Summery for copy_internal reached
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:745: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+omitting directory `//root'
+omitting directory omitting directory `//bin'
+`//root'
+omitting directory `//bin'
+omitting directory `//boot'
+omitting directory `//boot'
+omitting directory `//snap'
+omitting directory `//snap'
+omitting directory `//lib64'
+omitting directory `//lib64'
+omitting directory `//media'
+omitting directory `//media'
+omitting directory `//opt'
+omitting directory `//opt'
+omitting directory `//etc'
+omitting directory KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:251: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING ONCE: calling external: printf(28795024, 55098112, 101154144)
+
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+cannot create link cannot create symbolic link 
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+cannot create symbolic link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link `vmlinuz'cannot create link cannot create link cannot create symbolic link cannot create symbolic link 
+cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create link cannot create link 
+cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to 
+`vmlinuz'`vmlinuz'
+
+
+`vmlinuz'`vmlinuz'
+
+
+`vmlinuz'
+
+`vmlinuz'`vmlinuz'`vmlinuz'
+
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+
+
+
+
+
+
+
+
+
+
+
+`//etc'`//vmlinuz'
+cannot create symbolic link 
+cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz'cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz' to  to  to  to  to `vmlinuz' to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to  to  to  to  to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to  to `vmlinuz' to  to 
+ to 
+ to 
+
+
+`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+
+
+
+
+
+
+
+
+
+
+
+`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'
+
+
+
+`//vmlinuz'
+`//vmlinuz'
+`//vmlinuz'
+`//vmlinuz'`//vmlinuz'`//vmlinuz' -> `vmlinuz'`//vmlinuz' -> `vmlinuz'
+
+
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+`//vmlinuz'KLEE: WARNING: link: ignoring (EPERM)
+cannot open `//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'
+
+`//vmlinuz' for reading
+
+
+
+
+cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link KLEE: WARNING: symlink: ignoring (EPERM)
+cannot create symbolic link KLEE: WARNING: link: ignoring (EPERM)
+cannot create symbolic link KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to  to  to  to  to  to `//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'
+
+
+
+
+
+
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot open cannot open cannot open cannot open cannot open cannot open cannot open cannot open cannot open `vmlinuz'cannot open `vmlinuz'`vmlinuz'`vmlinuz'cannot open `vmlinuz'
+`vmlinuz'
+
+
+
+`vmlinuz'
+
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+
+
+
+
+`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz' for reading for reading`//vmlinuz'`//vmlinuz' for reading
+
+`//vmlinuz'`//vmlinuz'`//vmlinuz' for reading
+ for reading`//vmlinuz' for reading for reading
+
+ for reading for reading for reading
+
+ for reading
+
+
+
+cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create link cannot create link cannot open cannot open cannot open cannot open cannot open cannot open `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'cannot open `vmlinuz'cannot open `vmlinuz'cannot open `vmlinuz' to `vmlinuz'cannot open cannot open `vmlinuz' to `vmlinuz'
+
+`vmlinuz'cannot open  to `vmlinuz' to `vmlinuz'
+
+`vmlinuz'
+`vmlinuz' to `vmlinuz'`vmlinuz'
+`vmlinuz' to 
+`vmlinuz'`vmlinuz' to `vmlinuz'`vmlinuz' to 
+ to `vmlinuz'`vmlinuz' to 
+ to  to `//vmlinuz'
+
+
+`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz' for reading for reading
+ for reading for reading for reading for reading`//vmlinuz'
+`//vmlinuz'`//vmlinuz'
+
+`//vmlinuz'`//vmlinuz'`//vmlinuz'
+
+`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz' for reading for reading for reading
+
+`//vmlinuz'
+
+ for reading for reading
+ for reading
+`//vmlinuz'`//vmlinuz'`//vmlinuz'
+`//vmlinuz'
+
+
+cannot create symbolic link 
+`//vmlinuz'`//vmlinuz'
+
+
+
+cannot create symbolic link `//vmlinuz'cannot create symbolic link cannot create symbolic link 
+cannot create symbolic link 
+cannot create symbolic link 
+cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz'`vmlinuz' to  to  to `vmlinuz' to  to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz' to  to  to  to  to `//vmlinuz'`//vmlinuz'
+`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'
+
+
+
+
+`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'
+
+
+
+
+
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/basename.c:39: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/basename.c:42: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+omitting directory `//root'
+omitting directory `//bin'
+omitting directory `//boot'
+omitting directory `//snap'
+omitting directory `//lib64'
+omitting directory `//media'
+omitting directory `//opt'
+omitting directory `//etc'
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'
+`vmlinuz'
+
+
+`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+
+`vmlinuz'
+
+
+
+
+`vmlinuz'`vmlinuz'
+
+
+`vmlinuz'
+
+
+
+
+
+
+
+`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'
+
+
+
+
+
+
+cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz' to `vmlinuz'`vmlinuz'
+
+
+ to `vmlinuz'`vmlinuz'
+`vmlinuz'
+`vmlinuz' to  to `vmlinuz'`vmlinuz' to  to `vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz' to  to 
+`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+ to `vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'
+
+
+
+
+
+`vmlinuz'
+
+
+`vmlinuz' to `vmlinuz'
+
+`vmlinuz'
+`vmlinuz'
+`vmlinuz'
+
+`vmlinuz'`vmlinuz'
+
+`vmlinuz'`vmlinuz'`vmlinuz'
+
+
+
+
+
+
+
+
+`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'
+`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'
+
+`//vmlinuz'
+
+`//vmlinuz'
+
+
+
+`//vmlinuz'cannot create symbolic link 
+
+
+cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz' to  to  to  to  to  to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz' to  to  to  to `//vmlinuz'`//vmlinuz'`//vmlinuz'
+`//vmlinuz'`//vmlinuz'`//vmlinuz'`//vmlinuz'
+
+
+
+
+
+`//vmlinuz'`//vmlinuz'`//vmlinuz'
+`//vmlinuz'`//vmlinuz'
+
+
+
+omitting directory omitting directory `///root'`///root'
+
+omitting directory omitting directory `///bin'`///bin'
+
+omitting directory omitting directory `///boot'`///boot'
+
+omitting directory omitting directory `///snap'`///snap'
+
+omitting directory omitting directory `///lib64'`///lib64'
+
+omitting directory omitting directory `///media'`///media'
+
+omitting directory omitting directory `///opt'
+`///opt'
+omitting directory omitting directory `///etc'
+`///etc'
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot open cannot open cannot open cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot open cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot open cannot open cannot create symbolic link `vmlinuz'`vmlinuz'cannot open `vmlinuz'cannot open `vmlinuz'cannot open cannot open cannot open `vmlinuz'cannot open 
+
+`vmlinuz'
+
+`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'
+`vmlinuz'
+
+`vmlinuz'
+`vmlinuz'
+
+`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'
+`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'
+
+`vmlinuz'`vmlinuz'`vmlinuz'
+
+`vmlinuz'
+
+
+`vmlinuz'
+
+
+
+
+
+
+
+`vmlinuz'`///vmlinuz'
+`vmlinuz'`///vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'
+`///vmlinuz'`vmlinuz'`vmlinuz'
+`///vmlinuz'`vmlinuz'`vmlinuz'
+
+`vmlinuz'`vmlinuz'
+`///vmlinuz'
+ for reading
+`vmlinuz'`///vmlinuz'
+
+ for reading`///vmlinuz'
+
+
+ for reading
+
+`///vmlinuz' for reading`///vmlinuz'
+`///vmlinuz' for reading
+`///vmlinuz'`///vmlinuz'
+ for reading
+ for reading
+ for reading
+ for reading for reading
+ for reading for reading
+
+
+
+
+cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create link cannot create link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot open cannot create symbolic link cannot open cannot create link cannot create link cannot create symbolic link cannot create link cannot open cannot open cannot create link cannot create symbolic link cannot open cannot create symbolic link cannot open cannot create symbolic link `vmlinuz'cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'cannot open cannot create symbolic link cannot open  to `vmlinuz'`vmlinuz'cannot open cannot open `vmlinuz' to `vmlinuz'`vmlinuz'cannot open  to `vmlinuz'
+cannot open `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+
+ to 
+`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'
+`vmlinuz' to `vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz' to 
+`vmlinuz'
+ to  to `vmlinuz'
+ to  to  to  to 
+
+`vmlinuz'`vmlinuz' to 
+
+`vmlinuz'`vmlinuz'
+ to 
+ to `vmlinuz'`vmlinuz'
+ to `vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'`///vmlinuz'
+`vmlinuz' to 
+`vmlinuz'
+`vmlinuz'`///vmlinuz'
+`vmlinuz'
+
+
+
+ to `vmlinuz'
+`vmlinuz'
+`vmlinuz'
+
+
+`///vmlinuz'`///vmlinuz'`vmlinuz' to `///vmlinuz'
+
+ to `vmlinuz'`vmlinuz' for reading
+
+ to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' for reading`///vmlinuz'
+ to 
+`vmlinuz'
+`vmlinuz'`///vmlinuz'`vmlinuz'`vmlinuz' for reading for reading for reading
+`///vmlinuz'`vmlinuz'
+
+
+
+`///vmlinuz'
+`///vmlinuz'`///vmlinuz'`///vmlinuz'
+
+
+`///vmlinuz'
+
+
+
+`///vmlinuz' for reading`///vmlinuz'`///vmlinuz'
+
+ for reading for reading
+
+ for reading`///vmlinuz'
+ for reading for reading
+
+
+ for reading`///vmlinuz'
+`///vmlinuz'`///vmlinuz'`///vmlinuz'
+
+`///vmlinuz'`///vmlinuz'
+`///vmlinuz'`///vmlinuz'`///vmlinuz'
+`///vmlinuz'`///vmlinuz'
+
+`///vmlinuz'`///vmlinuz'cannot create symbolic link 
+
+
+
+`///vmlinuz'
+
+
+
+
+cannot create symbolic link 
+`///vmlinuz'cannot create symbolic link 
+
+`///vmlinuz'cannot create symbolic link cannot create symbolic link 
+`///vmlinuz'cannot create symbolic link `///vmlinuz'cannot create symbolic link cannot create symbolic link 
+`///vmlinuz'cannot create symbolic link 
+
+cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link 
+cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'cannot create symbolic link `vmlinuz' to `vmlinuz' to `vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz' to  to `vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz'`vmlinuz' to  to  to  to  to  to  to  to  to `vmlinuz' to `vmlinuz' to `vmlinuz'`vmlinuz' to  to `vmlinuz'`vmlinuz' to  to  to  to `///vmlinuz'`///vmlinuz'
+`///vmlinuz'
+`///vmlinuz'`///vmlinuz'`///vmlinuz'
+`///vmlinuz'
+
+`///vmlinuz'`///vmlinuz'
+`///vmlinuz'`///vmlinuz'`///vmlinuz'`///vmlinuz'`///vmlinuz'
+`///vmlinuz'`///vmlinuz'`///vmlinuz'
+
+
+
+`///vmlinuz'
+
+
+
+
+
+`///vmlinuz'
+`///vmlinuz'`///vmlinuz'
+`///vmlinuz'`///vmlinuz'
+`///vmlinuz'
+
+
+
+omitting directory `///root'
+omitting directory `///bin'
+omitting directory `///boot'
+omitting directory `///snap'
+omitting directory `///lib64'
+omitting directory `///media'
+omitting directory `///opt'
+omitting directory `///etc'
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+
+
+
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'
+
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+
+
+`vmlinuz'
+`vmlinuz'
+
+
+`vmlinuz'
+`vmlinuz'
+
+
+
+
+
+`vmlinuz'
+
+`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'
+`vmlinuz'
+
+
+
+
+
+
+
+
+
+cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to 
+`vmlinuz' to  to `vmlinuz'`vmlinuz'`vmlinuz'
+
+`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'
+ to  to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+
+`vmlinuz' to `vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz'
+
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz'`vmlinuz'`vmlinuz'
+
+
+`vmlinuz'`vmlinuz'
+ to 
+
+
+
+
+
+
+
+
+
+ to 
+ to  to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'
+`vmlinuz'
+
+`vmlinuz'
+
+
+
+
+
+
+
+`///vmlinuz'`///vmlinuz'`///vmlinuz'
+`///vmlinuz'`///vmlinuz'
+
+`///vmlinuz'`///vmlinuz'
+`///vmlinuz'
+`///vmlinuz'
+`///vmlinuz'
+`///vmlinuz'
+
+`///vmlinuz'cannot create symbolic link cannot create symbolic link 
+cannot create symbolic link cannot create symbolic link 
+
+cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to  to  to `vmlinuz'`vmlinuz' to  to `vmlinuz' to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to  to `vmlinuz' to  to  to  to `///vmlinuz'`///vmlinuz'`///vmlinuz'
+
+`///vmlinuz'
+`///vmlinuz'`///vmlinuz'
+
+
+`///vmlinuz'`///vmlinuz'`///vmlinuz'`///vmlinuz'`///vmlinuz'
+`///vmlinuz'
+
+
+
+
+omitting directory omitting directory `/root'`/root'
+
+omitting directory omitting directory `/bin'`/bin'
+
+omitting directory omitting directory `/boot'`/boot'
+
+omitting directory omitting directory `/snap'`/snap'
+
+omitting directory omitting directory `/lib64'`/lib64'
+
+omitting directory omitting directory `/media'`/media'
+
+omitting directory omitting directory `/opt'`/opt'
+
+omitting directory omitting directory `/etc'`/etc'
+
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+
+
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+
+
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create link cannot create link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create link cannot create link cannot create link cannot create link cannot open cannot create symbolic link cannot create symbolic link cannot open cannot open cannot open cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot open cannot open cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot open cannot open cannot open cannot open cannot open `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'cannot open `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+
+
+
+
+`vmlinuz'`vmlinuz'`vmlinuz'
+
+
+`vmlinuz'
+`vmlinuz'
+`vmlinuz'
+`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'
+`vmlinuz'
+`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'
+`vmlinuz'
+`vmlinuz'
+`vmlinuz'
+
+
+`vmlinuz'
+
+
+
+
+
+`vmlinuz'
+
+`/vmlinuz'
+`/vmlinuz'`/vmlinuz'`vmlinuz'`vmlinuz'
+
+`vmlinuz'
+`/vmlinuz'
+
+`/vmlinuz'`/vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'
+
+`vmlinuz'
+ for reading
+
+
+ for reading
+ for reading
+ for reading for reading for reading
+
+`/vmlinuz'
+
+`/vmlinuz'
+
+
+
+
+`/vmlinuz'`/vmlinuz'`/vmlinuz'`/vmlinuz' for reading for reading
+ for reading
+ for reading for reading for reading
+
+
+
+cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create link cannot create link cannot create link cannot create symbolic link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot open cannot open cannot open cannot open cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot open cannot create symbolic link cannot open cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'cannot open `vmlinuz'`vmlinuz'cannot open cannot open `vmlinuz'cannot open `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to cannot open  to cannot open  to `vmlinuz'`vmlinuz' to  to  to `vmlinuz' to  to `vmlinuz'
+`vmlinuz'`vmlinuz' to `vmlinuz'`vmlinuz' to `vmlinuz'`vmlinuz' to `vmlinuz' to 
+ to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+ to 
+
+
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz'`vmlinuz'
+
+ to `vmlinuz'
+
+`vmlinuz'`vmlinuz'`vmlinuz' to 
+`vmlinuz'
+`vmlinuz' to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz'
+`vmlinuz' to 
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+ to `vmlinuz'
+ to `vmlinuz'
+`vmlinuz'
+`vmlinuz'
+ to `vmlinuz'`vmlinuz'
+
+ to 
+
+
+
+
+
+`vmlinuz'
+`vmlinuz'
+
+`vmlinuz'
+`/vmlinuz'
+`vmlinuz'
+
+`/vmlinuz'`vmlinuz'`vmlinuz'`/vmlinuz'
+`vmlinuz'
+`vmlinuz'`vmlinuz'`/vmlinuz'`vmlinuz'`/vmlinuz'`/vmlinuz'
+
+
+`vmlinuz'`vmlinuz'
+
+
+
+ for reading
+
+
+ for reading`/vmlinuz' for reading`/vmlinuz'
+
+ for reading for reading`/vmlinuz'`/vmlinuz' for reading`/vmlinuz'
+
+
+`/vmlinuz'`/vmlinuz'`/vmlinuz'
+`/vmlinuz'
+`/vmlinuz'
+`/vmlinuz'`/vmlinuz'`/vmlinuz' for reading for reading
+`/vmlinuz'`/vmlinuz'`/vmlinuz'`/vmlinuz' for reading for reading`/vmlinuz'
+`/vmlinuz'
+
+
+
+
+
+
+ for reading`/vmlinuz'
+ for reading
+
+
+
+
+`/vmlinuz'`/vmlinuz'
+
+`/vmlinuz'`/vmlinuz'`/vmlinuz'
+
+
+`/vmlinuz'
+`/vmlinuz'
+`/vmlinuz'cannot create symbolic link cannot create symbolic link cannot create symbolic link 
+`/vmlinuz'
+`/vmlinuz'
+cannot create symbolic link 
+cannot create symbolic link cannot create symbolic link 
+cannot create symbolic link cannot create symbolic link 
+cannot create symbolic link 
+
+cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz'`vmlinuz' to  to  to `vmlinuz'`vmlinuz' to `vmlinuz' to  to `vmlinuz'`vmlinuz' to  to  to  to  to  to  to `vmlinuz' to `vmlinuz'`vmlinuz' to  to `vmlinuz'`vmlinuz'`vmlinuz' to  to  to  to  to  to `/vmlinuz'`/vmlinuz'`/vmlinuz'`/vmlinuz'
+`/vmlinuz'`/vmlinuz'`/vmlinuz'`/vmlinuz'`/vmlinuz'`/vmlinuz'
+
+`/vmlinuz'`/vmlinuz'
+`/vmlinuz'`/vmlinuz'
+`/vmlinuz'
+
+
+`/vmlinuz'
+
+`/vmlinuz'
+
+
+
+`/vmlinuz'
+`/vmlinuz'
+`/vmlinuz'
+`/vmlinuz'
+`/vmlinuz'
+`/vmlinuz'`/vmlinuz'
+
+
+
+
+omitting directory `/root'
+omitting directory `/bin'
+omitting directory `/boot'
+omitting directory `/snap'
+omitting directory `/lib64'
+omitting directory `/media'
+omitting directory `/opt'
+omitting directory `/etc'
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: link: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+KLEE: WARNING: symlink: ignoring (EPERM)
+cannot create link cannot create link cannot create link cannot create link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+
+`vmlinuz'
+`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'
+
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'
+
+
+
+
+`vmlinuz'
+
+
+
+
+
+
+
+
+
+`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'
+`vmlinuz'
+
+
+
+
+
+
+
+
+
+cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create link cannot create link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create link cannot create symbolic link cannot create link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to  to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+ to `vmlinuz' to `vmlinuz'`vmlinuz' to 
+
+
+
+`vmlinuz' to `vmlinuz' to `vmlinuz'`vmlinuz' to 
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+ to `vmlinuz'`vmlinuz' to 
+`vmlinuz'
+`vmlinuz'`vmlinuz'
+
+
+
+
+ to `vmlinuz'`vmlinuz'
+
+
+`vmlinuz'
+
+`vmlinuz'
+
+`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'
+
+
+
+`vmlinuz'
+
+
+`vmlinuz'
+
+
+
+
+
+
+`/vmlinuz'`/vmlinuz'`/vmlinuz'
+`/vmlinuz'`/vmlinuz'`/vmlinuz'
+
+`/vmlinuz'`/vmlinuz'
+`/vmlinuz'
+
+
+`/vmlinuz'
+
+`/vmlinuz'cannot create symbolic link `/vmlinuz'cannot create symbolic link 
+cannot create symbolic link cannot create symbolic link 
+
+cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link cannot create symbolic link `vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz'`vmlinuz' to `vmlinuz' to `vmlinuz'`vmlinuz' to  to  to  to `vmlinuz' to  to  to  to  to `/vmlinuz'`/vmlinuz'`/vmlinuz'
+`/vmlinuz'`/vmlinuz'
+`/vmlinuz'`/vmlinuz'
+`/vmlinuz'`/vmlinuz'
+
+`/vmlinuz'`/vmlinuz'
+`/vmlinuz'
+
+
+
+
+
+omitting directory omitting directory `//root'`//root'
+
+omitting directory omitting directory `//bin'
+`//bin'
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+`//vmlinuz' -> `vmlinuz'`//vmlinuz' -> `vmlinuz'`//vmlinuz' -> `vmlinuz'`//vmlinuz' -> `vmlinuz'`///vmlinuz' -> `vmlinuz'`///vmlinuz' -> `vmlinuz'`///vmlinuz' -> `vmlinuz'`///vmlinuz' -> `vmlinuz'`///vmlinuz' -> `vmlinuz'`///vmlinuz' -> `vmlinuz'`/vmlinuz' -> `vmlinuz'`/vmlinuz' -> `vmlinuz'`/vmlinuz' -> `vmlinuz'`/vmlinuz' -> `vmlinuz'`/vmlinuz' -> `vmlinuz'`/vmlinuz' -> `vmlinuz'
+KLEE: done: total instructions = 7835243
+KLEE: done: completed paths = 15243
+KLEE: done: generated tests = 106

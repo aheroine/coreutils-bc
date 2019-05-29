@@ -1,0 +1,76 @@
+array argno2[1] : w32 -> w8 = symbolic
+array argno3[144] : w32 -> w8 = symbolic
+array argno4[32] : w32 -> w8 = symbolic
+array macke_sizeof_argno1[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno2[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno3[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno4[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno5[4] : w32 -> w8 = symbolic
+array macke_sym_switch_prompt[4] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Sle 1
+              N0:(ReadLSB w32 0 macke_sizeof_argno1))
+         (Slt N0 1025)
+         (Eq false (Eq 4 N0))
+         (Eq false (Eq 16 N0))
+         (Eq false (Eq 128 N0))
+         (Eq false (Eq 2 N0))
+         (Sle 1
+              N1:(ReadLSB w32 0 macke_sizeof_argno2))
+         (Slt N1 1025)
+         (Eq false (Eq 4 N1))
+         (Eq false (Eq 16 N1))
+         (Eq false (Eq 128 N1))
+         (Eq false (Eq 2 N1))
+         (Sle 1
+              N2:(ReadLSB w32 0 macke_sizeof_argno3))
+         (Slt N2 1025)
+         (Eq false (Eq 4 N2))
+         (Eq false (Eq 16 N2))
+         (Eq false (Eq 128 N2))
+         (Eq false (Eq 2 N2))
+         (Sle 1
+              N3:(ReadLSB w32 0 macke_sizeof_argno4))
+         (Slt N3 1025)
+         (Eq false (Eq 4 N3))
+         (Eq false (Eq 16 N3))
+         (Eq false (Eq 128 N3))
+         (Eq false (Eq 2 N3))
+         (Sle 1
+              N4:(ReadLSB w32 0 macke_sizeof_argno5))
+         (Slt N4 1025)
+         (Eq false (Eq 4 N4))
+         (Eq false (Eq 16 N4))
+         (Eq false (Eq 128 N4))
+         (Eq false (Eq 2 N4))
+         (Eq false
+             (Eq 1
+                 N5:(ReadLSB w32 0 macke_sym_switch_prompt)))
+         (Eq false (Eq 4 N5))
+         (Eq false (Eq 3 N5))
+         (Eq false (Eq 5 N5))
+         (Eq false (Eq 2 N5))
+         (Eq false
+             (Eq 5
+                 N6:(ReadLSB w32 4 argno4)))
+         (Eq N7:(ZExt w64 (Eq 1 N6))
+             (ZExt w64 (Eq 3 N6)))
+         (Eq false
+             (Eq 0
+                 (And w64 (Or w64 (ZExt w64 (Read w8 24 argno4))
+                                  N7)
+                          (ZExt w64 (Xor w8 1
+                                            (And w8 (Read w8 0 argno4) 1))))))
+         (Eq false
+             (Eq 18446744073709551615
+                 N8:(ReadLSB w64 48 argno3)))
+         (Slt 18446744073709551615 N8)
+         (Eq false
+             (Eq 40960
+                 (And w32 (ReadLSB w32 24 argno3)
+                          61440)))
+         (Eq false
+             (Eq 0 (Read w8 0 argno2)))]
+        false)

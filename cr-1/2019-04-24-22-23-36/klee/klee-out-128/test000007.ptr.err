@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/mempcpy.c
+Line: 31
+assembly.ll line: 4692
+Stack: 
+	#000004692 in mempcpy327 (s1=34425360, s2, n) at /home/jl/deploy/klee-uclibc/libc/string/mempcpy.c:31
+	#100000651 in full_filename_ (ds.0.0.2.val, ds.0.0.3.val, filename=28416448) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:366
+	#200000440 in prompt (fd_cwd, ds=26815968, filename=28416448, sbuf=27020816, x=27829920, is_empty=48818240) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:880
+	#300000701 in remove_entry (fd_cwd, ds=26815968, filename=28416448, st=27020816, x=27829920, dp=49507760) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1023
+	#400001934 in __user_main (=1, =45090416)
+	#500005076 in __uClibc_main (argc=1, argv=45090416) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600006799 in macke_remove_entry_main (=1, =45090416)
+Info: 
+	address: (Add w64 1
+          (ReadLSB w64 16 argno1))
+	example: 25723360
+	range: [25723360, 25723360]
+	next: object at 25723600 of size 8
+		MO15[8] allocated at macke_remove_entry_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 25723344 of size 16
+		MO14[16] allocated at macke_remove_entry_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

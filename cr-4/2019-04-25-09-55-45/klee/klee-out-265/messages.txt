@@ -1,0 +1,2 @@
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/hash.c:494: divide by zero
+KLEE: NOTE: now ignoring this error at this location

@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-81/test000001.unified.assert.err
+Stack: 
+	#000006270 in __macke_error_xnanosleep (argno0)
+	#100000447 in tail_forever (f=39903456, n_files, sleep_interval) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:1148
+	#200006202 in __user_main (=1, =38840336)
+	#300008906 in __uClibc_main (argc=1, argv=38840336) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400010479 in macke_tail_forever_main (=1, =38840336)

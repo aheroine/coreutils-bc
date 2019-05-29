@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 307
+Stack: 
+	#000000307 in quotearg_buffer_restyled (buffer, buffersize, arg=34279984, quoting_style=5, o=49421616) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100000208 in quotearg_buffer (buffer, buffersize, arg=34279984, o=49421616) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200000861 in quotearg_n_options (n, arg=34279984, options=49421616) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300000218 in quotearg_n_style (n, arg=34279984) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:676
+	#400001023 in __macke_error_quotearg_n_style (argno0, argno2=34279984)
+	#500000196 in quote_n (n, name=34279984) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:32
+	#600000995 in __user_main (=1, =57050944)
+	#700003787 in __uClibc_main (argc=1, argv=57050944) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800005382 in macke_quote_n_main (=1, =57050944)
+Info: 
+	address: 34279985
+	next: object at 34319280 of size 8
+		MO700[8] allocated at __user_main():  %argvPtr = alloca i8**, align 8
+	prev: object at 34279984 of size 1
+		MO779[1] allocated at __user_main():  %7 = call i8* @malloc(i64 %6)

@@ -1,0 +1,18 @@
+Error: concretized symbolic size
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/xmalloc.c
+Line: 62
+assembly.ll line: 947
+Stack: 
+	#000000947 in xrealloc (p=0, n) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/xmalloc.c:62
+	#100000856 in quotearg_n_options (n, arg=34191536, argsize, options=42805664) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:615
+	#200001047 in __macke_error_quotearg_n_options (argno0, argno1=34191536, argno2, argno3=42805664)
+	#300000216 in quotearg_n_style_mem (n, s, arg=34191536, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:675
+	#400001019 in __user_main (=1, =37754608)
+	#500004660 in __uClibc_main (argc=1, argv=37754608) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600006282 in macke_quotearg_n_style_mem_main (=1, =37754608)
+Info: 
+  size expr: (Shl w64 (ZExt w64 (Add w32 1
+                                          (ReadLSB w32 0 argno0)))
+                       4)
+  concretization : 32
+  unbound example: 64

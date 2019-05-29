@@ -1,0 +1,2 @@
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee -use -libc=uclibc chain-close_stdout-close_stream.bc
+

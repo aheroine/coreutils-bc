@@ -1,0 +1,4 @@
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-127 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/bitcode/symmains.bc_AD_pop_and_chdir_ChangeEntry.bc
+
+KLEE: ERROR: /home/jl/deploy/use/src/runtime/Intrinsic/memcpy.c:17: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location

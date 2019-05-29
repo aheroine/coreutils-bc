@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strnlen.c
+Line: 30
+assembly.ll line: 2727
+Stack: 
+	#000002727 in strnlen (s=54497296, max=18446744073709551615) at /home/jl/deploy/klee-uclibc/libc/string/strnlen.c:30
+	#100001217 in _do_one_spec (ppfs=47185552, count=56751664) at /home/jl/deploy/klee-uclibc/libc/stdio/_vfprintf.c:1679
+	#200000820 in vfprintf (format=46769632, arg=39725456) at /home/jl/deploy/klee-uclibc/libc/stdio/_vfprintf.c:1919
+	#300000398 in __error (status=0, errnum=9, message=46769632) at /home/jl/deploy/klee-uclibc/libc/misc/error/error.c:57
+	#400000177 in xlseek (fd, offset, whence, filename=54497296) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:454
+	#500000317 in __user_main (=1, =53893744)
+	#600003059 in __uClibc_main (argc=1, argv=53893744) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700004456 in macke_xlseek_main (=1, =53893744)
+Info: 
+	address: 54497297
+	next: object at 54497328 of size 16
+		MO818[16] allocated at xlseek():  call void (i32, i32, i8*, ...)* @__error(i32 0, i32 %1, i8* getelementptr inbounds ([38 x i8]* @.str33, i64 0, i64 0), i8* %filename, i8* %call1) #0, !dbg !6005
+	prev: object at 54497296 of size 1
+		MO777[1] allocated at __user_main():  %11 = call i8* @malloc(i64 %10)

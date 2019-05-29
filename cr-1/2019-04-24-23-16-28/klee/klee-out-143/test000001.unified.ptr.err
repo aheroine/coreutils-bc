@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/cp-hash.c
+Line: 73
+assembly.ll line: 6576
+Stack: 
+	#000006576 in src_to_dest_compare (x=41124384, y=41125104) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/cp-hash.c:73
+	#100021388 in main (=1, =31273328)
+Info: 
+	address: 41124384
+	next: object at 41125104 of size 1
+		MO1019[1] addr [41125104]:  allocated at main():  %10 = call i8* @malloc(i64 %9)
+	prev: object at 41124384 of size 1
+		MO1008[1] addr [41124384]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

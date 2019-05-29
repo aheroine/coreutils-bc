@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-196/test000002.ptr.err
+Stack: 
+	#000001079 in __macke_error_quote (argno0=45167920)
+	#100000222 in set_owner (x=49680320, dst_name=45167920, dest_desc, uid, gid) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:211
+	#200001021 in __user_main (=1, =28573616)
+	#300003578 in __uClibc_main (argc=1, argv=28573616) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400005173 in macke_set_owner_main (=1, =28573616)

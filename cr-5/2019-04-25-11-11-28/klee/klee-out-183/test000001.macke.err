@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-53/test000001.unified.ptr.err
+Stack: 
+	#000006425 in __macke_error_pipe_lines (argno0=31846336, argno1, argno2, argno3=27913488)
+	#100000350 in tail_lines (pretty_filename=31846336, fd, n_lines, read_pos=27913488) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:1497
+	#200005845 in __user_main (=1, =40430352)
+	#300009035 in __uClibc_main (argc=1, argv=40430352) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400010608 in macke_tail_lines_main (=1, =40430352)

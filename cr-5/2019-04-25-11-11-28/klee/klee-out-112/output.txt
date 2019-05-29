@@ -1,0 +1,85 @@
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-112"
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-112 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/bitcode/symmains.bc_xmemdup_ChangeEntry.bc
+
+KLEE: WARNING ONCE: function "vasnprintf" has inline asm
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: __ctype_get_mb_cur_max
+KLEE: WARNING: undefined reference to function: __errno_location
+KLEE: WARNING: undefined reference to function: __fpending
+KLEE: WARNING: undefined reference to function: atexit
+KLEE: WARNING: undefined reference to function: clock_gettime
+KLEE: WARNING: undefined reference to function: close
+KLEE: WARNING: undefined reference to function: fclose
+KLEE: WARNING: undefined reference to function: fcntl
+KLEE: WARNING: undefined reference to function: ferror_unlocked
+KLEE: WARNING: undefined reference to function: fflush_unlocked
+KLEE: WARNING: undefined reference to function: fopen
+KLEE: WARNING: undefined reference to function: fprintf
+KLEE: WARNING: undefined reference to function: fputs_unlocked
+KLEE: WARNING: undefined reference to function: fstat
+KLEE: WARNING: undefined reference to function: fwrite
+KLEE: WARNING: undefined reference to function: fwrite_unlocked
+KLEE: WARNING: undefined reference to function: getenv
+KLEE: WARNING: undefined reference to function: getopt_long
+KLEE: WARNING: undefined reference to function: inotify_add_watch
+KLEE: WARNING: undefined reference to function: inotify_init
+KLEE: WARNING: undefined reference to function: inotify_rm_watch
+KLEE: WARNING: undefined reference to function: isatty
+KLEE: WARNING: undefined reference to function: iswprint
+KLEE: WARNING: undefined reference to function: lseek
+KLEE: WARNING: undefined reference to function: mbrtowc
+KLEE: WARNING: undefined reference to function: mbsinit
+KLEE: WARNING: undefined reference to function: memchr
+KLEE: WARNING: undefined reference to function: memcmp
+KLEE: WARNING: undefined reference to function: memrchr
+KLEE: WARNING: undefined reference to function: nanosleep
+KLEE: WARNING: undefined reference to function: newlocale
+KLEE: WARNING: undefined reference to function: nl_langinfo
+KLEE: WARNING: undefined reference to function: open
+KLEE: WARNING: undefined reference to variable: optarg
+KLEE: WARNING: undefined reference to variable: optind
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING: undefined reference to function: putc_unlocked
+KLEE: WARNING: undefined reference to function: read
+KLEE: WARNING: undefined reference to function: setlocale
+KLEE: WARNING: undefined reference to function: snprintf
+KLEE: WARNING: undefined reference to variable: stderr
+KLEE: WARNING: undefined reference to variable: stdout
+KLEE: WARNING: undefined reference to function: strchr
+KLEE: WARNING: undefined reference to function: strcmp
+KLEE: WARNING: undefined reference to function: strlen
+KLEE: WARNING: undefined reference to function: strncmp
+KLEE: WARNING: undefined reference to function: strndup
+KLEE: WARNING: undefined reference to function: strrchr
+KLEE: WARNING: undefined reference to function: strtod_l
+KLEE: WARNING: undefined reference to function: strtol
+KLEE: WARNING: undefined reference to function: strtoul
+KLEE: WARNING: undefined reference to function: strtoumax
+KLEE: WARNING: undefined reference to function: error (UNSAFE)!
+KLEE: WARNING: undefined reference to function: kill (UNSAFE)!
+KLEE: WARNING ONCE: Large alloc: 2880154539 bytes.  KLEE may run out of memory.
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+0  klee            0x0000000000e5f672 llvm::sys::PrintStackTrace(_IO_FILE*) + 50
+1  klee            0x0000000000e5eec4
+2  libpthread.so.0 0x00007f584ba05890
+3  libc.so.6       0x00007f584a8d5e97 gsignal + 199
+4  libc.so.6       0x00007f584a8d7801 abort + 321
+5  libstdc++.so.6  0x00007f584b2cb84d __gnu_cxx::__verbose_terminate_handler() + 365
+6  libstdc++.so.6  0x00007f584b2c96b6
+7  libstdc++.so.6  0x00007f584b2c9701
+8  libstdc++.so.6  0x00007f584b2c9919
+9  libstdc++.so.6  0x00007f584b2c9ebc
+10 libstdc++.so.6  0x00007f584b2c9f19 operator new[](unsigned long) + 9
+11 klee            0x00000000005a2cc5 klee::ObjectState::setKnownSymbolic(unsigned int, klee::Expr*) + 133
+12 klee            0x00000000005a3501 klee::ObjectState::write8(unsigned int, klee::ref<klee::Expr>) + 209
+13 klee            0x00000000005a3983 klee::ObjectState::write(unsigned int, klee::ref<klee::Expr>) + 291
+14 klee            0x00000000005a3cc0 klee::ObjectState::write(klee::ref<klee::Expr>, klee::ref<klee::Expr>) + 256
+15 klee            0x000000000056fcc3 klee::Executor::normalReadOrWrite(klee::ExecutionState&, bool, klee::ref<klee::Expr>, unsigned int, klee::ref<klee::Expr>, klee::ref<klee::Expr>, klee::KInstruction*, klee::MemoryObject const*, klee::ObjectState const*) + 259
+16 klee            0x0000000000572917 klee::Executor::executeMemoryOperation(klee::ExecutionState&, bool, klee::ref<klee::Expr>, klee::ref<klee::Expr>, klee::KInstruction*) + 9831
+17 klee            0x000000000057f4e3 klee::Executor::executeInstruction(klee::ExecutionState&, klee::KInstruction*) + 4547
+18 klee            0x000000000058da44 klee::Executor::run(klee::ExecutionState&) + 1300
+19 klee            0x000000000058fc68 klee::Executor::runFunctionAsMain(llvm::Function*, int, char**, char**) + 1896
+20 klee            0x000000000053ff5e main + 12670
+21 libc.so.6       0x00007f584a8b8b97 __libc_start_main + 231
+22 klee            0x0000000000551faa _start + 42

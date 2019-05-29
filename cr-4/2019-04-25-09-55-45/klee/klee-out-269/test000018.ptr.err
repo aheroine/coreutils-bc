@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/memcmp.c
+Line: 33
+assembly.ll line: 5377
+Stack: 
+	#000005377 in memcmp (s1=39862385, s2=49907520, n=1) at /home/jl/deploy/klee-uclibc/libc/string/memcmp.c:33
+	#100000410 in quotearg_buffer_restyled (buffer=52915344, buffersize=256, arg=39862384, argsize, quoting_style, flags=1, quote_these_too=38662216, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:352
+	#200000997 in quotearg_n_options (arg=39862384, argsize, options=38662208) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#300000231 in quotearg_n_style_mem (s, arg=39862384, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:856
+	#400001620 in __macke_error_quotearg_n_style_mem (argno1, argno2=39862384, argno3)
+	#500000238 in quotearg_style_mem (s, arg=39862384, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:868
+	#600001591 in __user_main (=1, =55659680)
+	#700005779 in __uClibc_main (argc=1, argv=55659680) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800009498 in macke_quotearg_style_mem_main (=1, =55659680)
+Info: 
+	address: 39862385
+	next: object at 39890960 of size 16
+		MO234[16] allocated at global:.str14
+	prev: object at 39862384 of size 1
+		MO810[1] allocated at __user_main():  %7 = call i8* @malloc(i64 %6)

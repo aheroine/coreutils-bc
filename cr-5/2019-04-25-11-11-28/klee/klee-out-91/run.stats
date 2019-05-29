@@ -1,0 +1,3 @@
+('Instructions','FullBranches','PartialBranches','NumBranches','UserTime','NumStates','MallocUsage','NumQueries','NumQueryConstructs','NumObjects','WallTime','CoveredInstructions','UncoveredInstructions','QueryTime','SolverTime','CexCacheTime','ForkTime','ResolveTime',)
+(0,0,0,931,7.847300e-02,0,9679008,0,0,0,1.619935e-03,0,15738,0.000000e+00,0.000000e+00,0.000000e+00,0.000000e+00,0.000000e+00)
+(43,0,4,931,8.432300e-02,0,9799728,2,43,0,1.575710e-01,43,15695,8.524900e-02,8.531800e-02,8.527600e-02,0.000000e+00,0.000000e+00)

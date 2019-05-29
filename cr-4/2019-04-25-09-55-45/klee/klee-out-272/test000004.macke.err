@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-271/test000001.macke.err
+Stack: 
+	#000001793 in __macke_error_quotearg_n_custom (argno1=27076960, argno2=27680896, argno3=26609376)
+	#100000274 in quotearg_custom (left_quote=27076960, right_quote=27680896, arg=26609376) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:920
+	#200001579 in __user_main (=1, =38072240)
+	#300005497 in __uClibc_main (argc=1, argv=38072240) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400009216 in macke_quotearg_custom_main (=1, =38072240)

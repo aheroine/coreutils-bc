@@ -1,0 +1,4 @@
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 46919008)
+KLEE: WARNING ONCE: __macke_error_dup_safer: MACKE: Summery for dup_safer reached

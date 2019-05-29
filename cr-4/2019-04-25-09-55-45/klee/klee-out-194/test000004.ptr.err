@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strlen.c
+Line: 22
+assembly.ll line: 6997
+Stack: 
+	#000006997 in strlen (s) at /home/jl/deploy/klee-uclibc/libc/string/strlen.c:22
+	#100000315 in quotearg_buffer_restyled (buffer, buffersize, arg=33691376, argsize, quoting_style, flags, quote_these_too=34255096, left_quote, right_quote) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:320
+	#200001680 in __macke_error_quotearg_buffer_restyled (argno0, argno1, argno2=33691376, argno3, argno4, argno5, argno6=34255096, argno7, argno8)
+	#300001033 in quotearg_n_options (n, arg=33691376, argsize, options=34255088) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#400001642 in __user_main (=1, =46537104)
+	#500007614 in __uClibc_main (argc=1, argv=46537104) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600011333 in macke_quotearg_n_options_main (=1, =46537104)
+Info: 
+	address: (ReadLSB w64 48 argno3)
+	example: 0
+	range: [0, 18446744073709551615]
+	next: object at 31382064 of size 14
+		MO246[14] allocated at global:.str25

@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c
+Line: 343
+assembly.ll line: 407
+Stack: 
+	#000000407 in quotearg_buffer_restyled (buffer=49640384, buffersize=256, arg=27478768, quoting_style=0, flags=1, quote_these_too=28172920, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:343
+	#100000991 in quotearg_n_options (arg=27478768, options=28172912) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#200000247 in quotearg_char_mem (arg=27478768) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:877
+	#300000254 in quotearg_char (arg=27478768) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:883
+	#400001583 in __macke_error_quotearg_char (argno0=27478768)
+	#500000261 in quotearg_colon (arg=27478768) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:889
+	#600001558 in __user_main (=1, =42438384)
+	#700005242 in __uClibc_main (argc=1, argv=42438384) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800008961 in macke_quotearg_colon_main (=1, =42438384)
+Info: 
+	address: 27478769
+	next: object at 27483408 of size 18
+		MO214[18] allocated at global:.str1749
+	prev: object at 27478768 of size 1
+		MO801[1] allocated at __user_main():  %5 = tail call i8* @malloc(i64 %4)

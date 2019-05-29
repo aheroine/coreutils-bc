@@ -1,0 +1,11 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c
+Line: 380
+assembly.ll line: 3130
+Stack: 
+	#000003130 in next_item (item_idx=43929680) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:380
+	#100012359 in main (=1, =38999472)
+Info: 
+	address: 8
+	next: object at 35290624 of size 102
+		MO1[102] addr [35290624]:  allocated at main():  call void @klee_mark_arg_symbolic(i32 %0, i8** %1)

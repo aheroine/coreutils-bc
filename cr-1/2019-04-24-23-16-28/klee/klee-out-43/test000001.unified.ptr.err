@@ -1,0 +1,15 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/basename.c
+Line: 42
+assembly.ll line: 12238
+Stack: 
+	#000012238 in last_component (name=61907536) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/basename.c:42
+	#100012582 in dir_len (file=61907536) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/dirname.c:49
+	#200012626 in dir_name (file=61907536) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/dirname.c:74
+	#300019455 in main (=1, =61164272)
+Info: 
+	address: 61907537
+	next: object at 61907600 of size 8
+		MO1020[8] addr [61907600]:  allocated at dir_len():  %length = alloca i64, align 8
+	prev: object at 61907536 of size 1
+		MO1008[1] addr [61907536]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

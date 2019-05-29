@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c
+Line: 280
+assembly.ll line: 492
+Stack: 
+	#000000492 in quotearg_buffer_restyled (buffer, buffersize, arg=42957632, argsize, quoting_style, o=53681520) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:280
+	#100000203 in quotearg_buffer (buffer, buffersize, arg=42957632, argsize, o=53681520) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:527
+	#200001022 in __macke_error_quotearg_buffer (argno0, argno1, argno2=42957632, argno3, argno4=53681520)
+	#300000871 in quotearg_n_options (n, arg=42957632, argsize, options=53681520) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:625
+	#400000998 in __user_main (=1, =59025488)
+	#500003748 in __uClibc_main (argc=1, argv=59025488) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600005370 in macke_quotearg_n_options_main (=1, =59025488)
+Info: 
+	address: 42957633
+	next: object at 44060080 of size 68
+		MO35[68] allocated at macke_quotearg_n_options_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 42957632 of size 1
+		MO778[1] allocated at __user_main():  %7 = call i8* @malloc(i64 %6)

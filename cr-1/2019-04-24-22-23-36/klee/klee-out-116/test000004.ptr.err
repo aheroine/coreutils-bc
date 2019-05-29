@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 308
+Stack: 
+	#000000308 in quotearg_buffer_restyled (buffer, buffersize, arg=38516976, argsize, quoting_style, o=41195072) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100000203 in quotearg_buffer (buffer, buffersize, arg=38516976, argsize, o=41195072) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200000883 in quotearg_n_options (n, arg=38516976, argsize, options=41195072) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300001053 in __macke_error_quotearg_n_options (argno0, argno1=38516976, argno2, argno3=41195072)
+	#400000213 in quotearg_n_style_mem (n, s, arg=38516976, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:684
+	#500001025 in __user_main (=1, =50485040)
+	#600004688 in __uClibc_main (argc=1, argv=50485040) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700006283 in macke_quotearg_n_style_mem_main (=1, =50485040)
+Info: 
+	address: 38516977
+	next: object at 38517568 of size 4
+		MO775[4] allocated at __user_main():  %argno1 = alloca i32, align 4
+	prev: object at 38516976 of size 1
+		MO785[1] allocated at __user_main():  %9 = call i8* @malloc(i64 %8)

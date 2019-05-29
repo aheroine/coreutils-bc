@@ -1,0 +1,25 @@
+KLEE: KLEE: WATCHDOG: watching 23346
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-166"
+Using STP solver backend
+KLEE: WARNING ONCE: function "vasnprintf" has inline asm
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 56529808)
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/string/strcmp.c:34: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: WARNING: max-instruction-time exceeded: 16.90s
+KLEE: WARNING: max-instruction-time exceeded: 17.80s
+KLEE: WARNING: max-instruction-time exceeded: 19.90s
+KLEE: WARNING ONCE: flushing 13312 bytes on read, may be slow and/or crash: MO789[13312] allocated at __user_main():  %6 = call i8* @malloc(i64 %5)
+KLEE: WARNING: max-instruction-time exceeded: 12.20s
+KLEE: WARNING: max-instruction-time exceeded: 16.60s
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+
+KLEE: done: total instructions = 9271
+KLEE: done: completed paths = 1117
+KLEE: done: generated tests = 10

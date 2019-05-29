@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/mempcpy.c
+Line: 31
+assembly.ll line: 3778
+Stack: 
+	#000003778 in mempcpy328 (s1=86467600, s2, n) at /home/jl/deploy/klee-uclibc/libc/string/mempcpy.c:31
+	#100000429 in full_filename_ (ds.0.0.2.val, ds.0.0.3.val) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:359
+	#200000250 in AD_push (ds=56933792, dir=63530560, dir_sb_from_parent=68499776) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:682
+	#300001329 in __user_main (=1, =73067408)
+	#400004114 in __uClibc_main (argc=1, argv=73067408) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500005709 in macke_AD_push_main (=1, =73067408)
+Info: 
+	address: (ReadLSB w64 16 argno1)
+	example: 3921856159
+	range: [3921856159, 18446744073336440482]
+	next: object at 140277512260544 of size 1536
+		MO81[1536] (no allocation info)
+	prev: object at 86467600 of size 116
+		MO1852[116] allocated at full_filename_():  %call10 = tail call i8* @realloc(i8* %1, i64 %add7) #2, !dbg !5117

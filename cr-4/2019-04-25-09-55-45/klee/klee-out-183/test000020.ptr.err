@@ -1,0 +1,20 @@
+Error: check_memory_access: memory error
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 430
+assembly.ll line: 6977
+Stack: 
+	#000006977 in write (fd, buf, count) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:430
+	#100006627 in __stdio_WRITE (stream=27288720, buf, bufsize) at /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c:52
+	#200006145 in __stdio_wcommit (stream=27288720) at /home/jl/deploy/klee-uclibc/libc/stdio/_wcommit.c:25
+	#300006276 in fflush_unlocked (stream=27288720) at /home/jl/deploy/klee-uclibc/libc/stdio/fflush.c:125
+	#400000223 in rpl_fflush (stream=27288720) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fflush.c:146
+	#500000183 in rpl_fclose (fp=27288720) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fclose.c:71
+	#600000411 in __macke_error_rpl_fclose (argno0=27288720)
+	#700000314 in close_stream (stream=27288720) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/close-stream.c:60
+	#800000382 in __user_main (=1, =26710016)
+	#900006522 in __uClibc_main (argc=1, argv=26710016) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#1000006732 in macke_close_stream_main (=1, =26710016)
+Info: 
+	address: 0
+	next: object at 24956848 of size 964
+		MO143[964] allocated at global:.str133

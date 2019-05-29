@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-205/test000001.macke.err
+Stack: 
+	#000001705 in __macke_error_quote (argno0=58378480)
+	#100000248 in dump_remainder (pretty_filename=58378480, fd, n_bytes) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:413
+	#200001644 in __user_main (=1, =62622208)
+	#300005388 in __uClibc_main (argc=1, argv=62622208) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400009107 in macke_dump_remainder_main (=1, =62622208)

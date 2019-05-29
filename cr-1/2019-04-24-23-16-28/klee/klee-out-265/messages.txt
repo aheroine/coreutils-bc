@@ -1,0 +1,8 @@
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:631: memory error: object read only
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:631: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee22/runtime/Intrinsic/memset.c:14: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states

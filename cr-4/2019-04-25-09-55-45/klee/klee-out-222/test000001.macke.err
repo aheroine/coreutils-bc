@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-220/test000001.ptr.err
+Stack: 
+	#000000258 in __macke_error_dup_safer (argno0)
+	#100000144 in fd_safer (fd) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fd-safer.c:41
+	#200000210 in __user_main (=1, =55924704)
+	#300000559 in __uClibc_main (argc=1, argv=55924704) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400000769 in macke_fd_safer_main (=1, =55924704)

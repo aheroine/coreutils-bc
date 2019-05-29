@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 43
+assembly.ll line: 18322
+Stack: 
+	#000018322 in fstatat (fd, path=56986016, buf=57450336) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:43
+	#100000967 in cache_fstatat (fd, file=56986016, st=57450336) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:174
+	#200000545 in write_protected_non_symlink (fd_cwd, file=56986016, ds=31601776, buf=57450336) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:762
+	#300000366 in prompt (fd_cwd, ds=31601776, filename=56986016, sbuf=57450336, x=33962080, is_empty=53344672) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:851
+	#400001965 in __macke_error_prompt (argno0, argno1=31601776, argno2=56986016, argno3=57450336, argno4=33962080, argno6=53344672)
+	#500000704 in remove_entry (fd_cwd, ds=31601776, filename=56986016, st=57450336, x=33962080, dp=39571328) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1023
+	#600001934 in __user_main (=1, =33682816)
+	#700015387 in __uClibc_main (argc=1, argv=33682816) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800017110 in macke_remove_entry_main (=1, =33682816)
+Info: 
+	address: 56986017
+	next: object at 57352304 of size 6
+		MO215[6] allocated at global:.str918
+	prev: object at 56986016 of size 1
+		MO855[1] allocated at __user_main():  %12 = call i8* @malloc(i64 %11)

@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/memcmp.c
+Line: 33
+assembly.ll line: 5143
+Stack: 
+	#000005143 in memcmp (s1=53751169, s2=54019248, n=1) at /home/jl/deploy/klee-uclibc/libc/string/memcmp.c:33
+	#100000407 in quotearg_buffer_restyled (buffer=68211888, buffersize=256, arg=53751168, argsize, quoting_style=6, flags=1, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:352
+	#200000984 in quotearg_n_options (arg=53751168, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#300000228 in quote_n_mem (arg=53751168, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:944
+	#400001580 in __macke_error_quote_n_mem (argno1=53751168, argno2)
+	#500000235 in quote_mem (arg=53751168, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:950
+	#600001552 in __user_main (=1, =75339200)
+	#700005545 in __uClibc_main (argc=1, argv=75339200) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800009264 in macke_quote_mem_main (=1, =75339200)
+Info: 
+	address: 53751169
+	next: object at 53774672 of size 8
+		MO820[8] allocated at __user_main():  %argno1 = alloca i64, align 8
+	prev: object at 53751168 of size 1
+		MO805[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

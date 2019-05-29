@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/printf-parse.c
+Line: 133
+assembly.ll line: 3304
+Stack: 
+	#000003304 in printf_parse (format=54721184, d=55505536, a=55505504) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/printf-parse.c:133
+	#100000251 in vasnprintf (resultbuf=54838304, lengthp=55907584, format=54721184, args=77861600) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/vasnprintf.c:1484
+	#200004428 in __macke_error_vasnprintf (argno0=54838304, argno1=55907584, argno2=54721184, argno3=77861600)
+	#300000189 in rpl_vfprintf (fp=58613136, format=54721184, args=77861600) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/vfprintf.c:43
+	#400004396 in __user_main (=1, =67967872)
+	#500008858 in __uClibc_main (argc=1, argv=67967872) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600010431 in macke_rpl_vfprintf_main (=1, =67967872)
+Info: 
+	address: 54721185
+	next: object at 54838304 of size 2000
+		MO831[2000] allocated at rpl_vfprintf():  %buf = alloca [2000 x i8], align 16
+	prev: object at 54721184 of size 1
+		MO791[1] allocated at __user_main():  %10 = tail call i8* @malloc(i64 %9)

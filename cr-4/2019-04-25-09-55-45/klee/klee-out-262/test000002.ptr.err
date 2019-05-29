@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c
+Line: 359
+assembly.ll line: 436
+Stack: 
+	#000000436 in quotearg_buffer_restyled (buffer=55867056, buffersize=256, arg=40008352, argsize, quoting_style=0, flags=1, quote_these_too=38638520, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:359
+	#100001014 in quotearg_n_options (arg=40008352, argsize, options=38638512) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#200000248 in quotearg_char_mem (arg=40008352, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:877
+	#300001610 in __macke_error_quotearg_char_mem (argno0=40008352, argno1)
+	#400000255 in quotearg_colon_mem (arg=40008352, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:895
+	#500001585 in __user_main (=1, =56079664)
+	#600005343 in __uClibc_main (argc=1, argv=56079664) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700009062 in macke_quotearg_colon_mem_main (=1, =56079664)
+Info: 
+	address: 40008353
+	next: object at 40083984 of size 3
+		MO98[3] allocated at global:.str16177
+	prev: object at 40008352 of size 1
+		MO802[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

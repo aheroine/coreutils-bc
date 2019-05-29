@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c
+Line: 359
+assembly.ll line: 7007
+Stack: 
+	#000007007 in quotearg_buffer_restyled (buffer=34467232, buffersize=256, arg=39078464, argsize, quoting_style=0, flags=1, quote_these_too=38791752, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c:359
+	#100008168 in quotearg_n_options (n=0, arg=39078464, argsize, options=38791744) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c:797
+	#200006462 in quotearg_n_mem (n=0, arg=39078464, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c:829
+	#300006485 in quotearg_mem (arg=39078464, argsize) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c:841
+	#400012115 in main (=1, =36627232)
+Info: 
+	address: 39078465
+	next: object at 39078672 of size 8
+		MO640[8] addr [39078672]:  allocated at quotearg_n_mem():  %arg.addr = alloca i8*, align 8
+	prev: object at 39078464 of size 1
+		MO624[1] addr [39078464]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

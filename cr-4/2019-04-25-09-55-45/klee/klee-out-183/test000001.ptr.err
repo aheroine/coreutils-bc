@@ -1,0 +1,18 @@
+Error: memory error: invalid pointer: free
+File: /home/jl/deploy/klee-uclibc/libc/stdio/fclose.c
+Line: 92
+assembly.ll line: 5903
+Stack: 
+	#000005903 in fclose (stream=27288720) at /home/jl/deploy/klee-uclibc/libc/stdio/fclose.c:92
+	#100000165 in rpl_fclose (fp=27288720) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fclose.c:65
+	#200000411 in __macke_error_rpl_fclose (argno0=27288720)
+	#300000314 in close_stream (stream=27288720) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/close-stream.c:60
+	#400000382 in __user_main (=1, =26710016)
+	#500006522 in __uClibc_main (argc=1, argv=26710016) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600006732 in macke_close_stream_main (=1, =26710016)
+Info: 
+	address: (ReadLSB w64 8 argno0)
+	example: 72340172838076673
+	range: [1, 18446744073709551615]
+	next: object at 24956848 of size 964
+		MO143[964] allocated at global:.str133

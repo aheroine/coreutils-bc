@@ -1,0 +1,7 @@
+Error: failed external call: fclose
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/close-stream.c
+Line: 61
+assembly.ll line: 12657
+Stack: 
+	#000012657 in close_stream (stream=61309584) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/close-stream.c:61
+	#100021143 in main (=1, =51250272)

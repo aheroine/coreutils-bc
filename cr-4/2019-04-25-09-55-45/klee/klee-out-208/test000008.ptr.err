@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c
+Line: 343
+assembly.ll line: 611
+Stack: 
+	#000000611 in quotearg_buffer_restyled (buffer=43152640, buffersize=256, arg=40400816, quoting_style=6, flags=1, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:343
+	#100001185 in quotearg_n_options (arg=40400816) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#200000451 in quote_n_mem (arg=40400816) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:944
+	#300000458 in quote_n (arg=40400816) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:956
+	#400000465 in quote (arg=40400816) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:962
+	#500001783 in __macke_error_quote (argno0=40400816)
+	#600000235 in fremote (fd, name=40400816) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:896
+	#700001754 in __user_main (=1, =48121248)
+	#800005498 in __uClibc_main (argc=1, argv=48121248) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#900009217 in macke_fremote_main (=1, =48121248)
+Info: 
+	address: 40400817
+	next: object at 40433520 of size 4
+		MO737[4] allocated at __user_main():  %argcPtr = alloca i32, align 4
+	prev: object at 40400816 of size 1
+		MO817[1] allocated at __user_main():  %7 = call i8* @malloc(i64 %6)

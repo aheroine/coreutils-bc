@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 1433
+assembly.ll line: 17794
+Stack: 
+	#000017794 in __fd_lstat (path=59167808, buf=80036720) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:1433
+	#100019634 in lstat (path=59167808, buf=75022608) at /home/jl/deploy/klee22/runtime/POSIX/fd_32.c:120
+	#200000636 in copy_internal (src_name=59167808, dst_name=77802160, new_dst=false, device=0, ancestors=0, x=58470288, command_line_arg=true, copy_into_self=71044160, rename_succeeded=64215120) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1034
+	#300000475 in copy (src_name=59167808, dst_name=77802160, options=58470288, copy_into_self=71044160, rename_succeeded=64215120) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1951
+	#400000380 in do_move (source=59167808, dest=77802160, x=58470288) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/mv.c:185
+	#500009038 in __macke_error_do_move (argno0=59167808, argno1=77802160, argno2=58470288)
+	#600000366 in movefile (source=59167808, dest=77802160, dest_is_dir, x=58470288) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/mv.c:288
+	#700009007 in __user_main (=1, =57743408)
+	#800014368 in __uClibc_main (argc=1, argv=57743408) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#900016091 in macke_movefile_main (=1, =57743408)
+Info: 
+	address: 59167812
+	next: object at 59170912 of size 0
+		MO921[0] allocated at klee_init_fds():  %7 = call noalias i8* @malloc(i64 %6) #4, !dbg !5673
+	prev: object at 59167808 of size 4
+		MO938[4] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c
+Line: 379
+assembly.ll line: 863
+Stack: 
+	#000000863 in quotearg_buffer_restyled (buffer=45818704, buffersize=256, arg=53825536, quoting_style=6, flags=1, quote_these_too=39057368) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:379
+	#100001140 in quotearg_n_options (arg=53825536, options=39057360) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:704
+	#200000423 in quotearg_n_style (arg=53825536) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:751
+	#300000407 in quote_n (name=53825536) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:31
+	#400000414 in quote (name=53825536) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:39
+	#500005469 in __macke_error_quote (argno0=53825536)
+	#600000315 in pipe_bytes (pretty_filename=53825536, fd, n_bytes, read_pos=40461392) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:768
+	#700005441 in __user_main (=1, =58822784)
+	#800008147 in __uClibc_main (argc=1, argv=58822784) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#900009720 in macke_pipe_bytes_main (=1, =58822784)
+Info: 
+	address: 53825537
+	next: object at 53903856 of size 46
+		MO57[46] allocated at macke_pipe_bytes_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 53825536 of size 1
+		MO782[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

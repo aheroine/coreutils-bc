@@ -1,0 +1,8 @@
+KLEE: ERROR: /home/jl/deploy/klee22/runtime/POSIX/fd.c:430: check_memory_access: memory error
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c:83: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c:83: memory error: object read only
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states

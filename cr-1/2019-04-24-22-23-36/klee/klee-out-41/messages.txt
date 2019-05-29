@@ -1,0 +1,19 @@
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-22-23-36/klee/klee-out-41 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-22-23-36/bitcode/symmains.bc_remove_entry_ChangeEntry.bc
+
+KLEE: Divergence Instruction: file:/home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c line: 846 test case id is: 1 
+
+KLEE: Divergence Instruction: file:/home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c line: 849 test case id is: 2 
+
+KLEE: Divergence Instruction: file:/home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c line: 849 test case id is: 3 
+
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1071: external call with symbolic argument in new version: unlinkat
+KLEE: NOTE: now ignoring this error at this location
+KLEE: error occurs only at new version
+new Info:Error: external call with symbolic argument in new version: unlinkat
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c
+Line: 1071
+assembly.ll line: 4810
+Stack: 
+	#000004810 in remove_entry (fd_cwd, ds=56917328, filename=56912176, st=56934240, x=56924656, dp=51575712) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1071
+	#100011462 in main (=1, =48882912)
+

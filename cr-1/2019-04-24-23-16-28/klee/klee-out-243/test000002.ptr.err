@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 746
+assembly.ll line: 700
+Stack: 
+	#000000700 in hash_find_entry (entry1=54065056, bucket_head=63287888) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:746
+	#100000485 in hash_insert (entry1=54065056) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:916
+	#200000213 in remember_copied (name=52330048, ino=2, dev=2049) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/cp-hash.c:148
+	#300001569 in __macke_error_remember_copied (argno0=52330048, argno1=2, argno2=2049)
+	#400000193 in remember_created (file=52330048) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/cp-hash.c:115
+	#500001543 in __user_main (=1, =53077808)
+	#600004308 in __uClibc_main (argc=1, argv=53077808) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700005903 in macke_remember_created_main (=1, =53077808)
+Info: 
+	address: 48
+	next: object at 48338944 of size 1
+		MO126[1] allocated at global:.str180

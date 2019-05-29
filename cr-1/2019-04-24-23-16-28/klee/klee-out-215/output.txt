@@ -1,0 +1,24 @@
+KLEE: KLEE: WATCHDOG: watching 6810
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-215"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 38574656)
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:746: invalid function pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
+
+KLEE: ctrl-c detected, requesting interpreter to halt.
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via gdb
+
+Could not attach to process.  If your uid matches the uid of the target
+process, check the setting of /proc/sys/kernel/yama/ptrace_scope, or try
+again as the root user.  For more details, see /etc/sysctl.d/10-ptrace.conf
+ptrace: Operation not permitted.
+No symbol table is loaded.  Use the "file" command.
+The program is not being run.
+KLEE: WARNING: KLEE: WATCHDOG: kill(9)ing child (I tried to be nice)
+

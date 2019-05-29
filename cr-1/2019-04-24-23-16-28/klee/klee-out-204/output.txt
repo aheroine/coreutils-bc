@@ -1,0 +1,864 @@
+KLEE: KLEE: WATCHDOG: watching 24753
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-204"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 61036048)
+KLEE: WARNING ONCE: __macke_error_quote: MACKE: Summery for quote reached
+cannot open `' for reading
+KLEE: ERROR: /home/jl/deploy/klee22/runtime/POSIX/fd.c:43: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+cannot open `' for reading
+skipping file `//', as it was replaced while being copied
+skipping file `//', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+KLEE: WARNING ONCE: calling external: __ctype_b_loc()
+cannot open `/\001' for reading
+cannot open `//\001' for reading
+cannot open `\001/' for reading
+KLEE: ERROR: /home/jl/deploy/klee22/runtime/POSIX/fd.c:1433: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+cannot open `/\001/' for reading
+cannot open `\001\001' for reading
+cannot open `/\001\001' for reading
+skipping file `/', as it was replaced while being copied
+skipping file `/', as it was replaced while being copied
+cannot open `\001' for reading
+cannot open `' for reading
+skipping file `//', as it was replaced while being copied
+skipping file `//', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+cannot open `/\001' for reading
+cannot open `//\001' for reading
+cannot open `\001/' for reading
+cannot open `/\001/' for reading
+cannot open `\001\001' for reading
+cannot open `/\001\001' for reading
+skipping file `/', as it was replaced while being copied
+skipping file `/', as it was replaced while being copied
+cannot open `\001' for reading
+cannot open `' for reading
+skipping file `//', as it was replaced while being copied
+skipping file `//', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+cannot open `/\001' for reading
+cannot open `//\001' for reading
+cannot open `\001/' for reading
+cannot open `/\001/' for reading
+cannot open `\001\001' for reading
+cannot open `/\001\001' for reading
+skipping file `/', as it was replaced while being copied
+skipping file `/', as it was replaced while being copied
+cannot open `\001' for reading
+cannot open `' for reading
+skipping file `//', as it was replaced while being copied
+skipping file `//', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+cannot open `/\001' for reading
+cannot open `//\001' for reading
+cannot open `\001/' for reading
+cannot open `/\001/' for reading
+cannot open `\001\001' for reading
+cannot open `/\001\001' for reading
+skipping file `/', as it was replaced while being copied
+skipping file `/', as it was replaced while being copied
+cannot open `\001' for reading
+cannot open `' for reading
+skipping file `//', as it was replaced while being copied
+skipping file `//', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+cannot open `/\001' for reading
+cannot open `//\001' for reading
+cannot open `\001/' for reading
+cannot open `/\001/' for reading
+cannot open `\001\001' for reading
+cannot open `/\001\001' for reading
+skipping file `/', as it was replaced while being copied
+skipping file `/', as it was replaced while being copied
+cannot open `\001' for reading
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot open `' for reading
+skipping file `//', as it was replaced while being copied
+skipping file `//', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+cannot open `/\001' for reading
+cannot open `//\001' for reading
+cannot open `\001/' for reading
+cannot open `/\001/' for reading
+cannot open `\001\001' for reading
+cannot open `/\001\001' for reading
+skipping file `/', as it was replaced while being copied
+skipping file `/', as it was replaced while being copied
+cannot open `\001' for reading
+cannot open `' for reading
+skipping file `//', as it was replaced while being copied
+skipping file `//', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+cannot open `/\001' for reading
+cannot open `//\001' for reading
+cannot open `\001/' for reading
+cannot open `/\001/' for reading
+cannot open `\001\001' for reading
+cannot open `/\001\001' for reading
+skipping file `/', as it was replaced while being copied
+skipping file `/', as it was replaced while being copied
+cannot open `\001' for reading
+cannot open `' for reading
+skipping file `//', as it was replaced while being copied
+skipping file `//', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+cannot open `/\001' for reading
+cannot open `//\001' for reading
+cannot open `\001/' for reading
+cannot open `/\001/' for reading
+cannot open `\001\001' for reading
+cannot open `/\001\001' for reading
+skipping file `/', as it was replaced while being copied
+skipping file `/', as it was replaced while being copied
+cannot open `\001' for reading
+cannot open `' for reading
+skipping file `//', as it was replaced while being copied
+skipping file `//', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+cannot open `/\001' for reading
+cannot open `//\001' for reading
+cannot open `\001/' for reading
+cannot open `/\001/' for reading
+cannot open `\001\001' for reading
+cannot open `/\001\001' for reading
+skipping file `/', as it was replaced while being copied
+skipping file `/', as it was replaced while being copied
+cannot open `\001' for reading
+cannot open `' for reading
+skipping file `//', as it was replaced while being copied
+skipping file `//', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+cannot open `/\001' for reading
+cannot open `//\001' for reading
+cannot open `\001/' for reading
+cannot open `/\001/' for reading
+cannot open `\001\001' for reading
+cannot open `/\001\001' for reading
+skipping file `/', as it was replaced while being copied
+skipping file `/', as it was replaced while being copied
+cannot open `\001' for reading
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot create regular file `'
+cannot open `' for reading
+skipping file `//', as it was replaced while being copied
+skipping file `//', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+cannot open `/\001' for reading
+cannot open `//\001' for reading
+cannot open `\001/' for reading
+cannot open `/\001/' for reading
+cannot open `\001\001' for reading
+cannot open `/\001\001' for reading
+skipping file `/', as it was replaced while being copied
+skipping file `/', as it was replaced while being copied
+cannot open `\001' for reading
+cannot open `' for reading
+skipping file `//', as it was replaced while being copied
+skipping file `//', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+cannot open `/\001' for reading
+cannot open `//\001' for reading
+cannot open `\001/' for reading
+cannot open `/\001/' for reading
+cannot open `\001\001' for reading
+cannot open `/\001\001' for reading
+skipping file `/', as it was replaced while being copied
+skipping file `/', as it was replaced while being copied
+cannot open `\001' for reading
+cannot open `' for reading
+skipping file `//', as it was replaced while being copied
+skipping file `//', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+cannot open `/\001' for reading
+cannot open `//\001' for reading
+cannot open `\001/' for reading
+cannot open `/\001/' for reading
+cannot open `\001\001' for reading
+cannot open `/\001\001' for reading
+skipping file `/', as it was replaced while being copied
+skipping file `/', as it was replaced while being copied
+cannot open `\001' for reading
+cannot open `' for reading
+skipping file `//', as it was replaced while being copied
+skipping file `//', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+skipping file `///', as it was replaced while being copied
+cannot open KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+
+KLEE: done: total instructions = 4292862
+KLEE: done: completed paths = 3282
+KLEE: done: generated tests = 13

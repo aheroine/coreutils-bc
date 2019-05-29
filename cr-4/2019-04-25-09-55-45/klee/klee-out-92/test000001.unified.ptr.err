@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c
+Line: 1268
+assembly.ll line: 5108
+Stack: 
+	#000005108 in wd_comparator (e1=64645696, e2=64646416) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:1268
+	#100017918 in main (=1, =60811616)
+Info: 
+	address: 64645764
+	next: object at 64646416 of size 1
+		MO851[1] addr [64646416]:  allocated at main():  %10 = call i8* @malloc(i64 %9)
+	prev: object at 64645696 of size 1
+		MO840[1] addr [64645696]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

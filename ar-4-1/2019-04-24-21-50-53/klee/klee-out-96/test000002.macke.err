@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/ar-4-1/2019-04-24-21-50-53/klee/klee-out-34/test000001.unified.ptr.err
+Stack: 
+	#000001566 in __macke_error_mark_printable_field (argno0=0)
+	#100000593 in set_fields (fieldstr=40758048) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/src/cut.c:534
+	#200001505 in __user_main (=1, =57165824)
+	#300004446 in __uClibc_main (argc=1, argv=57165824) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400006068 in macke_set_fields_main (=1, =57165824)

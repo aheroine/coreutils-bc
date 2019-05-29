@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash-pjw.c
+Line: 37
+assembly.ll line: 164
+Stack: 
+	#000000164 in hash_pjw (x, tablesize) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash-pjw.c:37
+	#100000250 in __macke_error_hash_pjw (argno0, argno1)
+	#200000134 in triple_hash (x=67320784, table_size) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:828
+	#300000227 in __user_main (=1, =52314128)
+	#400000622 in __uClibc_main (argc=1, argv=52314128) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500000805 in macke_triple_hash_main (=1, =52314128)
+Info: 
+	address: (Add w64 1
+          (ReadLSB w64 0 argno0))
+	example: 67320800
+	range: [67320800, 67320800]
+	next: object at 67353664 of size 72
+		MO146[72] allocated at global:.str1143
+	prev: object at 67320784 of size 16
+		MO743[16] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c
+Line: 379
+assembly.ll line: 637
+Stack: 
+	#000000637 in quotearg_buffer_restyled (buffer, buffersize, arg=69299952, quoting_style=0, flags=1) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:379
+	#100000956 in quotearg_n_options (n, arg=69299952) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:704
+	#200001106 in __macke_error_quotearg_n_options (argno0, argno1=69299952)
+	#300000197 in quotearg_n (n, arg=69299952) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:726
+	#400001077 in __user_main (=1, =74858736)
+	#500004796 in __uClibc_main (argc=1, argv=74858736) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600006368 in macke_quotearg_n_main (=1, =74858736)
+Info: 
+	address: 69299953
+	next: object at 69307504 of size 167
+		MO113[167] allocated at global:__evoke_link_warning___fpending
+	prev: object at 69299952 of size 1
+		MO780[1] allocated at __user_main():  %7 = call i8* @malloc(i64 %6)

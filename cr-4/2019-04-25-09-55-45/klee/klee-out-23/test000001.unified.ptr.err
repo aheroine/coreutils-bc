@@ -1,0 +1,14 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/localcharset.c
+Line: 542
+assembly.ll line: 15615
+Stack: 
+	#000015615 in locale_charset () at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/localcharset.c:542
+	#100012474 in gettext_quote (msgid=48732592, s) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:219
+	#200016609 in main (=1, =44898656)
+Info: 
+	address: 139793268606920
+	next: object at 139793268501440 of size 1536
+		MO81[1536] addr [139793268501440]:  (no allocation info)
+	prev: object at 48736128 of size 8
+		MO850[8] addr [48736128]:  allocated at gettext_quote():  %msgid.addr = alloca i8*, align 8

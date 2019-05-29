@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 43
+assembly.ll line: 5657
+Stack: 
+	#000005657 in futimesat (path=52653408, times=51954192) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:43
+	#100001151 in futimens1 (file=52653408, timespec=74521184) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/utimens.c:117
+	#200001158 in utimens1 (file=52653408, timespec=74521184) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/utimens.c:186
+	#300001262 in __macke_error_utimens1 (argno0=52653408, argno1=74521184)
+	#400000997 in utimecmp (dst_name=52653408, dst_stat=62580656, src_stat=73920432, options) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/utimecmp.c:263
+	#500001237 in __user_main (=1, =69874672)
+	#600003798 in __uClibc_main (argc=1, argv=69874672) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700005393 in macke_utimecmp_main (=1, =69874672)
+Info: 
+	address: 52653409
+	next: object at 52656112 of size 21
+		MO75[21] allocated at macke_utimecmp_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 52653408 of size 1
+		MO772[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

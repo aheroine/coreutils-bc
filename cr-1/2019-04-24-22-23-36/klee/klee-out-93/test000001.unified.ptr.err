@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 424
+assembly.ll line: 7020
+Stack: 
+	#000007020 in hash_string (string=44405120, n_buckets) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:424
+	#100012303 in main (=1, =49937088)
+Info: 
+	address: 44405121
+	next: object at 44447744 of size 47
+		MO66[47] addr [44447744]:  allocated at main():  call void @klee_mark_arg_symbolic(i32 %0, i8** %1)
+	prev: object at 44405120 of size 1
+		MO640[1] addr [44405120]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

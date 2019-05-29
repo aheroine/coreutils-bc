@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/localcharset.c
+Line: 542
+assembly.ll line: 9758
+Stack: 
+	#000009758 in locale_charset () at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/localcharset.c:542
+	#100008281 in gettext_quote (msgid=36919216, s=6) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c:219
+	#200006846 in quotearg_buffer_restyled (buffer=32591136, buffersize=256, arg=37202064, argsize=18446744073709551615, quoting_style=6, flags=1, quote_these_too=36918072, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c:312
+	#300008168 in quotearg_n_options (n=0, arg=37202064, argsize=18446744073709551615, options=36918064) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c:797
+	#400006702 in quote_n (n=0, name=37202064) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c:944
+	#500006712 in quote (name=37202064) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/quotearg.c:950
+	#600011074 in main (=1, =34750912)
+Info: 
+	address: 139826645526472
+	next: object at 139826645420992 of size 1536
+		MO81[1536] addr [139826645420992]:  (no allocation info)
+	prev: object at 37415776 of size 8
+		MO735[8] addr [37415776]:  allocated at gettext_quote():  %translation = alloca i8*, align 8

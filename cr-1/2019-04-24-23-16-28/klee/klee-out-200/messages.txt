@@ -1,0 +1,10 @@
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:226: memory error: object read only
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:232: memory error: object read only
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:327: concretized symbolic size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/string/mempcpy.c:31: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states

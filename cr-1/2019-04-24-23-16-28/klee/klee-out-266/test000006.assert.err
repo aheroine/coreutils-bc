@@ -1,0 +1,11 @@
+Error: ASSERTION FAIL: state->magic == 9827862
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/cycle-check.c
+Line: 62
+assembly.ll line: 509
+Stack: 
+	#000000509 in cycle_check (state=73963384, sb=67402192) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/cycle-check.c:62
+	#100001351 in __macke_error_cycle_check (argno0=73963384, argno1=67402192)
+	#200000242 in AD_push (ds=73963120, dir=74164064, dir_sb_from_parent=67402192) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:682
+	#300001326 in __user_main (=1, =64074608)
+	#400004756 in __uClibc_main (argc=1, argv=64074608) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500006351 in macke_AD_push_main (=1, =64074608)

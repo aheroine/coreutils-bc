@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/localcharset.c
+Line: 542
+assembly.ll line: 10801
+Stack: 
+	#000010801 in locale_charset () at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/localcharset.c:542
+	#100009080 in gettext_quote (msgid=33981984, s=6) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/quotearg.c:219
+	#200007645 in quotearg_buffer_restyled (buffer=29291856, buffersize=256, arg=34283584, argsize=18446744073709551615, quoting_style=6, flags=1, quote_these_too=33980840, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/quotearg.c:312
+	#300008967 in quotearg_n_options (n=0, arg=34283584, argsize=18446744073709551615, options=33980832) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/quotearg.c:797
+	#400007475 in quote_n_mem (n=0, arg=34283584, argsize=18446744073709551615) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/quotearg.c:944
+	#500007501 in quote_n (n=0, arg=34283584) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/quotearg.c:956
+	#600007511 in quote (arg=34283584) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/lib/quotearg.c:962
+	#700012143 in main (=1, =29353392)
+Info: 
+	address: 140094611945416
+	next: object at 140094611839936 of size 1536
+		MO81[1536] addr [140094611839936]:  (no allocation info)
+	prev: object at 34499552 of size 8
+		MO773[8] addr [34499552]:  allocated at gettext_quote():  %translation = alloca i8*, align 8

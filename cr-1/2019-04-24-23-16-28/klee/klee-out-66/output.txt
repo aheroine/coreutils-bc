@@ -1,0 +1,104 @@
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-66"
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-66 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/bitcode/symmains.bc_savedirstream_ChangeEntry.bc
+
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: __ctype_get_mb_cur_max
+KLEE: WARNING: undefined reference to function: __errno_location
+KLEE: WARNING: undefined reference to function: __fpending
+KLEE: WARNING: undefined reference to function: _obstack_begin
+KLEE: WARNING: undefined reference to function: _obstack_newchunk
+KLEE: WARNING: undefined reference to function: _setjmp
+KLEE: WARNING: undefined reference to function: atexit
+KLEE: WARNING: undefined reference to function: chmod
+KLEE: WARNING: undefined reference to function: chown
+KLEE: WARNING: undefined reference to function: close
+KLEE: WARNING: undefined reference to function: closedir
+KLEE: WARNING: undefined reference to function: dirfd
+KLEE: WARNING: undefined reference to function: dup
+KLEE: WARNING: undefined reference to function: euidaccess
+KLEE: WARNING: undefined reference to function: fchmod
+KLEE: WARNING: undefined reference to function: fchown
+KLEE: WARNING: undefined reference to function: fclose
+KLEE: WARNING: undefined reference to function: fcntl
+KLEE: WARNING: undefined reference to function: fdopendir
+KLEE: WARNING: undefined reference to function: ferror_unlocked
+KLEE: WARNING: undefined reference to function: fflush_unlocked
+KLEE: WARNING: undefined reference to function: fopen
+KLEE: WARNING: undefined reference to function: fprintf
+KLEE: WARNING: undefined reference to function: fputs_unlocked
+KLEE: WARNING: undefined reference to function: fstat
+KLEE: WARNING: undefined reference to function: fstatat
+KLEE: WARNING: undefined reference to function: ftruncate
+KLEE: WARNING: undefined reference to function: futimesat
+KLEE: WARNING: undefined reference to function: getchar
+KLEE: WARNING: undefined reference to function: getenv
+KLEE: WARNING: undefined reference to function: getopt_long
+KLEE: WARNING: undefined reference to function: group_member
+KLEE: WARNING: undefined reference to function: isatty
+KLEE: WARNING: undefined reference to function: iswprint
+KLEE: WARNING: undefined reference to function: lchown
+KLEE: WARNING: undefined reference to function: link
+KLEE: WARNING: undefined reference to function: longjmp
+KLEE: WARNING: undefined reference to function: lseek
+KLEE: WARNING: undefined reference to function: lstat
+KLEE: WARNING: undefined reference to function: mbrtowc
+KLEE: WARNING: undefined reference to function: mbsinit
+KLEE: WARNING: undefined reference to function: memcmp
+KLEE: WARNING: undefined reference to function: mkdir
+KLEE: WARNING: undefined reference to function: mkfifo
+KLEE: WARNING: undefined reference to function: mknod
+KLEE: WARNING: undefined reference to function: obstack_free
+KLEE: WARNING: undefined reference to function: open
+KLEE: WARNING: undefined reference to function: openat
+KLEE: WARNING: undefined reference to function: opendir
+KLEE: WARNING: undefined reference to variable: optarg
+KLEE: WARNING: undefined reference to variable: optind
+KLEE: WARNING: undefined reference to function: pathconf
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING: undefined reference to function: putc_unlocked
+KLEE: WARNING: undefined reference to function: putchar_unlocked
+KLEE: WARNING: undefined reference to function: read
+KLEE: WARNING: undefined reference to function: readdir
+KLEE: WARNING: undefined reference to function: readlink
+KLEE: WARNING: undefined reference to function: rename
+KLEE: WARNING: undefined reference to function: rewinddir
+KLEE: WARNING: undefined reference to function: setlocale
+KLEE: WARNING: undefined reference to function: stat
+KLEE: WARNING: undefined reference to variable: stderr
+KLEE: WARNING: undefined reference to variable: stdout
+KLEE: WARNING: undefined reference to function: strcmp
+KLEE: WARNING: undefined reference to function: strcpy
+KLEE: WARNING: undefined reference to function: strlen
+KLEE: WARNING: undefined reference to function: strncmp
+KLEE: WARNING: undefined reference to function: strndup
+KLEE: WARNING: undefined reference to function: symlink
+KLEE: WARNING: undefined reference to function: umask
+KLEE: WARNING: undefined reference to function: unlink
+KLEE: WARNING: undefined reference to function: unlinkat
+KLEE: WARNING: undefined reference to function: utimes
+KLEE: WARNING: undefined reference to function: vfprintf
+KLEE: WARNING: undefined reference to function: write
+KLEE: WARNING: undefined reference to function: error (UNSAFE)!
+KLEE: WARNING ONCE: calling external: __errno_location()
+KLEE: WARNING ONCE: calling external: readdir(33395056)
+KLEE: WARNING ONCE: calling external: closedir(33395056)
+0  klee            0x0000000000e5f672 llvm::sys::PrintStackTrace(_IO_FILE*) + 50
+1  klee            0x0000000000e5eec4
+2  libpthread.so.0 0x00007fb5e5c03890
+3  klee            0x0000000000e66087 llvm::StringMapImpl::FindKey(llvm::StringRef) const + 55
+4  klee            0x0000000000e661b9 llvm::StringMapImpl::RemoveKey(llvm::StringRef) + 9
+5  klee            0x0000000000e66201 llvm::StringMapImpl::RemoveKey(llvm::StringMapEntryBase*) + 17
+6  klee            0x0000000000d57357 void llvm::SymbolTableListTraits<llvm::Instruction, llvm::BasicBlock>::setSymTabObject<llvm::Function*>(llvm::Function**, llvm::Function*) + 103
+7  klee            0x0000000000d56c3d llvm::BasicBlock::eraseFromParent() + 45
+8  klee            0x0000000000dd5592 llvm::Function::dropAllReferences() + 66
+9  klee            0x0000000000e011e0 llvm::Module::dropAllReferences() + 32
+10 klee            0x0000000000e01308 llvm::Module::~Module() + 40
+11 klee            0x00000000008ca782 llvm::ExecutionEngine::~ExecutionEngine() + 114
+12 klee            0x00000000008b8dce llvm::JIT::~JIT() + 238
+13 klee            0x00000000008b8f49 llvm::JIT::~JIT() + 9
+14 klee            0x00000000005a1633 klee::ExternalDispatcher::~ExternalDispatcher() + 19
+15 klee            0x000000000055d831 klee::Executor::~Executor() + 65
+16 klee            0x000000000055d9d9 klee::Executor::~Executor() + 9
+17 klee            0x000000000053e5e8 main + 6152
+18 libc.so.6       0x00007fb5e4ab6b97 __libc_start_main + 231
+19 klee            0x0000000000551faa _start + 42

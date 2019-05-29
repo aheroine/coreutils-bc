@@ -1,0 +1,60 @@
+array argno0[96] : w32 -> w8 = symbolic
+array argno1[8] : w32 -> w8 = symbolic
+array const_arr125[784] : w32 -> w8 = [0 0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+array macke_sizeof_argno0[4] : w32 -> w8 = symbolic
+array macke_sym_switch_dump_remainder[4] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Sle 1
+              N0:(ReadLSB w32 0 macke_sizeof_argno0))
+         (Slt N0 1025)
+         (Eq false (Eq 4 N0))
+         (Eq false (Eq 16 N0))
+         (Eq false (Eq 128 N0))
+         (Eq false (Eq 2 N0))
+         (Eq false
+             (Eq 1
+                 N1:(ReadLSB w64 0 argno1)))
+         (Eq false (Eq 0 N1))
+         (Eq 0
+             (And w8 (Read w8 52 argno0) 1))
+         (Eq false
+             (Slt N2:(ReadLSB w32 56 argno0)
+                  0))
+         (Eq false
+             (Ult (Add w64 18446744073674463632
+                           N3:(ReadLSB w64 0 argno0))
+                  77))
+         (Ult (Add w64 18446744073674463344 N3) 35)
+         (Eq 0
+             (ReadLSB w32 64 argno0))
+         (Ult N2 32)
+         (Eq false
+             (Eq 0
+                 (And w32 (ReadLSB w32 N4:(Extract w32 0 (Add w64 4
+                                                                  N5:(Mul w64 24 (SExt w64 N2)))) U0:[783=0, 782=0, 781=0, 780=0, 779=0, 778=0, 777=0, 776=0, 775=N6:(Read w8 3 model_version),
+                                                                                                      774=N7:(Read w8 2 model_version),
+                                                                                                      773=N8:(Read w8 1 model_version),
+                                                                                                      772=N9:(Read w8 0 model_version)] @ const_arr125)
+                          1)))
+         (Eq false
+             (Eq 8592
+                 N10:(ReadLSB w32 48 argno0)))
+         (Eq false
+             (Eq 32768 (And w32 N10 61440)))
+         (Eq false
+             (Eq 1
+                 N11:(ReadLSB w32 0 macke_sym_switch_dump_remainder)))
+         (Eq false (Eq 4 N11))
+         (Eq false (Eq 3 N11))
+         (Eq false (Eq 9 N11))
+         (Eq false (Eq 6 N11))
+         (Eq false (Eq 5 N11))
+         (Eq false (Eq 2 N11))
+         (Eq false (Eq 8 N11))
+         (Eq false (Eq 7 N11))
+         (Eq false
+             (Eq 0
+                 (ReadLSB w32 N12:(Extract w32 0 N5) U0)))]
+        false)

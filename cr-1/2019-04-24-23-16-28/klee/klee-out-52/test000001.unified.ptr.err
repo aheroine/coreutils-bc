@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/utimens.c
+Line: 106
+assembly.ll line: 17923
+Stack: 
+	#000017923 in futimens1 (fd, file=52013552, timespec=52026928) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/utimens.c:106
+	#100019636 in main (=1, =51268352)
+Info: 
+	address: 52026944
+	next: object at 52029264 of size 4
+		MO1029[4] addr [52029264]:  allocated at futimens1():  %fd.addr = alloca i32, align 4
+	prev: object at 52026928 of size 16
+		MO1024[16] addr [52026928]:  allocated at main():  %12 = call i8* @malloc(i64 %11)

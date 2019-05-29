@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 493
+assembly.ll line: 391
+Stack: 
+	#000000391 in check_tuning (table=39756864) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:493
+	#100000162 in hash_initialize (candidate, tuning, hasher, comparator, data_freer) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:554
+	#200000246 in hash_rehash (table=62233072, candidate) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:824
+	#300000578 in __user_main (=1, =39693296)
+	#400001191 in __uClibc_main (argc=1, argv=39693296) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500001374 in macke_hash_rehash_main (=1, =39693296)
+Info: 
+	address: (Add w64 8
+          (Select w64 (Eq 0
+                          N0:(ReadLSB w64 40 argno0))
+                      44640432
+                      N0))
+	example: 56
+	range: [0, 18446744073709551615]
+	next: object at 34740880 of size 21
+		MO26[21] allocated at macke_hash_rehash_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

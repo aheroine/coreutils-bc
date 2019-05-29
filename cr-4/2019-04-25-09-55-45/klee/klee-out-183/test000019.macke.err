@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-182/test000008.ptr.err
+Stack: 
+	#000005831 in __macke_error_rpl_fclose (argno0=27288720)
+	#100000314 in close_stream (stream=27288720) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/close-stream.c:60
+	#200000382 in __user_main (=1, =26710016)
+	#300006522 in __uClibc_main (argc=1, argv=26710016) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400006732 in macke_close_stream_main (=1, =26710016)

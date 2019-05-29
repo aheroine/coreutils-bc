@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/basename.c
+Line: 39
+assembly.ll line: 2711
+Stack: 
+	#000002711 in last_component (name=44061808) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/basename.c:39
+	#100000385 in rm_1 (ds=43375568, filename=44061808, x=67867152) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1564
+	#200004523 in __user_main (=1, =62056320)
+	#300008001 in __uClibc_main (argc=1, argv=62056320) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400009724 in macke_rm_1_main (=1, =62056320)
+Info: 
+	address: 44061809
+	next: object at 44114544 of size 6
+		MO180[6] allocated at global:
+	prev: object at 44061808 of size 1
+		MO893[1] allocated at __user_main():  %10 = tail call i8* @malloc(i64 %9)

@@ -1,0 +1,10 @@
+Error: invalid function pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 746
+assembly.ll line: 582
+Stack: 
+	#000000582 in hash_find_entry (table=47079264, entry1=64353824, bucket_head=49296528) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:746
+	#100000387 in hash_delete (table=47079264, entry1=64353824) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:986
+	#200000741 in __user_main (=1, =63370208)
+	#300001347 in __uClibc_main (argc=1, argv=63370208) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400001530 in macke_hash_delete_main (=1, =63370208)

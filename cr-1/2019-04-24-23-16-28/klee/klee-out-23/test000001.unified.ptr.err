@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 15691
+Stack: 
+	#000015691 in quotearg_buffer_restyled (buffer=58006464, buffersize=256, arg=58451200, argsize=18446744073709551615, quoting_style=5, o=58664944) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100015301 in quotearg_buffer (buffer=58006464, buffersize=256, arg=58451200, argsize=18446744073709551615, o=58664944) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200016725 in quotearg_n_options (n=0, arg=58451200, argsize=18446744073709551615, options=58664944) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300015448 in quotearg_n_style (n=0, s=5, arg=58451200) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:676
+	#400011415 in argmatch_invalid (context=58450480, value=58451200, problem=18446744073709551614) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/argmatch.c:138
+	#500011536 in __xargmatch_internal (context=58450480, arg=58451200, arglist=57978176, vallist=57975728, valsize=4, exit_fn=48242496) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/argmatch.c:188
+	#600011741 in get_version (context=58450480, version=58451200) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/backupfile.c:342
+	#700011774 in xget_version (context=58450480, version=58451200) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/backupfile.c:356
+	#800019165 in main (=1, =48599296)
+Info: 
+	address: 58451201
+	next: object at 58451312 of size 8
+		MO1048[8] addr [58451312]:  allocated at __xargmatch_internal():  %vallist.addr = alloca i8*, align 8
+	prev: object at 58451200 of size 1
+		MO1019[1] addr [58451200]:  allocated at main():  %10 = call i8* @malloc(i64 %9)

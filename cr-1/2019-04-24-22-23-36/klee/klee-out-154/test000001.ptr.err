@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c
+Line: 393
+assembly.ll line: 170
+Stack: 
+	#000000170 in AD_stack_pop (ds=42276832) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:393
+	#100000427 in __macke_error_AD_stack_pop (argno0=42276832)
+	#200000226 in AD_stack_clear (ds=42276832) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:403
+	#300000400 in __user_main (=1, =52361472)
+	#400008962 in __uClibc_main (argc=1, argv=52361472) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500009145 in macke_AD_stack_clear_main (=1, =52361472)
+Info: 
+	address: (Add w64 18446744073709551584
+          (ReadLSB w64 200 argno0))
+	example: 18446744069431361504
+	range: [0, 18446744073709551615]
+	next: object at 39848928 of size 8
+		MO169[8] allocated at global:llvm.used

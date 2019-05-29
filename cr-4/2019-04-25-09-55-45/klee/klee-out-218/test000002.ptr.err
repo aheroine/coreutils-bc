@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c
+Line: 343
+assembly.ll line: 405
+Stack: 
+	#000000405 in quotearg_buffer_restyled (buffer=51427824, buffersize=256, arg=37518592, quoting_style=6, flags=1, quote_these_too=60392280, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:343
+	#100001034 in quotearg_n_options (n=0, arg=37518592, options=60392272) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#200000245 in quotearg_n_style (arg=37518592) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:848
+	#300001676 in __macke_error_quotearg_n_style (argno2=37518592)
+	#400000222 in argmatch_invalid (context=37518656, value=37518592, problem) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/argmatch.c:136
+	#500001649 in __user_main (=1, =49209328)
+	#600005451 in __uClibc_main (argc=1, argv=49209328) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700009170 in macke_argmatch_invalid_main (=1, =49209328)
+Info: 
+	address: 37518593
+	next: object at 37518656 of size 1
+		MO808[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)
+	prev: object at 37518592 of size 1
+		MO833[1] allocated at __user_main():  %8 = call i8* @malloc(i64 %7)

@@ -1,0 +1,9 @@
+Control Divergence
+Condition: (Eq false
+     (Eq 0 (Shadow w64 1 0)))
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c
+Line: 408
+assembly.ll line: 1235
+Stack: 
+	#000001235 in set_fields (fieldstr=31932448) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:408
+	#100012307 in main (=1, =27002288)

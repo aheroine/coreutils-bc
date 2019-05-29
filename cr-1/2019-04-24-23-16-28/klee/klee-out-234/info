@@ -1,0 +1,18 @@
+/home/jl/deploy/klee22/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-234 --search=sonar --sonar-target=function-call --sonar-target-info=__macke_error_utimens1 --max-time=120 --max-instruction-time=12 --allow-external-sym-calls --libc=uclibc --max-memory=1000 --only-output-states-covering-new --optimize --disable-inlining --output-source=false --posix-runtime --watchdog --stats-write-interval=238 --istats-write-interval=238 --entry-point macke_utimecmp_main /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/bitcode/chain-utimecmp-utimens1.bc
+PID: 4483
+Started: 2019-04-24 23:54:52
+BEGIN searcher description
+SonarDeepSearcher
+END searcher description
+Finished: 2019-04-24 23:56:55
+Elapsed: 00:02:03
+KLEE: done: explored paths = 899
+KLEE: done: avg. constructs per query = 419
+KLEE: done: total queries = 626
+KLEE: done: valid queries = 182
+KLEE: done: invalid queries = 444
+KLEE: done: query cex = 626
+
+KLEE: done: total instructions = 40116
+KLEE: done: completed paths = 899
+KLEE: done: generated tests = 8

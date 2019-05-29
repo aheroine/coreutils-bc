@@ -1,0 +1,58 @@
+array argno0[216] : w32 -> w8 = symbolic
+array macke_sizeof_argno0[4] : w32 -> w8 = symbolic
+array macke_sym_switch_rpl_fflush[4] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Sle 1
+              N0:(ReadLSB w32 0 macke_sizeof_argno0))
+         (Slt N0 1025)
+         (Eq false (Eq 4 N0))
+         (Eq false (Eq 16 N0))
+         (Eq false (Eq 128 N0))
+         (Eq false (Eq 2 N0))
+         (Slt 4294967295
+              N1:(ReadLSB w32 4 argno0))
+         (Eq 0
+             (And w32 (ZExt w32 N2:(ReadLSB w16 0 argno0))
+                      35))
+         (Eq false
+             (Eq 1
+                 N3:(ReadLSB w32 0 macke_sym_switch_rpl_fflush)))
+         (Eq false (Eq 3 N3))
+         (Eq false (Eq 2 N3))
+         (Eq false
+             (Eq 0 (And w16 N2 64)))
+         (Eq false
+             (Eq N4:(ReadLSB w64 24 argno0)
+                 N5:(ReadLSB w64 8 argno0)))
+         (Eq false (Ult N1 32))
+         (Eq false
+             (Eq N6:(ReadLSB w64 16 argno0)
+                 N5))
+         (Eq false
+             (Ult (Add w64 18446744073661247920 N5) 29))
+         (Eq false
+             (Ult (Add w64 18446744073660208368 N5) 964))
+         (Eq false
+             (Ult (Add w64 18446744073659280096 N5) 20))
+         (Eq false
+             (Ult (Add w64 18446744073659269024 N5) 8))
+         (Eq false
+             (Ult (Add w64 18446744073658931552 N5) 240))
+         (Eq false
+             (Ult (Add w64 18446744073658928688 N5) 18))
+         (Eq false
+             (Ult (Add w64 18446744073658541584 N5) 8))
+         (Eq false
+             (Ult (Add w64 18446744073658268560 N5) 41))
+         (Eq false
+             (Ult (Add w64 18446744073658200960 N5) 54))
+         (Eq false
+             (Ult (Add w64 18446744073657914752 N5) 16))
+         (Ult (Add w64 18446744073657914400 N5) 14)
+         (Eq 1
+             (Select w64 (Ult N7:(Sub w64 N4 N5) N8:(Sub w64 N6 N5))
+                         N7
+                         N8))]
+        false)

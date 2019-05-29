@@ -1,0 +1,15 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c
+Line: 850
+assembly.ll line: 179
+Stack: 
+	#000000179 in triple_compare (x=63307232, y=53805328) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:850
+	#100000470 in __user_main (=1, =40281904)
+	#200003064 in __uClibc_main (argc=1, argv=40281904) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#300004659 in macke_triple_compare_main (=1, =40281904)
+Info: 
+	address: 63307248
+	next: object at 63336672 of size 112
+		MO96[112] allocated at global:
+	prev: object at 63307232 of size 16
+		MO770[16] allocated at __user_main():  %5 = tail call i8* @malloc(i64 %4)

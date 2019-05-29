@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c
+Line: 850
+assembly.ll line: 2045
+Stack: 
+	#000002045 in triple_compare (x=39318224, y=39318944) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:850
+	#100021320 in main (=1, =38574432)
+Info: 
+	address: 39318232
+	next: object at 39318944 of size 1
+		MO1019[1] addr [39318944]:  allocated at main():  %10 = call i8* @malloc(i64 %9)
+	prev: object at 39318224 of size 1
+		MO1008[1] addr [39318224]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

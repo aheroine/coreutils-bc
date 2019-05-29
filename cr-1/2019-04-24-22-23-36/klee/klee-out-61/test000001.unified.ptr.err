@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c
+Line: 242
+assembly.ll line: 3735
+Stack: 
+	#000003735 in top_dir (ds=35882080) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:242
+	#100003773 in AD_mark_current_as_unremovable (ds=35882080) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:611
+	#200011812 in main (=1, =31249568)
+Info: 
+	address: (Add w64 N0:(ReadLSB w64 104 argno0)
+          (Mul w64 8
+                   (Add w64 18446744073709551615
+                            (UDiv w64 (ZExt w64 (Extract w32 0 (Sub w64 (ReadLSB w64 112 argno0)
+                                                                        N0)))
+                                      8))))
+	example: 12370169555311111075
+	range: [12370169555311111075, 12370169555311111075]
+	next: object at 139967191030720 of size 1536
+		MO81[1536] addr [139967191030720]:  (no allocation info)
+	prev: object at 35882080 of size 496
+		MO640[496] addr [35882080]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

@@ -1,0 +1,18 @@
+/home/jl/deploy/klee22/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-182 --search=sonar --sonar-target=function-call --sonar-target-info=__macke_error_rpl_fflush --max-time=120 --max-instruction-time=12 --allow-external-sym-calls --libc=uclibc --max-memory=1000 --only-output-states-covering-new --optimize --disable-inlining --output-source=false --posix-runtime --watchdog --stats-write-interval=238 --istats-write-interval=238 --entry-point macke_rpl_fclose_main /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/bitcode/chain-rpl_fclose-rpl_fflush.bc
+PID: 30033
+Started: 2019-04-25 10:04:22
+BEGIN searcher description
+SonarDeepSearcher
+END searcher description
+Finished: 2019-04-25 10:06:23
+Elapsed: 00:02:01
+KLEE: done: explored paths = 1103
+KLEE: done: avg. constructs per query = 970
+KLEE: done: total queries = 16819
+KLEE: done: valid queries = 12057
+KLEE: done: invalid queries = 4762
+KLEE: done: query cex = 16819
+
+KLEE: done: total instructions = 8863
+KLEE: done: completed paths = 1103
+KLEE: done: generated tests = 34

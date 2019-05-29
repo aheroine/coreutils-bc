@@ -1,0 +1,7 @@
+array macke_sizeof_argno2[4] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Eq 128
+             (ReadLSB w32 0 macke_sizeof_argno2))]
+        false)

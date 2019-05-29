@@ -1,0 +1,18 @@
+/home/jl/deploy/klee22/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-230 --search=sonar --sonar-target=function-call --sonar-target-info=__macke_error_dump_remainder --max-time=120 --max-instruction-time=12 --allow-external-sym-calls --libc=uclibc --max-memory=1000 --only-output-states-covering-new --optimize --disable-inlining --output-source=false --posix-runtime --watchdog --stats-write-interval=238 --istats-write-interval=238 --entry-point macke_file_lines_main /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/bitcode/chain-file_lines-dump_remainder.bc
+PID: 14323
+Started: 2019-04-25 10:27:40
+BEGIN searcher description
+SonarDeepSearcher
+END searcher description
+Finished: 2019-04-25 10:27:42
+Elapsed: 00:00:02
+KLEE: done: explored paths = 100
+KLEE: done: avg. constructs per query = 107
+KLEE: done: total queries = 24
+KLEE: done: valid queries = 5
+KLEE: done: invalid queries = 19
+KLEE: done: query cex = 24
+
+KLEE: done: total instructions = 5246
+KLEE: done: completed paths = 100
+KLEE: done: generated tests = 0

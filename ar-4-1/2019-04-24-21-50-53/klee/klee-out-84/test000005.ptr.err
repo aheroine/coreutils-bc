@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c
+Line: 280
+assembly.ll line: 485
+Stack: 
+	#000000485 in quotearg_buffer_restyled (buffer, buffersize, arg=76618912, quoting_style, o=66679472) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:280
+	#100000205 in quotearg_buffer (buffer, buffersize, arg=76618912, o=66679472) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:527
+	#200000855 in quotearg_n_options (n, arg=76618912, options=66679472) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:625
+	#300001015 in __macke_error_quotearg_n_options (argno0, argno1=76618912, argno3=66679472)
+	#400000215 in quotearg_n_style (n, s, arg=76618912) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:667
+	#500000987 in __user_main (=1, =64749552)
+	#600004628 in __uClibc_main (argc=1, argv=64749552) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700006250 in macke_quotearg_n_style_main (=1, =64749552)
+Info: 
+	address: 76618913
+	next: object at 76726496 of size 7
+		MO172[7] allocated at global:.str32281
+	prev: object at 76618912 of size 1
+		MO784[1] allocated at __user_main():  %9 = call i8* @malloc(i64 %8)

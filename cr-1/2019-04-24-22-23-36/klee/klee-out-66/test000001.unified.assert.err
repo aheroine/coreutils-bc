@@ -1,0 +1,8 @@
+Error: ASSERTION FAIL: strlen (buf) + 1 == n_bytes_needed
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c
+Line: 367
+assembly.ll line: 4485
+Stack: 
+	#000004485 in full_filename_ (ds=41069952, filename=41064800) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:367
+	#100002332 in remove_dir (fd_cwd, ds=41069952, dir=41064800, dir_st=41086864, x=41078576, cwd_errno=41090464) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1406
+	#200011918 in main (=1, =33035504)

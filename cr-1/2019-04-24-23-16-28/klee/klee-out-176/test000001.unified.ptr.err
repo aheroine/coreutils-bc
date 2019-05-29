@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 15691
+Stack: 
+	#000015691 in quotearg_buffer_restyled (buffer=63605664, buffersize=256, arg=64051312, argsize=18446744073709551615, quoting_style, o=64058752) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100015301 in quotearg_buffer (buffer=63605664, buffersize=256, arg=64051312, argsize=18446744073709551615, o=64058752) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200016725 in quotearg_n_options (n=0, arg=64051312, argsize=18446744073709551615, options=64058752) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300015448 in quotearg_n_style (n=0, s, arg=64051312) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:676
+	#400015482 in quotearg_style (s, arg=64051312) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:690
+	#500021855 in main (=1, =55147088)
+Info: 
+	address: 64051313
+	next: object at 64052272 of size 8
+		MO1083[8] addr [64052272]:  allocated at quotearg_n_options():  %arg.addr = alloca i8*, align 8
+	prev: object at 64051312 of size 1
+		MO1013[1] addr [64051312]:  allocated at main():  %8 = call i8* @malloc(i64 %7)

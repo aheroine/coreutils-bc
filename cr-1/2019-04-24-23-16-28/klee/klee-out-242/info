@@ -1,0 +1,18 @@
+/home/jl/deploy/klee22/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-242 --search=sonar --sonar-target=function-call --sonar-target-info=__macke_error_remember_copied --max-time=120 --max-instruction-time=12 --allow-external-sym-calls --libc=uclibc --max-memory=1000 --only-output-states-covering-new --optimize --disable-inlining --output-source=false --posix-runtime --watchdog --stats-write-interval=238 --istats-write-interval=238 --entry-point macke_copy_internal_main /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/bitcode/chain-copy_internal-remember_copied.bc
+PID: 17497
+Started: 2019-04-25 00:03:14
+BEGIN searcher description
+SonarDeepSearcher
+END searcher description
+Finished: 2019-04-25 00:05:14
+Elapsed: 00:02:00
+KLEE: done: explored paths = 26936
+KLEE: done: avg. constructs per query = 1817
+KLEE: done: total queries = 6681
+KLEE: done: valid queries = 5244
+KLEE: done: invalid queries = 1437
+KLEE: done: query cex = 6681
+
+KLEE: done: total instructions = 1391652
+KLEE: done: completed paths = 26936
+KLEE: done: generated tests = 12

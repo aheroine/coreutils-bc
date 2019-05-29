@@ -1,0 +1,22 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c
+Line: 379
+assembly.ll line: 1084
+Stack: 
+	#000001084 in quotearg_buffer_restyled (buffer=54267584, buffersize=256, arg=41730432, quoting_style=6, flags=1, quote_these_too=40236456) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:379
+	#100001361 in quotearg_n_options (arg=41730432, options=40236448) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:704
+	#200000644 in quotearg_n_style (arg=41730432) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:751
+	#300000628 in quote_n (name=41730432) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:31
+	#400000635 in quote (name=41730432) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:39
+	#500000344 in tail_bytes (pretty_filename=41730432, fd, n_bytes, read_pos=40933520) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:1393
+	#600005704 in __macke_error_tail_bytes (argno0=41730432, argno1, argno2, argno3=40933520)
+	#700000331 in tail (filename=41730432, fd, n_units, read_pos=40933520) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:1521
+	#800005675 in __user_main (=1, =58197712)
+	#900008865 in __uClibc_main (argc=1, argv=58197712) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#1000010438 in macke_tail_main (=1, =58197712)
+Info: 
+	address: 41730433
+	next: object at 41796960 of size 7
+		MO125[7] allocated at global:.str1102
+	prev: object at 41730432 of size 1
+		MO787[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

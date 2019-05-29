@@ -1,0 +1,4 @@
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/string/strnlen.c:30: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states

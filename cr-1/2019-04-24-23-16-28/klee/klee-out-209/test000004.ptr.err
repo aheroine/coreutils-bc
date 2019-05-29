@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 43
+assembly.ll line: 9628
+Stack: 
+	#000009628 in __fd_openat (basefd, pathname=54505968, flags=133376, mode=0) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:43
+	#100011175 in openat (fd, pathname=54505968, flags=133376) at /home/jl/deploy/klee22/runtime/POSIX/fd_32.c:90
+	#200001909 in fd_to_subdirp (fd_cwd, f=54505968, prev_errno=0, subdir_sb=74176912) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1187
+	#300000455 in remove_dir (fd_cwd, ds=51809264, dir=54505968, dir_st=74176912, x=76417584) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1388
+	#400004107 in __user_main (=1, =53878048)
+	#500007508 in __uClibc_main (argc=1, argv=53878048) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600009231 in macke_remove_dir_main (=1, =53878048)
+Info: 
+	address: 54505969
+	next: object at 55171408 of size 186
+		MO130[186] allocated at global:.str44161
+	prev: object at 54505968 of size 1
+		MO897[1] allocated at __user_main():  %12 = call i8* @malloc(i64 %11)

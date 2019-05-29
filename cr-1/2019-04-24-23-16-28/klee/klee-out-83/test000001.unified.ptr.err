@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 15691
+Stack: 
+	#000015691 in quotearg_buffer_restyled (buffer=35679072, buffersize=256, arg=36138096, argsize=18446744073709551615, quoting_style=5, o=36305088) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100015301 in quotearg_buffer (buffer=35679072, buffersize=256, arg=36138096, argsize=18446744073709551615, o=36305088) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200016725 in quotearg_n_options (n=0, arg=36138096, argsize=18446744073709551615, options=36305088) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300015448 in quotearg_n_style (n=0, s=5, arg=36138096) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:676
+	#400015140 in quote_n (n=0, name=36138096) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:32
+	#500015150 in quote (name=36138096) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:40
+	#600011234 in copy_acl (src_name=36123088, source_desc, dst_name=36138096, dest_desc, mode) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/acl.c:296
+	#700020181 in main (=1, =27220592)
+Info: 
+	address: 36138097
+	next: object at 36138128 of size 8
+		MO1079[8] addr [36138128]:  allocated at quotearg_n_style():  %arg.addr = alloca i8*, align 8
+	prev: object at 36138096 of size 1
+		MO1024[1] addr [36138096]:  allocated at main():  %12 = call i8* @malloc(i64 %11)

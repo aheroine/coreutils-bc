@@ -1,0 +1,25 @@
+array argno0[4] : w32 -> w8 = symbolic
+array argno1[4] : w32 -> w8 = symbolic
+array argno2[4] : w32 -> w8 = symbolic
+array macke_sizeof_argno2[4] : w32 -> w8 = symbolic
+array macke_sym_switch_quotearg_n_options[4] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Eq 4
+             (ReadLSB w32 0 macke_sizeof_argno2))
+         (Eq false
+             (Eq 1
+                 N0:(ReadLSB w32 0 macke_sym_switch_quotearg_n_options)))
+         (Eq false (Eq 2 N0))
+         (Eq false
+             (Slt N1:(ReadLSB w32 0 argno0)
+                  0))
+         (Ult N1 1)
+         (Eq 0
+             (ReadLSB w32 0 argno1))
+         (Eq false
+             (Eq 0 N2:(Read w8 0 argno2)))
+         (Or (Eq 123 N2) (Eq 125 N2))
+         (Eq 0 (Read w8 1 argno2))]
+        false)

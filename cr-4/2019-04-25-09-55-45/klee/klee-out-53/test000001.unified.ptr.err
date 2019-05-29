@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/localcharset.c
+Line: 542
+assembly.ll line: 15615
+Stack: 
+	#000015615 in locale_charset () at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/localcharset.c:542
+	#100012474 in gettext_quote (msgid=46902272, s=6) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:219
+	#200011039 in quotearg_buffer_restyled (buffer=46899504, buffersize=256, arg=47299008, argsize=18446744073709551615, quoting_style=6, flags=1, quote_these_too=46901128, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:312
+	#300012361 in quotearg_n_options (n=0, arg=47299008, argsize=18446744073709551615, options=46901120) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#400010869 in quote_n_mem (n=0, arg=47299008, argsize=18446744073709551615) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:944
+	#500010895 in quote_n (n=0, arg=47299008) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:956
+	#600010905 in quote (arg=47299008) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:962
+	#700005358 in tail_lines (pretty_filename=47299008, fd, n_lines, read_pos=47315744) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:1659
+	#800017217 in main (=1, =43465008)
+Info: 
+	address: 140647707408328
+	next: object at 140647707302848 of size 1536
+		MO81[1536] addr [140647707302848]:  (no allocation info)
+	prev: object at 47515056 of size 8
+		MO950[8] addr [47515056]:  allocated at quotearg_buffer_restyled():  %buffer.addr = alloca i8*, align 8

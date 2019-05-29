@@ -1,0 +1,85 @@
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/klee/klee-out-5"
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/klee/klee-out-5 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/bitcode/symmains.bc_klee_change_ChangeEntry.bc
+
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: __ctype_get_mb_cur_max
+KLEE: WARNING: undefined reference to function: __errno_location
+KLEE: WARNING: undefined reference to function: __fpending
+KLEE: WARNING: undefined reference to function: __freading
+KLEE: WARNING: undefined reference to function: atexit
+KLEE: WARNING: undefined reference to function: clearerr_unlocked
+KLEE: WARNING: undefined reference to function: close
+KLEE: WARNING: undefined reference to function: fclose
+KLEE: WARNING: undefined reference to function: fdopen
+KLEE: WARNING: undefined reference to function: feof_unlocked
+KLEE: WARNING: undefined reference to function: ferror
+KLEE: WARNING: undefined reference to function: ferror_unlocked
+KLEE: WARNING: undefined reference to function: fflush
+KLEE: WARNING: undefined reference to function: fflush_unlocked
+KLEE: WARNING: undefined reference to function: fgetc
+KLEE: WARNING: undefined reference to function: fileno
+KLEE: WARNING: undefined reference to function: fopen
+KLEE: WARNING: undefined reference to function: fprintf
+KLEE: WARNING: undefined reference to function: fputs
+KLEE: WARNING: undefined reference to function: fputs_unlocked
+KLEE: WARNING: undefined reference to function: fread
+KLEE: WARNING: undefined reference to function: fscanf
+KLEE: WARNING: undefined reference to function: fseeko
+KLEE: WARNING: undefined reference to function: fwrite_unlocked
+KLEE: WARNING: undefined reference to function: getc_unlocked
+KLEE: WARNING: undefined reference to function: getenv
+KLEE: WARNING: undefined reference to function: getopt_long
+KLEE: WARNING: undefined reference to function: iswprint
+KLEE: WARNING: undefined reference to function: lseek
+KLEE: WARNING: undefined reference to function: mbrtowc
+KLEE: WARNING: undefined reference to function: mbsinit
+KLEE: WARNING: undefined reference to function: memchr
+KLEE: WARNING: undefined reference to function: memcmp
+KLEE: WARNING: undefined reference to function: nl_langinfo
+KLEE: WARNING: undefined reference to function: open
+KLEE: WARNING: undefined reference to variable: optarg
+KLEE: WARNING: undefined reference to variable: optind
+KLEE: WARNING: undefined reference to function: posix_fadvise
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING: undefined reference to variable: program_invocation_name
+KLEE: WARNING: undefined reference to variable: program_invocation_short_name
+KLEE: WARNING: undefined reference to function: putchar_unlocked
+KLEE: WARNING: undefined reference to function: qsort
+KLEE: WARNING: undefined reference to function: setlocale
+KLEE: WARNING: undefined reference to variable: stderr
+KLEE: WARNING: undefined reference to variable: stdin
+KLEE: WARNING: undefined reference to variable: stdout
+KLEE: WARNING: undefined reference to function: strcmp
+KLEE: WARNING: undefined reference to function: strcpy
+KLEE: WARNING: undefined reference to function: strlen
+KLEE: WARNING: undefined reference to function: strncmp
+KLEE: WARNING: undefined reference to function: strndup
+KLEE: WARNING: undefined reference to function: strrchr
+KLEE: WARNING: undefined reference to function: strspn
+KLEE: WARNING: undefined reference to function: ungetc
+KLEE: WARNING: undefined reference to function: error (UNSAFE)!
+
+KLEE: done: total instructions = 14
+KLEE: done: completed paths = 2
+KLEE: done: generated tests = 0
+KLEE: data flow divergences discovered in concerned functions:
+function __main_old in level 6 founded 0 data divergence
+function cut_bytes in level 3 founded 0 data divergence
+function cut_fields in level 3 founded 0 data divergence
+function cut_file in level 5 founded 0 data divergence
+function cut_stream in level 4 founded 0 data divergence
+function is_range_start_index in level 1 founded 0 data divergence
+function macke_cut_bytes_main in level 4 founded 0 data divergence
+function macke_cut_fields_main in level 4 founded 0 data divergence
+function macke_cut_file_main in level 6 founded 0 data divergence
+function macke_cut_stream_main in level 5 founded 0 data divergence
+function macke_is_range_start_index_main in level 2 founded 0 data divergence
+function macke_print_kth_main in level 3 founded 0 data divergence
+function macke_set_fields_main in level 2 founded 0 data divergence
+function main in level 1 founded 0 data divergence
+function print_kth in level 2 founded 0 data divergence
+function set_fields in level 1 founded 0 data divergence
+KLEE: control flow divergences discovered:
+Total data divergences:0
+0   of data divergences are affected by control divergences
+Total control divergences:0

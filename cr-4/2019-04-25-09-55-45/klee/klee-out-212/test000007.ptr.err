@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c
+Line: 453
+assembly.ll line: 759
+Stack: 
+	#000000759 in quotearg_buffer_restyled (buffer=66058864, buffersize=256, arg=66135936, quoting_style=6, flags=1, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:453
+	#100001039 in quotearg_n_options (arg=66135936) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#200000305 in quote_n_mem (arg=66135936) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:944
+	#300000312 in quote_n (arg=66135936) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:956
+	#400000319 in quote (arg=66135936) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:962
+	#500001665 in __macke_error_quote (argno0=66135936)
+	#600000262 in start_bytes (pretty_filename=66135936, fd, n_bytes, read_pos=51334928) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:818
+	#700001635 in __user_main (=1, =61500560)
+	#800005380 in __uClibc_main (argc=1, argv=61500560) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#900009099 in macke_start_bytes_main (=1, =61500560)
+Info: 
+	address: 66135937
+	next: object at 66783584 of size 18
+		MO158[18] allocated at global:qual_chars
+	prev: object at 66135936 of size 1
+		MO811[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

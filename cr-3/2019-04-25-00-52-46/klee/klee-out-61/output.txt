@@ -1,0 +1,31 @@
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/klee/klee-out-61"
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/klee/klee-out-61 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/bitcode/symmains.bc_freadseek_ChangeEntry.bc
+
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+0  klee            0x0000000000e5f672 llvm::sys::PrintStackTrace(_IO_FILE*) + 50
+1  klee            0x0000000000e5eec4
+2  libpthread.so.0 0x00007f4a20b5d890
+3  libc.so.6       0x00007f4a1fa2de97 gsignal + 199
+4  libc.so.6       0x00007f4a1fa2f801 abort + 321
+5  libstdc++.so.6  0x00007f4a2042384d __gnu_cxx::__verbose_terminate_handler() + 365
+6  libstdc++.so.6  0x00007f4a204216b6
+7  libstdc++.so.6  0x00007f4a20421701
+8  libstdc++.so.6  0x00007f4a20421919
+9  libstdc++.so.6  0x00007f4a20421ebc
+10 libstdc++.so.6  0x00007f4a204b3499 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) + 105
+11 libstdc++.so.6  0x00007f4a204b4833 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) + 99
+12 klee            0x0000000000e77207 llvm::raw_ostream::write(char const*, unsigned long) + 215
+13 klee            0x0000000000e4ef51 llvm::formatted_raw_ostream::write_impl(char const*, unsigned long) + 33
+14 klee            0x0000000000e76c2c llvm::raw_ostream::write(unsigned char) + 60
+15 klee            0x0000000000d415b3
+16 klee            0x0000000000d46b0a
+17 klee            0x0000000000d48327 llvm::AssemblyWriter::printGlobal(llvm::GlobalVariable const*) + 535
+18 klee            0x0000000000d4b984 llvm::AssemblyWriter::printModule(llvm::Module const*) + 612
+19 klee            0x0000000000d4c0f6 llvm::Module::print(llvm::raw_ostream&, llvm::AssemblyAnnotationWriter*) const + 278
+20 klee            0x00000000005d685c klee::InstructionInfoTable::InstructionInfoTable(llvm::Module*) + 412
+21 klee            0x00000000005d9420 klee::KModule::prepare(klee::Interpreter::ModuleOptions const&, klee::InterpreterHandler*) + 2256
+22 klee            0x000000000055ae56 klee::Executor::setModule(llvm::Module*, klee::Interpreter::ModuleOptions const&) + 278
+23 klee            0x000000000053de5e main + 4222
+24 libc.so.6       0x00007f4a1fa10b97 __libc_start_main + 231
+25 klee            0x0000000000551faa _start + 42

@@ -1,0 +1,7 @@
+Error: failed external call: _obstack_newchunk
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c
+Line: 627
+assembly.ll line: 10529
+Stack: 
+	#000010529 in AD_push_initial (ds=60611104) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:627
+	#100020587 in main (=1, =51702352)

@@ -1,0 +1,38 @@
+/home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/klee/klee-out-6 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/bitcode/symmains.bc_klee_get_true_ChangeEntry.bc
+PID: 8366
+Started: 2019-04-25 00:52:51
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2019-04-25 00:52:51
+Elapsed: 00:00:00
+KLEE: done: explored paths = 1
+KLEE: done: total queries = 0
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 0
+KLEE: done: query cex = 0
+
+KLEE: done: total instructions = 7
+KLEE: done: completed paths = 2
+KLEE: done: generated tests = 0
+KLEE: data flow divergences discovered in concerned functions:
+function __main_old in level 6 founded 0 data divergence
+function cut_bytes in level 3 founded 0 data divergence
+function cut_fields in level 3 founded 0 data divergence
+function cut_file in level 5 founded 0 data divergence
+function cut_stream in level 4 founded 0 data divergence
+function is_range_start_index in level 1 founded 0 data divergence
+function macke_cut_bytes_main in level 4 founded 0 data divergence
+function macke_cut_fields_main in level 4 founded 0 data divergence
+function macke_cut_file_main in level 6 founded 0 data divergence
+function macke_cut_stream_main in level 5 founded 0 data divergence
+function macke_is_range_start_index_main in level 2 founded 0 data divergence
+function macke_klee_change_main in level 1 founded 0 data divergence
+function macke_print_kth_main in level 3 founded 0 data divergence
+function macke_set_fields_main in level 2 founded 0 data divergence
+function print_kth in level 2 founded 0 data divergence
+function set_fields in level 1 founded 0 data divergence
+KLEE: control flow divergences discovered:
+Total data divergences:0
+0   of data divergences are affected by control divergences
+Total control divergences:0

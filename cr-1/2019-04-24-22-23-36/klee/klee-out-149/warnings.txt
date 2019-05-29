@@ -1,0 +1,7 @@
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 34842864)
+KLEE: WARNING ONCE: flushing 7936 bytes on read, may be slow and/or crash: MO853[7936] allocated at __user_main():  %15 = tail call i8* @malloc(i64 %14)
+KLEE: WARNING: max-instruction-time exceeded: 13.90s
+KLEE: WARNING: max-instruction-time exceeded: 17.30s

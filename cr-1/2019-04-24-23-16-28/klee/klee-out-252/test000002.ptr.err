@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 43
+assembly.ll line: 13807
+Stack: 
+	#000013807 in __fd_stat (path=61159440, buf=54652912) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:43
+	#100015644 in stat (path=61159440, buf=57860384) at /home/jl/deploy/klee22/runtime/POSIX/fd_32.c:106
+	#200000367 in copy_internal (src_name=61159440, dst_name=62396976, new_dst, device, ancestors=49267088, x=52984672, command_line_arg, copy_into_self=46221632, rename_succeeded=48084304) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1034
+	#300005992 in __user_main (=1, =39643504)
+	#400010932 in __uClibc_main (argc=1, argv=39643504) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500012655 in macke_copy_internal_main (=1, =39643504)
+Info: 
+	address: 61159441
+	next: object at 61729728 of size 1416
+		MO55[1416] allocated at macke_copy_internal_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 61159440 of size 1
+		MO856[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

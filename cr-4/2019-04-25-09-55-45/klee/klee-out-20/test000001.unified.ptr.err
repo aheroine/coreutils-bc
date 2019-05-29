@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/localcharset.c
+Line: 542
+assembly.ll line: 15615
+Stack: 
+	#000015615 in locale_charset () at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/localcharset.c:542
+	#100016566 in main (=1, =47413600)
+Info: 
+	address: 140220723931080
+	next: object at 140220723825600 of size 1536
+		MO81[1536] addr [140220723825600]:  (no allocation info)
+	prev: object at 51242416 of size 8
+		MO834[8] addr [51242416]:  allocated at locale_charset():  %aliases = alloca i8*, align 8

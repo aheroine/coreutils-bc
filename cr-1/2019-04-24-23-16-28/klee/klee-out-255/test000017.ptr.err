@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 745
+assembly.ll line: 7103
+Stack: 
+	#000007103 in hash_find_entry (table, entry1=57308224, bucket_head=52109360, delete=false) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:745
+	#100006807 in hash_insert (table, entry1=57308224) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:916
+	#200003036 in record_file (ht, file=63510880, stats=77969552) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:946
+	#300000667 in copy_internal (src_name=63510880, dst_name=76478576, new_dst=false, device=0, ancestors=0, x=74900896, command_line_arg=true, copy_into_self=78072448, rename_succeeded=74895568) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1063
+	#400000441 in copy (src_name=63510880, dst_name=76478576, options=74900896, copy_into_self=78072448, rename_succeeded=74895568) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1951
+	#500008983 in __macke_error_copy (argno0=63510880, argno1=76478576, argno3=74900896, argno4=78072448, argno5=74895568)
+	#600000354 in do_move (source=63510880, dest=76478576, x=74900896) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/mv.c:185
+	#700008956 in __user_main (=1, =54164336)
+	#800013151 in __uClibc_main (argc=1, argv=54164336) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#900014874 in macke_do_move_main (=1, =54164336)
+Info: 
+	address: (ReadLSB w64 56 argno2)
+	example: 72340172838076673
+	range: [1, 18446744073709551615]
+	next: object at 52109360 of size 8
+		MO486431[8] allocated at hash_insert():  %bucket = alloca %struct.hash_entry*, align 8

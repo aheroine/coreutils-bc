@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strlen.c
+Line: 22
+assembly.ll line: 4644
+Stack: 
+	#000004644 in strlen (s=49866064) at /home/jl/deploy/klee-uclibc/libc/string/strlen.c:22
+	#100000601 in full_filename_ (ds.0.0.2.val, ds.0.0.3.val, filename=49866064) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:317
+	#200000737 in remove_entry (fd_cwd, ds=45665264, filename=49866064, st=46713312, x=46184672, dp=48608800) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1046
+	#300001934 in __user_main (=1, =47727968)
+	#400005076 in __uClibc_main (argc=1, argv=47727968) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500006799 in macke_remove_entry_main (=1, =47727968)
+Info: 
+	address: 49866065
+	next: object at 49879648 of size 17
+		MO148[17] allocated at global:.str135
+	prev: object at 49866064 of size 1
+		MO855[1] allocated at __user_main():  %12 = call i8* @malloc(i64 %11)

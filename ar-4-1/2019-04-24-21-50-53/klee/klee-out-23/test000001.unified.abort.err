@@ -1,0 +1,7 @@
+Error: abort failure
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c
+Line: 600
+assembly.ll line: 6508
+Stack: 
+	#000006508 in quotearg_n_options (n, arg=39705488, argsize, options=39714048) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:600
+	#100007425 in main (=1, =35262096)

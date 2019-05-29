@@ -1,0 +1,18 @@
+/home/jl/deploy/klee22/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/ar-4-1/2019-04-24-21-50-53/klee/klee-out-93 --search=sonar --sonar-target=function-call --sonar-target-info=__macke_error_allocate_entry --max-time=120 --max-instruction-time=12 --allow-external-sym-calls --libc=uclibc --max-memory=1000 --only-output-states-covering-new --optimize --disable-inlining --output-source=false --posix-runtime --watchdog --stats-write-interval=238 --istats-write-interval=238 --entry-point macke_hash_rehash_main /home/jl/testspace/coreutils-bc/ar-4-1/2019-04-24-21-50-53/bitcode/chain-hash_rehash-allocate_entry.bc
+PID: 27375
+Started: 2019-04-24 22:08:17
+BEGIN searcher description
+SonarDeepSearcher
+END searcher description
+Finished: 2019-04-24 22:09:34
+Elapsed: 00:01:17
+KLEE: done: explored paths = 883
+KLEE: done: avg. constructs per query = 1439
+KLEE: done: total queries = 2962
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 2962
+KLEE: done: query cex = 2962
+
+KLEE: done: total instructions = 16736
+KLEE: done: completed paths = 883
+KLEE: done: generated tests = 2

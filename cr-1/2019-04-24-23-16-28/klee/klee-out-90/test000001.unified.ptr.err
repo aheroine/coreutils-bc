@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 15691
+Stack: 
+	#000015691 in quotearg_buffer_restyled (buffer=35593728, buffersize=256, arg=36037744, argsize=18446744073709551615, quoting_style=5, o=36204512) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100015301 in quotearg_buffer (buffer=35593728, buffersize=256, arg=36037744, argsize=18446744073709551615, o=36204512) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200016725 in quotearg_n_options (n=0, arg=36037744, argsize=18446744073709551615, options=36204512) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300015448 in quotearg_n_style (n=0, s=5, arg=36037744) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:676
+	#400015140 in quote_n (n=0, name=36037744) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:32
+	#500015150 in quote (name=36037744) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:40
+	#600002297 in copy_internal (src_name=36037744, dst_name=36038464, new_dst, device, ancestors=36057312, x=36072656, command_line_arg, copy_into_self=36088208, rename_succeeded=36100464) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1036
+	#700020390 in main (=1, =27134544)
+Info: 
+	address: 36037745
+	next: object at 36038128 of size 4
+		MO1095[4] addr [36038128]:  allocated at copy_internal():  %dst_mode = alloca i32, align 4
+	prev: object at 36037744 of size 1
+		MO1008[1] addr [36037744]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

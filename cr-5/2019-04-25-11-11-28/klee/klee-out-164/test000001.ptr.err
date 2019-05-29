@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/version-etc.c
+Line: 53
+assembly.ll line: 244
+Stack: 
+	#000000244 in version_etc_va (stream=42684624, command_name=43294928, package=43440304, version=42213408, authors=41674992) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/version-etc.c:53
+	#100004560 in __user_main (=1, =64697360)
+	#200010491 in __uClibc_main (argc=1, argv=64697360) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#300012064 in macke_version_etc_va_main (=1, =64697360)
+Info: 
+	address: (Add w64 (Extract w64 0 (LShr w192 N0:(Or w192 (Or w192 (Shl w192 (ZExt w192 (ReadLSB w64 8 argno4))
+                                                                   64)
+                                                         (ZExt w192 (ReadLSB w64 0 argno4)))
+                                                (Shl w192 (ZExt w192 (ReadLSB w64 16 argno4))
+                                                          128))
+                                    128))
+          (SExt w64 (Extract w32 0 N0)))
+	example: 0
+	range: [0, 18446744073709551615]
+	next: object at 38996960 of size 19
+		MO58[19] allocated at macke_version_etc_va_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

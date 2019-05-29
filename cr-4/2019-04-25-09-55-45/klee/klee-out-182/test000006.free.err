@@ -1,0 +1,18 @@
+Error: free of alloca
+File: /home/jl/deploy/klee-uclibc/libc/stdio/fclose.c
+Line: 92
+assembly.ll line: 2931
+Stack: 
+	#000002931 in fclose (stream=71547904) at /home/jl/deploy/klee-uclibc/libc/stdio/fclose.c:92
+	#100000184 in rpl_fclose (fp=71547904) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fclose.c:98
+	#200000340 in __user_main (=1, =53941504)
+	#300003520 in __uClibc_main (argc=1, argv=53941504) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400003730 in macke_rpl_fclose_main (=1, =53941504)
+Info: 
+	address: (ReadLSB w64 8 argno0)
+	example: 62979952
+	range: [62979952, 62979952]
+	next: object at 63090528 of size 8
+		MO4[8] allocated at macke_rpl_fclose_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 62979952 of size 8
+		MO668[8] allocated at __user_main():  %argvPtr = alloca i8**, align 8

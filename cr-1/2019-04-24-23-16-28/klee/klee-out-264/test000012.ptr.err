@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/mempcpy.c
+Line: 31
+assembly.ll line: 15003
+Stack: 
+	#000015003 in mempcpy379 (s1=56964400, s2, n) at /home/jl/deploy/klee-uclibc/libc/string/mempcpy.c:31
+	#100000654 in full_filename_ (ds.0.0.2.val, ds.0.0.3.val, filename=56986016) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:366
+	#200000416 in prompt (fd_cwd, ds=31601776, filename=56986016, sbuf=57450336, x=33962080, is_empty=53344672) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:866
+	#300001965 in __macke_error_prompt (argno0, argno1=31601776, argno2=56986016, argno3=57450336, argno4=33962080, argno6=53344672)
+	#400000704 in remove_entry (fd_cwd, ds=31601776, filename=56986016, st=57450336, x=33962080, dp=39571328) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1023
+	#500001934 in __user_main (=1, =33682816)
+	#600015387 in __uClibc_main (argc=1, argv=33682816) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700017110 in macke_remove_entry_main (=1, =33682816)
+Info: 
+	address: (ReadLSB w64 16 argno1)
+	example: 0
+	range: [0, 18446744073709551615]
+	next: object at 28736416 of size 964
+		MO220[964] allocated at global:.str133

@@ -1,0 +1,15 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/open-safer.c
+Line: 40
+assembly.ll line: 169
+Stack: 
+	#000000169 in open_safer (file=50548128, flags) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/open-safer.c:40
+	#100000292 in __user_main (=1, =46242480)
+	#200000642 in __uClibc_main (argc=1, argv=46242480) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#300000852 in macke_open_safer_main (=1, =46242480)
+Info: 
+	address: 55895936
+	next: object at 57298320 of size 9
+		MO158[9] allocated at global:.str2052
+	prev: object at 55895936 of size 0
+		MO777[0] allocated at __user_main():  call void (i8*, i32, ...)* @open_safer(i8* %5, i32 %7)

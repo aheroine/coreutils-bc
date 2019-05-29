@@ -1,0 +1,10 @@
+Error: invalid function pointer
+File: /home/jl/deploy/klee-uclibc/libc/misc/gnu/obstack.c
+Line: 309
+assembly.ll line: 2173
+Stack: 
+	#000002173 in _obstack_newchunk (h=47920864, length=32) at /home/jl/deploy/klee-uclibc/libc/misc/gnu/obstack.c:309
+	#100000267 in AD_push (ds=47920688, dir=70510160, dir_sb_from_parent=68726512) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:702
+	#200001326 in __user_main (=1, =48298896)
+	#300004756 in __uClibc_main (argc=1, argv=48298896) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400006351 in macke_AD_push_main (=1, =48298896)

@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 9014
+Stack: 
+	#000009014 in quotearg_buffer_restyled (buffer=58471184, buffersize=256, arg=50696560, argsize=18446744073709551615, quoting_style=0, o=58810624) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100008624 in quotearg_buffer (buffer=58471184, buffersize=256, arg=50696560, argsize=18446744073709551615, o=58810624) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200010048 in quotearg_n_options (n=0, arg=50696560, argsize=18446744073709551615, options=58810624) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300008822 in quotearg_char (arg=50696560, ch=58) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:699
+	#400008832 in quotearg_colon (arg=50696560) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:705
+	#500012164 in main (=1, =54206512)
+Info: 
+	address: 50696561
+	next: object at 50739248 of size 20
+		MO3[20] addr [50739248]:  allocated at main():  call void @klee_mark_arg_symbolic(i32 %0, i8** %1)
+	prev: object at 50696560 of size 1
+		MO640[1] addr [50696560]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

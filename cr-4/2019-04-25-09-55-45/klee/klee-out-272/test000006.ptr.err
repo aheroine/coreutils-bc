@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strlen.c
+Line: 22
+assembly.ll line: 4880
+Stack: 
+	#000004880 in strlen (s=27680896) at /home/jl/deploy/klee-uclibc/libc/string/strlen.c:22
+	#100000364 in quotearg_buffer_restyled (buffer=42969840, buffersize=256, arg=26609376, quoting_style=8, flags=1, quote_these_too=43558856, left_quote=27076960, right_quote=27680896) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:320
+	#200001004 in quotearg_n_options (arg=26609376, options=43558848) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#300000267 in quotearg_n_custom_mem (left_quote=27076960, right_quote=27680896, arg=26609376) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:913
+	#400000256 in quotearg_n_custom (left_quote=27076960, right_quote=27680896, arg=26609376) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:902
+	#500001610 in __macke_error_quotearg_n_custom (argno1=27076960, argno2=27680896, argno3=26609376)
+	#600000274 in quotearg_custom (left_quote=27076960, right_quote=27680896, arg=26609376) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:920
+	#700001579 in __user_main (=1, =38072240)
+	#800005497 in __uClibc_main (argc=1, argv=38072240) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#900009216 in macke_quotearg_custom_main (=1, =38072240)
+Info: 
+	address: 27680897
+	next: object at 27702640 of size 3
+		MO99[3] allocated at global:.str228
+	prev: object at 27680896 of size 1
+		MO834[1] allocated at __user_main():  %8 = tail call i8* @malloc(i64 %7)

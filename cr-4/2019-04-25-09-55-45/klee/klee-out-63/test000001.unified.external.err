@@ -1,0 +1,7 @@
+Error: failed external call: strcmp
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c
+Line: 1733
+assembly.ll line: 1972
+Stack: 
+	#000001972 in tail_file (f=48307600, n_units) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:1733
+	#100017430 in main (=1, =44468512)

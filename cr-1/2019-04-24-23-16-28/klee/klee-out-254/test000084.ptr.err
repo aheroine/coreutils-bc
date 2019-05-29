@@ -1,0 +1,11 @@
+Error: memory error: invalid pointer: klee_get_obj_size
+Stack: 
+	#000045650 in __macke_error_copy_internal (argno0=65458800, argno1=65470096, argno2, argno3, argno4=64965856, argno5=64862368, argno7=64761712)
+	#100002202 in copy_dir (src_name_in=64465856, dst_name_in=64660032, new_dst, src_sb=64783040, ancestors=64965856, x=64859824, copy_into_self=64763120) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:172
+	#200005856 in __user_main (=1, =49953680)
+	#300053128 in __uClibc_main (argc=1, argv=49953680) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400054851 in macke_copy_dir_main (=1, =49953680)
+Info: 
+	address: 0
+	next: object at 23530336 of size 105
+		MO184[105] allocated at global:

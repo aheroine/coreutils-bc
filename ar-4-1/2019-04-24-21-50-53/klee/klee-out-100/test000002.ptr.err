@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c
+Line: 249
+assembly.ll line: 318
+Stack: 
+	#000000318 in quotearg_buffer_restyled (buffer=51224240, buffersize=256, arg=42687504, quoting_style=0, o=42795200) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:249
+	#100000213 in quotearg_buffer (buffer=51224240, buffersize=256, arg=42687504, o=42795200) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:527
+	#200000827 in quotearg_n_options (arg=42687504, options=42795200) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:625
+	#300000225 in quotearg_char (arg=42687504) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:690
+	#400000946 in __macke_error_quotearg_char (argno0=42687504)
+	#500000232 in quotearg_colon (arg=42687504) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:696
+	#600000923 in __user_main (=1, =52017616)
+	#700003445 in __uClibc_main (argc=1, argv=52017616) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800005067 in macke_quotearg_colon_main (=1, =52017616)
+Info: 
+	address: 42687505
+	next: object at 42759840 of size 32
+		MO29[32] allocated at macke_quotearg_colon_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 42687504 of size 1
+		MO769[1] allocated at __user_main():  %5 = tail call i8* @malloc(i64 %4)

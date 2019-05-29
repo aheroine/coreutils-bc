@@ -1,0 +1,21 @@
+KLEE: KLEE: WATCHDOG: watching 2826
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-135"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 59048432)
+KLEE: WARNING ONCE: __macke_error_last_component: MACKE: Summery for last_component reached
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: WARNING ONCE: calling external: printf(51794976, 0, 69409824)
+General help using GNU software: <http://www.gnu.org/gethelp/>
+
+KLEE: done: total instructions = 3791
+KLEE: done: completed paths = 2
+KLEE: done: generated tests = 2
+
+Report (null) bugs to bug-coreutils@gnu.org
+GNU coreutils home page: <http://www.gnu.org/software/coreutils/>

@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/./lib/anytostr.c
+Line: 37
+assembly.ll line: 9999
+Stack: 
+	#000009999 in offtostr (i, buf=40354336) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/./lib/anytostr.c:37
+	#100017105 in main (=1, =36518176)
+Info: 
+	address: 40354356
+	next: object at 40355392 of size 8
+		MO849[8] addr [40355392]:  allocated at offtostr():  %i.addr = alloca i64, align 8
+	prev: object at 40354336 of size 1
+		MO845[1] addr [40354336]:  allocated at main():  %8 = call i8* @malloc(i64 %7)

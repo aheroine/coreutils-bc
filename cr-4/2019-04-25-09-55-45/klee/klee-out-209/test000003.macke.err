@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-205/test000005.ptr.err
+Stack: 
+	#000001840 in __macke_error_quote (argno0=46809248)
+	#100000332 in pipe_bytes (pretty_filename=46809248, fd, n_bytes, read_pos=46253488) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:770
+	#200001742 in __user_main (=1, =44707696)
+	#300005487 in __uClibc_main (argc=1, argv=44707696) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400009206 in macke_pipe_bytes_main (=1, =44707696)

@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: n_lengths > 0
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c
+Line: 256
+assembly.ll line: 9054
+Stack: 
+	#000009054 in pop_dir (ds=62937936) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:256
+	#100021061 in main (=1, =62188288)

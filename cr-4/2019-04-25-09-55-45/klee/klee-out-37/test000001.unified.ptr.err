@@ -1,0 +1,14 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/version-etc.c
+Line: 203
+assembly.ll line: 13189
+Stack: 
+	#000013189 in version_etc_va (stream=59015648, command_name=59011216, package=59034496, version=59037568, authors=59011984) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/version-etc.c:203
+	#100013233 in version_etc (stream=59015648, command_name=59011216, package=59034496, version=59037568) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/version-etc.c:234
+	#200016914 in main (=1, =55314896)
+Info: 
+	address: 59030384
+	next: object at 59033312 of size 8
+		MO897[8] addr [59033312]:  allocated at version_etc_va():  %command_name.addr = alloca i8*, align 8
+	prev: object at 59030384 of size 0
+		MO877[0] addr [59030384]:  allocated at main():  call void (%struct._IO_FILE*, i8*, i8*, i8*, ...)* @version_etc(%struct._IO_FILE* %7, i8* %11, i8* %15, i8* %19)

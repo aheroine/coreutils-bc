@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 1433
+assembly.ll line: 55121
+Stack: 
+	#000055121 in __fd_open (pathname=64465856, flags=67584, mode=0) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:1433
+	#100057826 in open (pathname=64465856, flags=67584) at /home/jl/deploy/klee22/runtime/POSIX/fd_32.c:76
+	#200050266 in opendir (name=64465856) at /home/jl/deploy/klee-uclibc/libc/misc/dirent/opendir.c:43
+	#300005013 in savedir (dir=64465856) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/savedir.c:120
+	#400002167 in copy_dir (src_name_in=64465856, dst_name_in=64660032, new_dst, src_sb=64783040, ancestors=64965856, x=64859824, copy_into_self=64763120) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:151
+	#500005856 in __user_main (=1, =49953680)
+	#600053128 in __uClibc_main (argc=1, argv=49953680) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700054851 in macke_copy_dir_main (=1, =49953680)
+Info: 
+	address: 64465860
+	next: object at 64637792 of size 0
+		MO167577[0] allocated at opendir():  %1 = tail call i32 (i8*, i32, ...)* @open(i8* %name, i32 67584) #23, !dbg !5661
+	prev: object at 64465856 of size 4
+		MO947[4] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

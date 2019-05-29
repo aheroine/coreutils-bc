@@ -1,0 +1,7 @@
+Error: failed external call: _obstack_begin
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c
+Line: 411
+assembly.ll line: 6905
+Stack: 
+	#000006905 in ds_init () at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:411
+	#100020470 in main (=1, =55491184)

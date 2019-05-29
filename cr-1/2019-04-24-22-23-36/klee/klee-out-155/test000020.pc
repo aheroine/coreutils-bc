@@ -1,0 +1,60 @@
+array argno0[496] : w32 -> w8 = symbolic
+array const_arr4[768] : w32 -> w8 = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 3 32 2 32 2 32 2 32 2 32 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 1 96 4 192 4 192 4 192 4 192 4 192 4 192 4 192 4 192 4 192 4 192 4 192 4 192 4 192 4 192 4 192 8 216 8 216 8 216 8 216 8 216 8 216 8 216 8 216 8 216 8 216 4 192 4 192 4 192 4 192 4 192 4 192 4 192 8 213 8 213 8 213 8 213 8 213 8 213 8 197 8 197 8 197 8 197 8 197 8 197 8 197 8 197 8 197 8 197 8 197 8 197 8 197 8 197 8 197 8 197 8 197 8 197 8 197 8 197 4 192 4 192 4 192 4 192 4 192 4 192 8 214 8 214 8 214 8 214 8 214 8 214 8 198 8 198 8 198 8 198 8 198 8 198 8 198 8 198 8 198 8 198 8 198 8 198 8 198 8 198 8 198 8 198 8 198 8 198 8 198 8 198 4 192 4 192 4 192 4 192 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+array macke_sizeof_argno0[4] : w32 -> w8 = symbolic
+array macke_sym_switch_AD_stack_pop[4] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Sle 1
+              N0:(ReadLSB w32 0 macke_sizeof_argno0))
+         (Slt N0 1025)
+         (Eq false (Eq 4 N0))
+         (Eq false (Eq 16 N0))
+         (Eq false (Eq 128 N0))
+         (Eq false (Eq 2 N0))
+         (Eq false
+             (Eq N1:(ReadLSB w64 24 argno0)
+                 N2:(ReadLSB w64 16 argno0)))
+         (Eq false
+             (Slt (Sub w64 N3:(ReadLSB w64 32 argno0)
+                           N4:(ReadLSB w64 8 argno0))
+                  (Sub w64 (And w64 (Add w64 (SExt w64 N5:(ReadLSB w32 48 argno0))
+                                             N1)
+                                    (SExt w64 (Xor w32 4294967295 N5)))
+                           N4)))
+         (Ult N4 N2)
+         (Ult N2 N3)
+         (Eq false
+             (Eq N6:(ReadLSB w64 112 argno0)
+                 N7:(ReadLSB w64 104 argno0)))
+         (Eq false
+             (Slt (Sub w64 N8:(ReadLSB w64 120 argno0)
+                           N9:(ReadLSB w64 96 argno0))
+                  (Sub w64 (And w64 (Add w64 (SExt w64 N10:(ReadLSB w32 136 argno0))
+                                             N6)
+                                    (SExt w64 (Xor w32 4294967295 N10)))
+                           N9)))
+         (Ult N9 N7)
+         (Ult N7 N8)
+         (Eq false
+             (Eq 0
+                 (And w64 (LShr w64 (Sub w64 N11:(ReadLSB w64 200 argno0)
+                                             (ReadLSB w64 192 argno0))
+                                    5)
+                          134217727)))
+         (Eq false
+             (Eq 1
+                 N12:(ReadLSB w32 0 macke_sym_switch_AD_stack_pop)))
+         (Eq false (Eq 4 N12))
+         (Eq false (Eq 3 N12))
+         (Eq false (Eq 2 N12))
+         (Eq false
+             (Ult (Add w64 18446603744981358776 N11) 1))
+         (Eq false
+             (Ult (Add w64 18446603744981358784 N11) 1))
+         (Eq false
+             (Ult (Add w64 18446603744981358792 N11) 1))
+         (Ult N13:(Add w64 18446603745022837792 N11) 761)
+         (Eq 0
+             (ReadLSB w64 N14:(Extract w32 0 N13) const_arr4))]
+        false)

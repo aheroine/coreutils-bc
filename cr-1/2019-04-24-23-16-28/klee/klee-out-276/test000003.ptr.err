@@ -1,0 +1,22 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 653
+assembly.ll line: 456
+Stack: 
+	#000000456 in hash_free (table) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:653
+	#100000403 in AD_stack_pop (ds=55300688) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:394
+	#200000628 in __macke_error_AD_stack_pop (argno0=55300688)
+	#300000301 in ds_clear (ds=55300688) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:423
+	#400000601 in __user_main (=1, =57297136)
+	#500009241 in __uClibc_main (argc=1, argv=57297136) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600009424 in macke_ds_clear_main (=1, =57297136)
+Info: 
+	address: (Add w64 64
+          (ReadLSB w64 N0:(Extract w32 0 (Add w64 18446744073641692864
+                                                  (ReadLSB w64 200 argno0))) const_arr95))
+	example: 7310600299814733204
+	range: [32210658860938869, 8245928668400334194]
+	next: object at 139915471522752 of size 1536
+		MO81[1536] (no allocation info)
+	prev: object at 82109920 of size 10
+		MO131[10] allocated at global:.str211

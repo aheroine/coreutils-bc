@@ -1,0 +1,25 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 746
+assembly.ll line: 7139
+Stack: 
+	#000007139 in hash_find_entry (table, entry1=66945152, bucket_head=87269328, delete=false) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:746
+	#100006841 in hash_insert (table, entry1=66945152) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:916
+	#200003070 in record_file (ht, file=59167808, stats=75022608) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:946
+	#300000701 in copy_internal (src_name=59167808, dst_name=77802160, new_dst=false, device=0, ancestors=0, x=58470288, command_line_arg=true, copy_into_self=71044160, rename_succeeded=64215120) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1063
+	#400000475 in copy (src_name=59167808, dst_name=77802160, options=58470288, copy_into_self=71044160, rename_succeeded=64215120) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1951
+	#500000380 in do_move (source=59167808, dest=77802160, x=58470288) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/mv.c:185
+	#600009038 in __macke_error_do_move (argno0=59167808, argno1=77802160, argno2=58470288)
+	#700000366 in movefile (source=59167808, dest=77802160, dest_is_dir, x=58470288) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/mv.c:288
+	#800009007 in __user_main (=1, =57743408)
+	#900014368 in __uClibc_main (argc=1, argv=57743408) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#1000016091 in macke_movefile_main (=1, =57743408)
+Info: 
+	address: (Add w64 48
+          (ReadLSB w64 56 argno3))
+	example: 64782896
+	range: [64782896, 64782896]
+	next: object at 64783376 of size 8
+		MO311[8] allocated at global:__exe_fs.9
+	prev: object at 64782848 of size 8
+		MO310[8] allocated at global:__exe_fs.8

@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c
+Line: 280
+assembly.ll line: 485
+Stack: 
+	#000000485 in quotearg_buffer_restyled (buffer=41786416, buffersize=256, arg=40980144, quoting_style, o=46237168) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:280
+	#100000198 in quotearg_buffer (buffer=41786416, buffersize=256, arg=40980144, o=46237168) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:527
+	#200000810 in quotearg_n_options (arg=40980144, options=46237168) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:625
+	#300000208 in quotearg_n_style (s, arg=40980144) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:667
+	#400000948 in __macke_error_quotearg_n_style (argno1, argno2=40980144)
+	#500000215 in quotearg_style (s, arg=40980144) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:681
+	#600000921 in __user_main (=1, =36519312)
+	#700003646 in __uClibc_main (argc=1, argv=36519312) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800005268 in macke_quotearg_style_main (=1, =36519312)
+Info: 
+	address: 40980145
+	next: object at 41733664 of size 1
+		MO126[1] allocated at global:.str189
+	prev: object at 40980144 of size 1
+		MO777[1] allocated at __user_main():  %7 = call i8* @malloc(i64 %6)

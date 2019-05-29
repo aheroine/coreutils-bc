@@ -1,0 +1,7 @@
+Error: failed external call: fclose
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fclose.c
+Line: 65
+assembly.ll line: 14581
+Stack: 
+	#000014581 in rpl_fclose (fp=42565792) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fclose.c:65
+	#100016409 in main (=1, =41928752)

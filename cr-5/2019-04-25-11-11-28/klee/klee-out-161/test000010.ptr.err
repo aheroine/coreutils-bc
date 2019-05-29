@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/Intrinsic/memcpy.c
+Line: 17
+assembly.ll line: 10491
+Stack: 
+	#000010491 in memcpy (destaddr=82313024, srcaddr=59109504, len=32) at /home/jl/deploy/klee22/runtime/Intrinsic/memcpy.c:17
+	#100000335 in vasnprintf (resultbuf=82313024, lengthp=77033056, format=59109504, args=57094832) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/vasnprintf.c:1587
+	#200004335 in __user_main (=1, =72080144)
+	#300006775 in __uClibc_main (argc=1, argv=72080144) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400008348 in macke_vasnprintf_main (=1, =72080144)
+Info: 
+	address: 82313024
+	next: object at 139813837175744 of size 1536
+		MO81[1536] (no allocation info)
+	prev: object at 82313024 of size 1
+		MO762[1] allocated at __user_main():  %5 = tail call i8* @malloc(i64 %4)

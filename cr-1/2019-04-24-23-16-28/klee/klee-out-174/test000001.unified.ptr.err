@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 15691
+Stack: 
+	#000015691 in quotearg_buffer_restyled (buffer=53398512, buffersize=256, arg=53842528, argsize=18446744073709551615, quoting_style=0, o=53384416) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100015301 in quotearg_buffer (buffer=53398512, buffersize=256, arg=53842528, argsize=18446744073709551615, o=53384416) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200016725 in quotearg_n_options (n=0, arg=53842528, argsize=18446744073709551615, options=53384416) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300015420 in quotearg_n (n=0, arg=53842528) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:653
+	#400015430 in quotearg (arg=53842528) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:659
+	#500021815 in main (=1, =44939888)
+Info: 
+	address: 53842529
+	next: object at 53842592 of size 8
+		MO1023[8] addr [53842592]:  allocated at quotearg_n_options():  %argsize.addr = alloca i64, align 8
+	prev: object at 53842528 of size 1
+		MO1008[1] addr [53842528]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

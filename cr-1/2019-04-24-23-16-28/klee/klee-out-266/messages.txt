@@ -1,0 +1,20 @@
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:226: memory error: object read only
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:226: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:232: memory error: object read only
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:232: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) memory error: invalid pointer: klee_get_obj_size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/cycle-check.c:62: ASSERTION FAIL: state->magic == 9827862
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:327: concretized symbolic size
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/string/mempcpy.c:31: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:705: ASSERTION FAIL: AD_stack_height (ds) == 1 + __extension__ ({ struct obstack const *__o = (&ds->len_stack); (unsigned) (__o->next_free - __o->object_base); }) / sizeof (size_t)
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/misc/gnu/obstack.c:309: invalid function pointer
+KLEE: NOTE: now ignoring this error at this location

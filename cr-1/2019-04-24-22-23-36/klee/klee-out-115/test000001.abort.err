@@ -1,0 +1,11 @@
+Error: abort failure
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 609
+assembly.ll line: 813
+Stack: 
+	#000000813 in quotearg_n_options (n, arg=40335472, options=60452272) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:609
+	#100001021 in __macke_error_quotearg_n_options (argno0, argno1=40335472, argno3=60452272)
+	#200000212 in quotearg_n_style (n, s, arg=40335472) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:676
+	#300000993 in __user_main (=1, =56979264)
+	#400004656 in __uClibc_main (argc=1, argv=56979264) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500006251 in macke_quotearg_n_style_main (=1, =56979264)

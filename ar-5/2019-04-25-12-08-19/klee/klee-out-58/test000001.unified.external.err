@@ -1,0 +1,7 @@
+Error: failed external call: fread
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/freadseek.c
+Line: 127
+assembly.ll line: 9626
+Stack: 
+	#000009626 in freadseek (fp=32219600, offset) at /home/shadowvm/shadow/shadow-test/coreutils/ar-5/lib/freadseek.c:127
+	#100011426 in main (=1, =29761968)

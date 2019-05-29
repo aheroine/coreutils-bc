@@ -1,0 +1,22 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 335
+assembly.ll line: 617
+Stack: 
+	#000000617 in quotearg_buffer_restyled (buffer=65412176, buffersize=256, arg=52146240, quoting_style=5, o=56153024) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:335
+	#100000253 in quotearg_buffer (buffer=65412176, buffersize=256, arg=52146240, o=56153024) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200000861 in quotearg_n_options (arg=52146240, options=56153024) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300000263 in quotearg_n_style (arg=52146240) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:676
+	#400000234 in quote_n (name=52146240) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:32
+	#500000241 in quote (name=52146240) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quote.c:40
+	#600001013 in __macke_error_quote (argno0=52146240)
+	#700000220 in copy_acl (dst_name=52146240, dest_desc, mode) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/acl.c:296
+	#800000987 in __user_main (=1, =49931424)
+	#900003544 in __uClibc_main (argc=1, argv=49931424) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#1000005139 in macke_copy_acl_main (=1, =49931424)
+Info: 
+	address: 52146241
+	next: object at 52178688 of size 15
+		MO24[15] allocated at macke_copy_acl_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 52146240 of size 1
+		MO820[1] allocated at __user_main():  %9 = call i8* @malloc(i64 %8)

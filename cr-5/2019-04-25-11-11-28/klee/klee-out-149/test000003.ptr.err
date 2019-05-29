@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c
+Line: 279
+assembly.ll line: 338
+Stack: 
+	#000000338 in quotearg_buffer_restyled (buffer=54598416, buffersize=256, arg=65248960, quoting_style=6, flags=1, quote_these_too=47853864) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:279
+	#100000922 in quotearg_n_options (arg=65248960, options=47853856) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:704
+	#200000205 in quotearg_n_style (arg=65248960) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:751
+	#300000189 in quote_n (name=65248960) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:31
+	#400001055 in __macke_error_quote_n (argno1=65248960)
+	#500000196 in quote (name=65248960) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:39
+	#600001030 in __user_main (=1, =66550368)
+	#700003651 in __uClibc_main (argc=1, argv=66550368) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800005223 in macke_quote_main (=1, =66550368)
+Info: 
+	address: 65248961
+	next: object at 65298304 of size 16
+		MO114[16] allocated at global:_ppfs_parsespec.spec_or_mask
+	prev: object at 65248960 of size 1
+		MO769[1] allocated at __user_main():  %5 = tail call i8* @malloc(i64 %4)

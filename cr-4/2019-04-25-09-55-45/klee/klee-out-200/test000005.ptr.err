@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c
+Line: 343
+assembly.ll line: 375
+Stack: 
+	#000000375 in quotearg_buffer_restyled (buffer, buffersize, arg=57378960, quoting_style, flags=1, quote_these_too=59150680, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:343
+	#100001004 in quotearg_n_options (n, arg=57378960, options=59150672) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#200001651 in __macke_error_quotearg_n_options (argno0, argno1=57378960, argno3=59150672)
+	#300000229 in quotearg_n_style (n, s, arg=57378960) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:848
+	#400001626 in __user_main (=1, =74919600)
+	#500005862 in __uClibc_main (argc=1, argv=74919600) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600009581 in macke_quotearg_n_style_main (=1, =74919600)
+Info: 
+	address: 57378961
+	next: object at 57836688 of size 240
+		MO236[240] allocated at __uClibc_main():  %auxvt = alloca [15 x %struct.Elf64_auxv_t], align 16
+	prev: object at 57378960 of size 1
+		MO811[1] allocated at __user_main():  %9 = call i8* @malloc(i64 %8)

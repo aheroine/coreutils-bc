@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c
+Line: 258
+assembly.ll line: 291
+Stack: 
+	#000000291 in quotearg_buffer_restyled (buffer=57422848, buffersize=256, arg=56910160, quoting_style=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:258
+	#100000187 in quotearg_buffer (buffer=57422848, buffersize=256, arg=56910160) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:536
+	#200000789 in quotearg_n_options (arg=56910160) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:634
+	#300000195 in quotearg_n (arg=56910160) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:653
+	#400000917 in __macke_error_quotearg_n (argno1=56910160)
+	#500000202 in quotearg (arg=56910160) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/quotearg.c:659
+	#600000891 in __user_main (=1, =64772224)
+	#700003521 in __uClibc_main (argc=1, argv=64772224) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800005116 in macke_quotearg_main (=1, =64772224)
+Info: 
+	address: 56910161
+	next: object at 57173392 of size 15
+		MO158[15] allocated at global:.str514
+	prev: object at 56910160 of size 1
+		MO770[1] allocated at __user_main():  %5 = tail call i8* @malloc(i64 %4)

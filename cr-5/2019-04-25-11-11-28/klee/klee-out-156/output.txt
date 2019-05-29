@@ -1,0 +1,41 @@
+KLEE: KLEE: WATCHDOG: watching 27353
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-156"
+Using STP solver backend
+KLEE: WARNING ONCE: function "vasnprintf" has inline asm
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 58287632)
+KLEE: WARNING ONCE: __macke_error_quote: MACKE: Summery for quote reached
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-149/test000002.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-149/test000001.macke.err
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:379: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: WARNING ONCE: calling external: __ctype_b_loc()
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:279: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+error reading `'
+error reading `'
+error reading `'
+error reading `'
+error reading `'
+error reading `'
+error reading `'
+error reading `'
+error reading `'
+error reading `'
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
+
+KLEE: ctrl-c detected, requesting interpreter to halt.
+KLEE: WARNING: max-instruction-time exceeded: 105.50s
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+
+KLEE: done: total instructions = 64969
+KLEE: done: completed paths = 225
+KLEE: done: generated tests = 11

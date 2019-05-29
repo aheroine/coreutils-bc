@@ -1,0 +1,12 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 653
+assembly.ll line: 13957
+Stack: 
+	#000013957 in hash_free (table=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:653
+	#100006516 in forget_all () at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/cp-hash.c:186
+	#200021356 in main (=1, =42965744)
+Info: 
+	address: 64
+	next: object at 33312800 of size 398
+		MO94[398] addr [33312800]:  allocated at global:.str6

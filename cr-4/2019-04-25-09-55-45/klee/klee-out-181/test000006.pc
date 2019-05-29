@@ -1,0 +1,52 @@
+array argno0[216] : w32 -> w8 = symbolic
+array macke_sizeof_argno0[4] : w32 -> w8 = symbolic
+array macke_sym_switch_clear_ungetc_buffer_preserving_position[4] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Sle 1
+              N0:(ReadLSB w32 0 macke_sizeof_argno0))
+         (Slt N0 1025)
+         (Eq false (Eq 4 N0))
+         (Eq false (Eq 16 N0))
+         (Eq false (Eq 128 N0))
+         (Eq false (Eq 2 N0))
+         (Eq false
+             (Eq 0
+                 (And w32 N1:(ZExt w32 N2:(ReadLSB w16 0 argno0))
+                          35)))
+         (Eq false
+             (Eq 1
+                 (ReadLSB w32 0 macke_sym_switch_clear_ungetc_buffer_preserving_position)))
+         (Eq false
+             (Eq 0
+                 (And w32 (ReadLSB w32 0 argno0)
+                          256)))
+         (Eq false
+             (Eq (ReadLSB w64 16 argno0)
+                 (ReadLSB w64 8 argno0)))
+         (Eq 0 (And w16 N2 64))
+         (Eq false
+             (Eq 0
+                 N3:(Select w32 (Eq 0 N4:(And w32 N1 3))
+                                0
+                                (Add w32 4294967295 N4))))
+         (Eq false
+             (Eq 0 (And w16 N2 2048)))
+         (Eq false (Slt 1 N3))
+         (Eq 0
+             (ReadLSB w32 68 argno0))
+         (Slt 0
+              (ReadLSB w32 72 argno0))
+         (Slt (Select w32 (Slt (Shl w64 N5:(Add w64 (Sub w64 (ReadLSB w64 32 argno0)
+                                                             (ReadLSB w64 24 argno0))
+                                                    (ZExt w64 (Add w32 4294967295
+                                                                       (Sub w32 (Sub w32 N3
+                                                                                         (ZExt w32 N6:(Read w8 3 argno0)))
+                                                                                (ZExt w32 N7:(Read w8 2 argno0))))))
+                                        32)
+                               0)
+                          (Sub w32 0 N8:(Extract w32 0 N5))
+                          N8)
+              0)]
+        false)

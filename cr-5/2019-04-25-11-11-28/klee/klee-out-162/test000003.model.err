@@ -1,0 +1,19 @@
+Error: concretized symbolic size
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/vasnprintf.c
+Line: 1581
+assembly.ll line: 310
+Stack: 
+	#000000310 in vasnprintf (resultbuf=57587632, lengthp=52844240, format=40900640, args=41605056) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/vasnprintf.c:1581
+	#100004335 in __user_main (=1, =58012016)
+	#200006615 in __uClibc_main (argc=1, argv=58012016) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#300008188 in macke_vasnprintf_main (=1, =58012016)
+Info: 
+  size expr: (Select w64 (Ult N0:(Select w64 (Slt 18446744073709551615
+                                                   N1:(ReadLSB w64 0 argno1))
+                                              (Shl w64 N1 1)
+                                              18446744073709551615)
+                               5)
+                          5
+                          N0)
+  concretization : 5
+  unbound example: 6

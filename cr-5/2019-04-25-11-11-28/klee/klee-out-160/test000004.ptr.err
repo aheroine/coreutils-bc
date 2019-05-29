@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c
+Line: 279
+assembly.ll line: 944
+Stack: 
+	#000000944 in quotearg_buffer_restyled (buffer=40123792, buffersize=256, arg=35036624, quoting_style=6, flags=1, quote_these_too=56264632) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:279
+	#100001528 in quotearg_n_options (arg=35036624, options=56264624) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:704
+	#200000811 in quotearg_n_style (arg=35036624) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:751
+	#300000795 in quote_n (name=35036624) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:31
+	#400000802 in quote (name=35036624) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:39
+	#500005868 in __macke_error_quote (argno0=35036624)
+	#600000312 in tail_lines (pretty_filename=35036624, fd, n_lines, read_pos=33908384) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:1459
+	#700005842 in __user_main (=1, =42316304)
+	#800008510 in __uClibc_main (argc=1, argv=42316304) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#900010083 in macke_tail_lines_main (=1, =42316304)
+Info: 
+	address: 35036625
+	next: object at 35172288 of size 16
+		MO722[16] allocated at klee_init_env():  %370 = call noalias i8* @malloc(i64 %369) #1, !dbg !5751
+	prev: object at 35036624 of size 1
+		MO785[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

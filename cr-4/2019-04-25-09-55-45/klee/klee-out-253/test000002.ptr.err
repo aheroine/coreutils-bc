@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/hash.c
+Line: 877
+assembly.ll line: 189
+Stack: 
+	#000000189 in transfer_entries (dst=55064192, src=61945488, safe) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/hash.c:877
+	#100000367 in __user_main (=1, =58064368)
+	#200000961 in __uClibc_main (argc=1, argv=58064368) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#300001171 in macke_transfer_entries_main (=1, =58064368)
+Info: 
+	address: (Add w64 8
+          (ReadLSB w64 0 argno1))
+	example: 36894046
+	range: [36894046, 36894053]
+	next: object at 37454992 of size 8
+		MO168[8] allocated at global:.str3
+	prev: object at 36894032 of size 21
+		MO26[21] allocated at macke_transfer_entries_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

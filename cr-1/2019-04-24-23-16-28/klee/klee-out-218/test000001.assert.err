@@ -1,0 +1,12 @@
+Error: ASSERTION FAIL: ((unsigned int) (co->backup_type) <= numbered_backups)
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c
+Line: 1919
+assembly.ll line: 553
+Stack: 
+	#000000553 in valid_options (co=74376528) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1919
+	#100000467 in copy (src_name=75805072, dst_name=74374896, options=74376528, copy_into_self=55965904, rename_succeeded=74186720) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1939
+	#200000375 in do_move (source=75805072, dest=74374896, x=74376528) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/mv.c:185
+	#300000356 in movefile (source=75805072, dest=60436816, dest_is_dir, x=74376528) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/mv.c:283
+	#400009002 in __user_main (=1, =54078048)
+	#500012593 in __uClibc_main (argc=1, argv=54078048) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600014316 in macke_movefile_main (=1, =54078048)

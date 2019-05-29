@@ -1,0 +1,7 @@
+Error: failed external call: fflush
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fflush.c
+Line: 146
+assembly.ll line: 14829
+Stack: 
+	#000014829 in rpl_fflush (stream=40337312) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fflush.c:146
+	#100016396 in main (=1, =31138544)

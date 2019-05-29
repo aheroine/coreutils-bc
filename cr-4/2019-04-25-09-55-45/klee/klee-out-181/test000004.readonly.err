@@ -1,0 +1,16 @@
+Error: memory error: object read only
+File: /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c
+Line: 83
+assembly.ll line: 1924
+Stack: 
+	#000001924 in __stdio_WRITE (stream=36331888, buf, bufsize) at /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c:83
+	#100001436 in __stdio_wcommit (stream=36331888) at /home/jl/deploy/klee-uclibc/libc/stdio/_wcommit.c:25
+	#200001238 in fseeko64 (stream=36331888, offset=0, whence=1) at /home/jl/deploy/klee-uclibc/libc/stdio/fseeko.c:44
+	#300001215 in fseek (stream=36331888, offset=0, whence=1) at /home/jl/deploy/klee-uclibc/libc/stdio/fseeko.c:28
+	#400000234 in rpl_fseeko (fp=36331888) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fseeko.c:152
+	#500000183 in clear_ungetc_buffer_preserving_position (fp=36331888) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fflush.c:44
+	#600000305 in __macke_error_clear_ungetc_buffer_preserving_position (argno0=36331888)
+	#700000164 in rpl_fflush (stream=36331888) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fflush.c:150
+	#800000282 in __user_main (=1, =49835728)
+	#900001783 in __uClibc_main (argc=1, argv=49835728) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#1000001993 in macke_rpl_fflush_main (=1, =49835728)

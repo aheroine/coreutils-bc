@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 1433
+assembly.ll line: 16577
+Stack: 
+	#000016577 in __fd_lstat (path=63510880, buf=63804544) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:1433
+	#100018417 in lstat (path=63510880, buf=77969552) at /home/jl/deploy/klee22/runtime/POSIX/fd_32.c:120
+	#200000602 in copy_internal (src_name=63510880, dst_name=76478576, new_dst=false, device=0, ancestors=0, x=74900896, command_line_arg=true, copy_into_self=78072448, rename_succeeded=74895568) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1034
+	#300000441 in copy (src_name=63510880, dst_name=76478576, options=74900896, copy_into_self=78072448, rename_succeeded=74895568) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1951
+	#400008983 in __macke_error_copy (argno0=63510880, argno1=76478576, argno3=74900896, argno4=78072448, argno5=74895568)
+	#500000354 in do_move (source=63510880, dest=76478576, x=74900896) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/mv.c:185
+	#600008956 in __user_main (=1, =54164336)
+	#700013151 in __uClibc_main (argc=1, argv=54164336) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800014874 in macke_do_move_main (=1, =54164336)
+Info: 
+	address: 63510884
+	next: object at 63622912 of size 45
+		MO157[45] allocated at global:.str17134
+	prev: object at 63510880 of size 4
+		MO933[4] allocated at __user_main():  %5 = tail call i8* @malloc(i64 %4)

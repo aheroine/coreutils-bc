@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-205/test000004.macke.err
+Stack: 
+	#000002230 in __macke_error_quote (argno0=75110448)
+	#100000333 in tail_lines (pretty_filename=75110448, fd, n_lines, read_pos=53267120) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:1659
+	#200002150 in __user_main (=1, =67694864)
+	#300005895 in __uClibc_main (argc=1, argv=67694864) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400009614 in macke_tail_lines_main (=1, =67694864)

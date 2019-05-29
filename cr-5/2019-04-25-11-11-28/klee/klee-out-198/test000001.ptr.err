@@ -1,0 +1,13 @@
+Error: memory error: invalid pointer: klee_get_obj_size
+Stack: 
+	#000000277 in __macke_error_close_stream (argno0=45268912)
+	#100000166 in close_stdout () at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/closeout.c:109
+	#200000250 in __user_main (=1, =43427152)
+	#300003568 in __uClibc_main (argc=1, argv=43427152) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400005140 in macke_close_stdout_main (=1, =43427152)
+Info: 
+	address: 45268912
+	next: object at 45353120 of size 14
+		MO13[14] allocated at macke_close_stdout_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 45268832 of size 240
+		MO95[240] allocated at global:_stdio_streams

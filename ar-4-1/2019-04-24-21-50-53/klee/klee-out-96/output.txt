@@ -1,0 +1,30 @@
+KLEE: KLEE: WATCHDOG: watching 609
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/ar-4-1/2019-04-24-21-50-53/klee/klee-out-96"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 39188672)
+KLEE: WARNING ONCE: calling external: __ctype_b_loc()
+KLEE: WARNING ONCE: calling external: vprintf(53769728, 59072416)
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/src/cut.c:377: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+getenv failed for key KLEE_DIVERGENCE_FILE
+getenv failed for key KLEE_DIVERGENCE_FILE
+KLEE: WARNING ONCE: __macke_error_mark_printable_field: MACKE: Summery for mark_printable_field reached
+getenv failed for key KLEE_DIVERGENCE_FILE
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/ar-4-1/2019-04-24-21-50-53/klee/klee-out-34/test000001.unified.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+getenv failed for key KLEE_DIVERGENCE_FILE
+getenv failed for key KLEE_DIVERGENCE_FILE
+getenv failed for key KLEE_DIVERGENCE_FILE
+getenv failed for key KLEE_DIVERGENCE_FILE
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+
+KLEE: done: total instructions = 4240074
+KLEE: done: completed paths = 36423
+KLEE: done: generated tests = 13

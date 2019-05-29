@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c
+Line: 343
+assembly.ll line: 387
+Stack: 
+	#000000387 in quotearg_buffer_restyled (buffer=46847568, buffersize=256, arg=29971664, quoting_style=6, flags=1, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:343
+	#100000961 in quotearg_n_options (arg=29971664) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#200000227 in quote_n_mem (arg=29971664) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:944
+	#300000234 in quote_n (arg=29971664) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:956
+	#400001553 in __macke_error_quote_n (argno1=29971664)
+	#500000241 in quote (arg=29971664) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:962
+	#600001525 in __user_main (=1, =40264464)
+	#700005341 in __uClibc_main (argc=1, argv=40264464) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800009060 in macke_quote_main (=1, =40264464)
+Info: 
+	address: 29971665
+	next: object at 30036480 of size 16
+		MO14[16] allocated at macke_quote_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 29971664 of size 1
+		MO804[1] allocated at __user_main():  %5 = tail call i8* @malloc(i64 %4)

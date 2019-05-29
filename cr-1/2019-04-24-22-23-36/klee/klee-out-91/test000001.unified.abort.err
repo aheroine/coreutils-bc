@@ -1,0 +1,7 @@
+Error: abort failure
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c
+Line: 286
+assembly.ll line: 6699
+Stack: 
+	#000006699 in hash_get_first (table=35020624) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:286
+	#100012268 in main (=1, =38522288)

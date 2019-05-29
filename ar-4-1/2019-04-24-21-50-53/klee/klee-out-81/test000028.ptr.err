@@ -1,0 +1,15 @@
+Error: memory error: invalid pointer: klee_get_obj_size
+Stack: 
+	#000001026 in __macke_error_quotearg_buffer (argno0, argno1, argno2=42957632, argno3, argno4=53681520)
+	#100000871 in quotearg_n_options (n, arg=42957632, argsize, options=53681520) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/quotearg.c:625
+	#200000998 in __user_main (=1, =59025488)
+	#300003748 in __uClibc_main (argc=1, argv=59025488) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400005370 in macke_quotearg_n_options_main (=1, =59025488)
+Info: 
+	address: (ReadLSB w64 N0:(Extract w32 0 (Add w64 8
+                                         (Mul w64 16
+                                                  (SExt w64 (ReadLSB w32 0 argno0))))) const_arr6)
+	example: 0
+	range: [0, 0]
+	next: object at 34126432 of size 33
+		MO12[33] allocated at macke_quotearg_n_options_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 1433
+assembly.ll line: 6690
+Stack: 
+	#000006690 in __fd_open (pathname=69370544, flags=0, mode=0) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:1433
+	#100008749 in open (pathname=69370544, flags=0) at /home/jl/deploy/klee22/runtime/POSIX/fd_32.c:76
+	#200001083 in open_safer (file=69370544, flags=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/open-safer.c:49
+	#300000272 in copy_reg (src_name=69370544, dst_name=55544640, x=75612464, dst_mode, omitted_permissions, new_dst=50172768, src_sb=52213392) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:285
+	#400001995 in __user_main (=1, =53437088)
+	#500004937 in __uClibc_main (argc=1, argv=53437088) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600006532 in macke_copy_reg_main (=1, =53437088)
+Info: 
+	address: 69370548
+	next: object at 69505152 of size 92
+		MO1[92] allocated at macke_copy_reg_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 69370544 of size 4
+		MO814[4] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

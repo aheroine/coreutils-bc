@@ -1,0 +1,7 @@
+Error: failed external call: strcmp
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c
+Line: 2081
+assembly.ll line: 2227
+Stack: 
+	#000002227 in ignore_fifo_and_pipe (f=47566336, n_files) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:2081
+	#100017447 in main (=1, =43727184)

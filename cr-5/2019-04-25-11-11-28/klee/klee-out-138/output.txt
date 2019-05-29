@@ -1,0 +1,16 @@
+KLEE: KLEE: WATCHDOG: watching 2913
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-138"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 63958320)
+KLEE: WARNING ONCE: __macke_error_usage: MACKE: Summery for usage reached
+KLEE: WARNING ONCE: calling external: vprintf(58855616, 59195456)
+
+KLEE: done: total instructions = 3317
+KLEE: done: completed paths = 2
+KLEE: done: generated tests = 1
+Try `(null) --help' for more information.

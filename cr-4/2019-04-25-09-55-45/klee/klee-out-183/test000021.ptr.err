@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c
+Line: 83
+assembly.ll line: 6662
+Stack: 
+	#000006662 in __stdio_WRITE (stream=27288720, buf, bufsize) at /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c:83
+	#100006145 in __stdio_wcommit (stream=27288720) at /home/jl/deploy/klee-uclibc/libc/stdio/_wcommit.c:25
+	#200006276 in fflush_unlocked (stream=27288720) at /home/jl/deploy/klee-uclibc/libc/stdio/fflush.c:125
+	#300000223 in rpl_fflush (stream=27288720) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fflush.c:146
+	#400000183 in rpl_fclose (fp=27288720) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fclose.c:71
+	#500000411 in __macke_error_rpl_fclose (argno0=27288720)
+	#600000314 in close_stream (stream=27288720) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/close-stream.c:60
+	#700000382 in __user_main (=1, =26710016)
+	#800006522 in __uClibc_main (argc=1, argv=26710016) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#900006732 in macke_close_stream_main (=1, =26710016)
+Info: 
+	address: (ReadLSB w64 8 argno0)
+	example: 0
+	range: [0, 18446744073709551615]
+	next: object at 24956848 of size 964
+		MO143[964] allocated at global:.str133

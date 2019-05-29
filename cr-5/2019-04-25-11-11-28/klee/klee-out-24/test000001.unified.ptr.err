@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/printf-parse.c
+Line: 133
+assembly.ll line: 17876
+Stack: 
+	#000017876 in printf_parse (format=64363200, d=64378048, a=64364800) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/printf-parse.c:133
+	#100019926 in main (=1, =54309984)
+Info: 
+	address: 64363201
+	next: object at 64363296 of size 8
+		MO748[8] addr [64363296]:  allocated at printf_parse():  %a_allocated = alloca i64, align 8
+	prev: object at 64363200 of size 1
+		MO715[1] addr [64363200]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

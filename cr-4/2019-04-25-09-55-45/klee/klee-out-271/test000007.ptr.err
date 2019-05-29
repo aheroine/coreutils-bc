@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c
+Line: 453
+assembly.ll line: 710
+Stack: 
+	#000000710 in quotearg_buffer_restyled (buffer, buffersize, arg=51692752, quoting_style=8, flags=1, quote_these_too=49625016, left_quote=67033104, right_quote=50251792) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:453
+	#100001045 in quotearg_n_options (n, arg=51692752, options=49625008) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#200000270 in quotearg_n_custom_mem (n, left_quote=67033104, right_quote=50251792, arg=51692752) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:913
+	#300001683 in __macke_error_quotearg_n_custom_mem (argno0, argno1=67033104, argno2=50251792, argno3=51692752)
+	#400000259 in quotearg_n_custom (n, left_quote=67033104, right_quote=50251792, arg=51692752) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:902
+	#500001652 in __user_main (=1, =69924912)
+	#600005783 in __uClibc_main (argc=1, argv=69924912) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700009502 in macke_quotearg_n_custom_main (=1, =69924912)
+Info: 
+	address: 51692753
+	next: object at 51733360 of size 10
+		MO229[10] allocated at global:.str2254
+	prev: object at 51692752 of size 1
+		MO865[1] allocated at __user_main():  %13 = call i8* @malloc(i64 %12)

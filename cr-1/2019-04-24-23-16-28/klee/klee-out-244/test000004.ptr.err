@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strlen.c
+Line: 22
+assembly.ll line: 8547
+Stack: 
+	#000008547 in strlen (s=78277088) at /home/jl/deploy/klee-uclibc/libc/string/strlen.c:22
+	#100005804 in xstrdup (string=78277088) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/xmalloc.c:122
+	#200002881 in remember_copied (name=78277088, ino=2, dev=2049) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/cp-hash.c:144
+	#300000901 in copy_internal (src_name=54992880, dst_name=78277088, new_dst, device, ancestors=56985456, x=78272848, command_line_arg, copy_into_self=56757328, rename_succeeded=54701344) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:1351
+	#400005991 in __user_main (=1, =56230832)
+	#500008994 in __uClibc_main (argc=1, argv=56230832) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#600010717 in macke_copy_internal_main (=1, =56230832)
+Info: 
+	address: 78277089
+	next: object at 78337584 of size 33
+		MO211[33] allocated at global:.str9250
+	prev: object at 78277088 of size 1
+		MO402195[1] allocated at __user_main():  %8 = call i8* @malloc(i64 %7)

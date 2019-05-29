@@ -1,0 +1,16 @@
+Control Divergence
+Condition: (Eq false
+     (Eq 0
+         (And w64 (SExt w64 (ZExt w32 (Eq false
+                                          (Extract 0 (Read w8 0 argno4)))))
+                  (Or w64 (Shadow w64 (SExt w64 (ZExt w32 (Eq 1
+                                                              N0:(ReadLSB w32 4 argno4))))
+                                      (SExt w64 (ZExt w32 (Eq 3 N0))))
+                          (ZExt w64 (Extract 0 (Read w8 24 argno4)))))))
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c
+Line: 849
+assembly.ll line: 2859
+Stack: 
+	#000002859 in prompt (fd_cwd, ds=56917328, filename=56912176, sbuf=56934240, x=56924656, mode=2, is_empty=48803984) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:849
+	#100004680 in remove_entry (fd_cwd, ds=56917328, filename=56912176, st=56934240, x=56924656, dp=51575712) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1023
+	#200011462 in main (=1, =48882912)

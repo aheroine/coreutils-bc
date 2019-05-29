@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fcntl.c
+Line: 301
+assembly.ll line: 14792
+Stack: 
+	#000014792 in rpl_fcntl (fd, action) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fcntl.c:301
+	#100016946 in main (=1, =29149472)
+Info: 
+	address: 32975936
+	next: object at 32977024 of size 4
+		MO844[4] addr [32977024]:  allocated at rpl_fcntl():  %fd.addr = alloca i32, align 4
+	prev: object at 32975936 of size 0
+		MO843[0] addr [32975936]:  allocated at main():  %7 = call i32 (i32, i32, ...)* @rpl_fcntl(i32 %4, i32 %6)

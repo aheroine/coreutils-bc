@@ -1,0 +1,7 @@
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 65797744)
+KLEE: WARNING ONCE: __macke_error_quotearg_buffer_restyled: MACKE: Summery for quotearg_buffer_restyled reached
+KLEE: WARNING ONCE: calling external: __ctype_b_loc()
+KLEE: WARNING ONCE: flushing 5120 bytes on read, may be slow and/or crash: MO825[5120] allocated at __user_main():  %13 = call i8* @malloc(i64 %12)

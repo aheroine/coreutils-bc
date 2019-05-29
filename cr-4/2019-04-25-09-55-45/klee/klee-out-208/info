@@ -1,0 +1,18 @@
+/home/jl/deploy/klee22/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-208 --search=sonar --sonar-target=function-call --sonar-target-info=__macke_error_quote --max-time=120 --max-instruction-time=12 --allow-external-sym-calls --libc=uclibc --max-memory=1000 --only-output-states-covering-new --optimize --disable-inlining --output-source=false --posix-runtime --watchdog --stats-write-interval=238 --istats-write-interval=238 --entry-point macke_fremote_main /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/bitcode/chain-fremote-quote.bc
+PID: 20485
+Started: 2019-04-25 10:19:04
+BEGIN searcher description
+SonarDeepSearcher
+END searcher description
+Finished: 2019-04-25 10:21:04
+Elapsed: 00:02:00
+KLEE: done: explored paths = 4086
+KLEE: done: avg. constructs per query = 48
+KLEE: done: total queries = 624
+KLEE: done: valid queries = 66
+KLEE: done: invalid queries = 558
+KLEE: done: query cex = 624
+
+KLEE: done: total instructions = 184943
+KLEE: done: completed paths = 4086
+KLEE: done: generated tests = 15

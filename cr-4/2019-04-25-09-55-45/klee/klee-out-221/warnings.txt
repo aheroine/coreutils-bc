@@ -1,0 +1,5 @@
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 34397936)
+KLEE: WARNING ONCE: __macke_error_rpl_fcntl: MACKE: Summery for rpl_fcntl reached

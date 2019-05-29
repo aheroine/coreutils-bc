@@ -1,0 +1,4 @@
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/hash.c:746: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/jl/deploy/klee-uclibc/libc/string/strlen.c:22: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location

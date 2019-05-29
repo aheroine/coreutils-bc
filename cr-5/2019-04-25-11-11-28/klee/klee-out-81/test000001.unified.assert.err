@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: 0 <= seconds
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/xnanosleep.c
+Line: 67
+assembly.ll line: 11973
+Stack: 
+	#000011973 in xnanosleep (seconds) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/xnanosleep.c:67
+	#100020996 in main (=1, =48686080)

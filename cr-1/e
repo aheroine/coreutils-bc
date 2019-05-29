@@ -1,0 +1,12 @@
+348:  %call4 = call i64 @klee_change(i64 0, i64 5), !dbg !1133
+358:  %call6 = call i64 @klee_change(i64 1, i64 3), !dbg !1137
+368:  %call11 = call i64 @klee_change(i64 0, i64 5), !dbg !1141
+410:  %call20 = call i64 @klee_change(i64 0, i64 5), !dbg !1155
+418:  %call24 = call i64 @klee_change(i64 0, i64 4), !dbg !1159
+428:  %call29 = call i64 @klee_change(i64 1, i64 3), !dbg !1163
+640:  %call = call i64 @klee_change(i64 0, i64 4), !dbg !1224
+764:define i64 @klee_change(i64 %x, i64 %y) #0 {
+2757:  %call12 = call i64 @klee_change(i64 %conv7, i64 %conv11), !dbg !1803
+2785:  %call24 = call i64 @klee_change(i64 %conv19, i64 %conv23), !dbg !1806
+2845:  %call52 = call i64 @klee_change(i64 %conv47, i64 %conv51), !dbg !1809
+2941:  %call100 = call i64 @klee_change(i64 %conv95, i64 %conv99), !dbg !1823

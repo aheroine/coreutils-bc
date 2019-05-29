@@ -1,0 +1,92 @@
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/klee/klee-out-41"
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/klee/klee-out-41 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-3/2019-04-25-00-52-46/bitcode/symmains.bc_safe_hasher_ChangeEntry.bc
+
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: __ctype_get_mb_cur_max
+KLEE: WARNING: undefined reference to function: __errno_location
+KLEE: WARNING: undefined reference to function: __fpending
+KLEE: WARNING: undefined reference to function: __freading
+KLEE: WARNING: undefined reference to function: atexit
+KLEE: WARNING: undefined reference to function: clearerr_unlocked
+KLEE: WARNING: undefined reference to function: close
+KLEE: WARNING: undefined reference to function: fclose
+KLEE: WARNING: undefined reference to function: fdopen
+KLEE: WARNING: undefined reference to function: feof_unlocked
+KLEE: WARNING: undefined reference to function: ferror
+KLEE: WARNING: undefined reference to function: ferror_unlocked
+KLEE: WARNING: undefined reference to function: fflush
+KLEE: WARNING: undefined reference to function: fflush_unlocked
+KLEE: WARNING: undefined reference to function: fgetc
+KLEE: WARNING: undefined reference to function: fileno
+KLEE: WARNING: undefined reference to function: fopen
+KLEE: WARNING: undefined reference to function: fprintf
+KLEE: WARNING: undefined reference to function: fputs
+KLEE: WARNING: undefined reference to function: fputs_unlocked
+KLEE: WARNING: undefined reference to function: fread
+KLEE: WARNING: undefined reference to function: fscanf
+KLEE: WARNING: undefined reference to function: fseeko
+KLEE: WARNING: undefined reference to function: fwrite_unlocked
+KLEE: WARNING: undefined reference to function: getc_unlocked
+KLEE: WARNING: undefined reference to function: getenv
+KLEE: WARNING: undefined reference to function: getopt_long
+KLEE: WARNING: undefined reference to function: iswprint
+KLEE: WARNING: undefined reference to function: lseek
+KLEE: WARNING: undefined reference to function: mbrtowc
+KLEE: WARNING: undefined reference to function: mbsinit
+KLEE: WARNING: undefined reference to function: memchr
+KLEE: WARNING: undefined reference to function: memcmp
+KLEE: WARNING: undefined reference to function: nl_langinfo
+KLEE: WARNING: undefined reference to function: open
+KLEE: WARNING: undefined reference to variable: optarg
+KLEE: WARNING: undefined reference to variable: optind
+KLEE: WARNING: undefined reference to function: posix_fadvise
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING: undefined reference to variable: program_invocation_name
+KLEE: WARNING: undefined reference to variable: program_invocation_short_name
+KLEE: WARNING: undefined reference to function: putchar_unlocked
+KLEE: WARNING: undefined reference to function: qsort
+KLEE: WARNING: undefined reference to function: setlocale
+KLEE: WARNING: undefined reference to variable: stderr
+KLEE: WARNING: undefined reference to variable: stdin
+KLEE: WARNING: undefined reference to variable: stdout
+KLEE: WARNING: undefined reference to function: strcmp
+KLEE: WARNING: undefined reference to function: strcpy
+KLEE: WARNING: undefined reference to function: strlen
+KLEE: WARNING: undefined reference to function: strncmp
+KLEE: WARNING: undefined reference to function: strndup
+KLEE: WARNING: undefined reference to function: strrchr
+KLEE: WARNING: undefined reference to function: strspn
+KLEE: WARNING: undefined reference to function: ungetc
+KLEE: WARNING: undefined reference to function: error (UNSAFE)!
+terminate called after throwing an instance of 'Minisat::OutOfMemoryException'
+0  klee            0x0000000000e5f672 llvm::sys::PrintStackTrace(_IO_FILE*) + 50
+1  klee            0x0000000000e5eec4
+2  libpthread.so.0 0x00007f6635fb0890
+3  libc.so.6       0x00007f6634e80e97 gsignal + 199
+4  libc.so.6       0x00007f6634e82801 abort + 321
+5  libstdc++.so.6  0x00007f663587684d __gnu_cxx::__verbose_terminate_handler() + 365
+6  libstdc++.so.6  0x00007f66358746b6
+7  libstdc++.so.6  0x00007f6635874701
+8  libstdc++.so.6  0x00007f6635874919
+9  libminisat.so.2 0x00007f6635b7b400
+10 libminisat.so.2 0x00007f6635b85a11 Minisat::RegionAllocator<unsigned int>::capacity(unsigned int) + 229
+11 libminisat.so.2 0x00007f6635b83aa4 Minisat::RegionAllocator<unsigned int>::RegionAllocator(unsigned int) + 76
+12 libminisat.so.2 0x00007f6635b826e7 Minisat::ClauseAllocator::ClauseAllocator() + 29
+13 libminisat.so.2 0x00007f6635b7b8e3 Minisat::Solver::Solver() + 1129
+14 klee            0x0000000000efeff5 stp::MinisatCore::MinisatCore() + 37
+15 klee            0x0000000000eb625d stp::STP::get_new_sat_solver() + 157
+16 klee            0x0000000000ebb2da stp::STP::TopLevelSTP(stp::ASTNode const&, stp::ASTNode const&) + 186
+17 klee            0x0000000000e7ccb9 vc_query_with_timeout + 201
+18 klee            0x0000000000603804 STPSolverImpl::computeInitialValues(klee::Query const&, std::vector<klee::Array const*, std::allocator<klee::Array const*> > const&, std::vector<std::vector<unsigned char, std::allocator<unsigned char> >, std::allocator<std::vector<unsigned char, std::allocator<unsigned char> > > >&, bool&) + 2756
+19 klee            0x00000000005e6a4a CexCachingSolver::getAssignment(klee::Query const&, klee::Assignment*&) + 266
+20 klee            0x00000000005e7afc CexCachingSolver::computeValue(klee::Query const&, klee::ref<klee::Expr>&) + 364
+21 klee            0x00000000005f707b IndependentSolver::computeValue(klee::Query const&, klee::ref<klee::Expr>&) + 331
+22 klee            0x00000000006015e8 klee::Solver::getValue(klee::Query const&, klee::ref<klee::ConstantExpr>&) + 392
+23 klee            0x00000000005b9915 klee::TimingSolver::getValue(klee::ExecutionState const&, klee::ref<klee::Expr>, klee::ref<klee::ConstantExpr>&, bool) + 1845
+24 klee            0x000000000058756a klee::Executor::executeInstruction(klee::ExecutionState&, klee::KInstruction*) + 37450
+25 klee            0x000000000058da44 klee::Executor::run(klee::ExecutionState&) + 1300
+26 klee            0x000000000058fc68 klee::Executor::runFunctionAsMain(llvm::Function*, int, char**, char**) + 1896
+27 klee            0x000000000053ff5e main + 12670
+28 libc.so.6       0x00007f6634e63b97 __libc_start_main + 231
+29 klee            0x0000000000551faa _start + 42
+ERROR: STP did not return successfully.  Most likely you forgot to run 'ulimit -s unlimited'

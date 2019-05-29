@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-191/test000003.ptr.err
+Stack: 
+	#000001090 in __macke_error_quote_n (argno0=0, argno1=39467968)
+	#100000183 in emit_verbose (src=39467968, dst=39642432, backup_dst_name=50175328) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/copy.c:989
+	#200001031 in __user_main (=1, =39426864)
+	#300003651 in __uClibc_main (argc=1, argv=39426864) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400005246 in macke_emit_verbose_main (=1, =39426864)

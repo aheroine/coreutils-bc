@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/localcharset.c
+Line: 542
+assembly.ll line: 15615
+Stack: 
+	#000015615 in locale_charset () at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/localcharset.c:542
+	#100012474 in gettext_quote (msgid=43674736, s=6) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:219
+	#200011039 in quotearg_buffer_restyled (buffer=43671968, buffersize=256, arg=44071424, argsize=18446744073709551615, quoting_style=6, flags=1, quote_these_too=43673592, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:312
+	#300012361 in quotearg_n_options (n=0, arg=44071424, argsize=18446744073709551615, options=43673584) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#400010869 in quote_n_mem (n=0, arg=44071424, argsize=18446744073709551615) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:944
+	#500010895 in quote_n (n=0, arg=44071424) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:956
+	#600010905 in quote (arg=44071424) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:962
+	#700005892 in pipe_bytes (pretty_filename=44071424, fd, n_bytes, read_pos=44088160) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:770
+	#800017271 in main (=1, =40237344)
+Info: 
+	address: 140641394767816
+	next: object at 140641394662336 of size 1536
+		MO81[1536] addr [140641394662336]:  (no allocation info)
+	prev: object at 44820304 of size 8
+		MO961[8] addr [44820304]:  allocated at quotearg_n_options():  %sv = alloca %struct.slotvec*, align 8

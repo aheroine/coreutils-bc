@@ -1,0 +1,65 @@
+KLEE: KLEE: WATCHDOG: watching 31660
+
+KLEE: NOTE: Using klee-uclibc : /home/jl/deploy/klee22/Release+Asserts/lib/klee-uclibc.bca
+KLEE: NOTE: Using model: /home/jl/deploy/klee22/Release+Asserts/lib/libkleeRuntimePOSIX.bca
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-188"
+Using STP solver backend
+KLEE: WARNING: undefined reference to function: klee_posix_prefer_cex
+KLEE: WARNING: executable has module level assembly (ignoring)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 46996304)
+KLEE: WARNING ONCE: calling external: printf(54501872, 0)
+
+Mandatory arguments to long options are mandatory for short options too.
+  -c, --bytes=K            output the last K bytes; alternatively, use -c +K
+                           to output bytes starting with the Kth of each file
+  -f, --follow[={name|descriptor}]
+                           output appended data as the file grows;
+                           -f, --follow, and --follow=descriptor are
+                           equivalent
+  -F                       same as --follow=name --retry
+      --pid=PID            with -f, terminate after process ID, PID dies
+  -q, --quiet, --silent    never output headers giving file names
+      --retry              keep trying to open a file if it is inaccessible
+  -s, --sleep-interval=N   with -f, sleep for approximately N seconds
+                             (default 1.0) between iterations.
+                             With inotify and --pid=P, check process P at
+                             least once every N seconds.
+  -v, --verbose            always output headers giving file names
+      --help     display this help and exit
+      --version  output version information and exit
+
+If the first character of K (the number of bytes or lines) is a '+',
+print beginning with the Kth item from the start of each file, otherwise,
+print the last K items in the file.  K may have a multiplier suffix:
+b 512, kB 1000, K 1024, MB 1000*1000, M 1024*1024,
+GB 1000*1000*1000, G 1024*1024*1024, and so on for T, P, E, Z, Y.
+
+With --follow (-f), tail defaults to following the file descriptor, which
+means that even if a tail'ed file is renamed, tail will continue to track
+its end.  This default behavior is not desirable when you really want to
+track the actual name of the file, not the file descriptor (e.g., log
+rotation).  Use --follow=name in that case.  That causes tail to track the
+named file in a way that accommodates renaming, removal and creation.
+KLEE: WARNING ONCE: __macke_error_emit_ancillary_info: MACKE: Summery for emit_ancillary_info reached
+Usage: (null) [OPTION]... [FILE]...
+Print the last 10 lines of each FILE to standard output.
+With more than one FILE, precede each with a header giving the file name.
+With no FILE, or when FILE is -, read standard input.
+  -n, --lines=K            output the last K lines, instead of the last 10;
+                           or use -n +K to output lines starting with the Kth
+      --max-unchanged-stats=N
+                           with --follow=name, reopen a FILE which has not
+                           changed size after N (default 5) iterations
+                           to see if it has been unlinked or renamed
+                           (this is the usual case of rotated log files).
+                           With inotify, this option is rarely useful.
+KLEE: ERROR: (location information missing) ERROR FROM /home/jl/testspace/coreutils-bc/cr-4/2019-04-25-09-55-45/klee/klee-out-11/test000001.unified.ptr.err
+KLEE: NOTE: now ignoring this error at this location
+
+KLEE: done: total instructions = 14077
+KLEE: done: completed paths = 3
+KLEE: done: generated tests = 2
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Report (null) translation bugs to <http://translationproject.org/team/>
+For complete documentation, run: info coreutils '(null) invocation'

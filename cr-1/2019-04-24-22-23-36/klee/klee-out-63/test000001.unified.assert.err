@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: 0 < AD_stack_height (ds)
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c
+Line: 389
+assembly.ll line: 2155
+Stack: 
+	#000002155 in AD_stack_pop (ds=33416064) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:389
+	#100011838 in main (=1, =28679904)

@@ -1,0 +1,13 @@
+Error: memory error: invalid pointer: klee_get_obj_size
+Stack: 
+	#000001356 in __macke_error_cycle_check (argno0=73963384, argno1=67402192)
+	#100000242 in AD_push (ds=73963120, dir=74164064, dir_sb_from_parent=67402192) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:682
+	#200001326 in __user_main (=1, =64074608)
+	#300004756 in __uClibc_main (argc=1, argv=64074608) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400006351 in macke_AD_push_main (=1, =64074608)
+Info: 
+	address: 73963384
+	next: object at 74034544 of size 4
+		MO715[4] allocated at __user_main():  %argcPtr = alloca i32, align 4
+	prev: object at 73963120 of size 496
+		MO796[496] allocated at __user_main():  %7 = call i8* @malloc(i64 %6)

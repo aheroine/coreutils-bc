@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/stdio/fclose.c
+Line: 101
+assembly.ll line: 2932
+Stack: 
+	#000002932 in fclose (stream=71547904) at /home/jl/deploy/klee-uclibc/libc/stdio/fclose.c:101
+	#100000184 in rpl_fclose (fp=71547904) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fclose.c:98
+	#200000340 in __user_main (=1, =53941504)
+	#300003520 in __uClibc_main (argc=1, argv=53941504) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400003730 in macke_rpl_fclose_main (=1, =53941504)
+Info: 
+	address: 71547904
+	next: object at 71639568 of size 1
+		MO97[1] allocated at global:.str205
+	prev: object at 71458192 of size 11
+		MO68[11] allocated at macke_rpl_fclose_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

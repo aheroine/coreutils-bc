@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strnlen.c
+Line: 30
+assembly.ll line: 5076
+Stack: 
+	#000005076 in strnlen (s=29633776, max=18446744073709551615) at /home/jl/deploy/klee-uclibc/libc/string/strnlen.c:30
+	#100003414 in _do_one_spec (ppfs=24293136, count=44603536) at /home/jl/deploy/klee-uclibc/libc/stdio/_vfprintf.c:1679
+	#200003017 in vfprintf (format=48253632, arg=28751408) at /home/jl/deploy/klee-uclibc/libc/stdio/_vfprintf.c:1919
+	#300002077 in __error (status=0, errnum=9, message=48253632) at /home/jl/deploy/klee-uclibc/libc/misc/error/error.c:57
+	#400000224 in xlseek (fd, offset, filename=29633776) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:450
+	#500001883 in __macke_error_xlseek (argno0, argno1, argno3=29633776)
+	#600000333 in file_lines (pretty_filename=29633776, fd, n_lines, start_pos, end_pos, read_pos=36889232) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:496
+	#700001857 in __user_main (=1, =44197696)
+	#800005673 in __uClibc_main (argc=1, argv=44197696) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#900009392 in macke_file_lines_main (=1, =44197696)
+Info: 
+	address: 29633777
+	next: object at 29722912 of size 8
+		MO99[8] allocated at global:.str14175
+	prev: object at 29633776 of size 1
+		MO810[1] allocated at __user_main():  %5 = call i8* @malloc(i64 %4)

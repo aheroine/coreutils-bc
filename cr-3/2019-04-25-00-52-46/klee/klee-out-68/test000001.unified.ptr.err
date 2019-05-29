@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c
+Line: 368
+assembly.ll line: 3252
+Stack: 
+	#000003252 in compare_ranges (a=60375264, b=60375984) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/src/cut.c:368
+	#100012610 in main (=1, =51112832)
+Info: 
+	address: 60375264
+	next: object at 60375984 of size 1
+		MO664[1] addr [60375984]:  allocated at main():  %10 = call i8* @malloc(i64 %9)
+	prev: object at 60375264 of size 1
+		MO653[1] addr [60375264]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

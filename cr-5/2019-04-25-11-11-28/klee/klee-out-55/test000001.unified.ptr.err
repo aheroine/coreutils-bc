@@ -1,0 +1,18 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c
+Line: 279
+assembly.ll line: 10245
+Stack: 
+	#000010245 in quotearg_buffer_restyled (buffer=35968176, buffersize=256, arg=43518512, argsize=18446744073709551615, quoting_style=6, flags=1, quote_these_too=43567352) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:279
+	#100011432 in quotearg_n_options (n=0, arg=43518512, argsize=18446744073709551615, options=43567344) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:704
+	#200009909 in quotearg_n_style (n=0, s=6, arg=43518512) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quotearg.c:751
+	#300009481 in quote_n (n=0, name=43518512) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:31
+	#400009491 in quote (name=43518512) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/quote.c:39
+	#500004558 in start_bytes (pretty_filename=43518512, fd, n_bytes, read_pos=43535776) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:816
+	#600020537 in main (=1, =33465344)
+Info: 
+	address: 43518513
+	next: object at 43518928 of size 4
+		MO742[4] addr [43518928]:  allocated at start_bytes():  %fd.addr = alloca i32, align 4
+	prev: object at 43518512 of size 1
+		MO715[1] addr [43518512]:  allocated at main():  %6 = call i8* @malloc(i64 %5)

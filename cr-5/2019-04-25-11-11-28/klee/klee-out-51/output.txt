@@ -1,0 +1,97 @@
+KLEE: output directory is "/home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-51"
+KLEE: input args: /home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/klee/klee-out-51 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-5/2019-04-25-11-11-28/bitcode/symmains.bc_xlseek_ChangeEntry.bc
+
+KLEE: WARNING ONCE: function "vasnprintf" has inline asm
+KLEE: WARNING: undefined reference to function: __ctype_b_loc
+KLEE: WARNING: undefined reference to function: __ctype_get_mb_cur_max
+KLEE: WARNING: undefined reference to function: __errno_location
+KLEE: WARNING: undefined reference to function: __fpending
+KLEE: WARNING: undefined reference to function: atexit
+KLEE: WARNING: undefined reference to function: clock_gettime
+KLEE: WARNING: undefined reference to function: close
+KLEE: WARNING: undefined reference to function: fclose
+KLEE: WARNING: undefined reference to function: fcntl
+KLEE: WARNING: undefined reference to function: ferror_unlocked
+KLEE: WARNING: undefined reference to function: fflush_unlocked
+KLEE: WARNING: undefined reference to function: fopen
+KLEE: WARNING: undefined reference to function: fprintf
+KLEE: WARNING: undefined reference to function: fputs_unlocked
+KLEE: WARNING: undefined reference to function: fstat
+KLEE: WARNING: undefined reference to function: fwrite
+KLEE: WARNING: undefined reference to function: fwrite_unlocked
+KLEE: WARNING: undefined reference to function: getenv
+KLEE: WARNING: undefined reference to function: getopt_long
+KLEE: WARNING: undefined reference to function: inotify_add_watch
+KLEE: WARNING: undefined reference to function: inotify_init
+KLEE: WARNING: undefined reference to function: inotify_rm_watch
+KLEE: WARNING: undefined reference to function: isatty
+KLEE: WARNING: undefined reference to function: iswprint
+KLEE: WARNING: undefined reference to function: lseek
+KLEE: WARNING: undefined reference to function: mbrtowc
+KLEE: WARNING: undefined reference to function: mbsinit
+KLEE: WARNING: undefined reference to function: memchr
+KLEE: WARNING: undefined reference to function: memcmp
+KLEE: WARNING: undefined reference to function: memrchr
+KLEE: WARNING: undefined reference to function: nanosleep
+KLEE: WARNING: undefined reference to function: newlocale
+KLEE: WARNING: undefined reference to function: nl_langinfo
+KLEE: WARNING: undefined reference to function: open
+KLEE: WARNING: undefined reference to variable: optarg
+KLEE: WARNING: undefined reference to variable: optind
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING: undefined reference to function: putc_unlocked
+KLEE: WARNING: undefined reference to function: read
+KLEE: WARNING: undefined reference to function: setlocale
+KLEE: WARNING: undefined reference to function: snprintf
+KLEE: WARNING: undefined reference to variable: stderr
+KLEE: WARNING: undefined reference to variable: stdout
+KLEE: WARNING: undefined reference to function: strchr
+KLEE: WARNING: undefined reference to function: strcmp
+KLEE: WARNING: undefined reference to function: strlen
+KLEE: WARNING: undefined reference to function: strncmp
+KLEE: WARNING: undefined reference to function: strndup
+KLEE: WARNING: undefined reference to function: strrchr
+KLEE: WARNING: undefined reference to function: strtod_l
+KLEE: WARNING: undefined reference to function: strtol
+KLEE: WARNING: undefined reference to function: strtoul
+KLEE: WARNING: undefined reference to function: strtoumax
+KLEE: WARNING: undefined reference to function: error (UNSAFE)!
+KLEE: WARNING: undefined reference to function: kill (UNSAFE)!
+KLEE: WARNING ONCE: calling external: lseek((ReadLSB w32 0 argno0), (ReadLSB w64 0 argno1), (ReadLSB w32 0 argno2))
+KLEE: ERROR: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:460: abort failure
+KLEE: NOTE: now ignoring this error at this location
+0  klee            0x0000000000e5f672 llvm::sys::PrintStackTrace(_IO_FILE*) + 50
+1  klee            0x0000000000e5eec4
+2  libpthread.so.0 0x00007fe08c22b890
+3  klee            0x0000000000f3cdd9 Aig_MmFixedEntryFetch + 185
+4  klee            0x0000000000f471d8 Dar_ObjPrepareCuts + 40
+5  klee            0x0000000000f4744e Dar_ObjComputeCuts + 190
+6  klee            0x0000000000f47136 Dar_ManComputeCuts + 182
+7  klee            0x0000000000f445fc Cnf_Derive + 60
+8  klee            0x0000000000f55c85 stp::ToCNFAIG::toCNF(stp::BBNodeAIG const&, Cnf_Dat_t_*&, std::unordered_map<stp::ASTNode, std::vector<unsigned int, std::allocator<unsigned int> >, stp::ASTNode::ASTNodeHasher, stp::ASTNode::ASTNodeEqual, std::allocator<std::pair<stp::ASTNode const, std::vector<unsigned int, std::allocator<unsigned int> > > > >&, bool, stp::BBNodeManagerAIG&) + 709
+9  klee            0x0000000000ef93d5 stp::ToSATAIG::bitblast(stp::ASTNode const&, bool) + 2101
+10 klee            0x0000000000ef9a23 stp::ToSATAIG::CallSAT(stp::SATSolver&, stp::ASTNode const&, bool) + 115
+11 klee            0x0000000000ed4200 stp::AbsRefine_CounterExample::CallSAT_ResultCheck(stp::SATSolver&, stp::ASTNode const&, stp::ASTNode const&, stp::ToSATBase*, bool) + 64
+12 klee            0x0000000000eb9ef8 stp::STP::TopLevelSTPAux(stp::SATSolver&, stp::ASTNode const&) + 8936
+13 klee            0x0000000000ebb2fa stp::STP::TopLevelSTP(stp::ASTNode const&, stp::ASTNode const&) + 218
+14 klee            0x0000000000e7ccb9 vc_query_with_timeout + 201
+15 klee            0x0000000000603804 STPSolverImpl::computeInitialValues(klee::Query const&, std::vector<klee::Array const*, std::allocator<klee::Array const*> > const&, std::vector<std::vector<unsigned char, std::allocator<unsigned char> >, std::allocator<std::vector<unsigned char, std::allocator<unsigned char> > > >&, bool&) + 2756
+16 klee            0x00000000005e6a4a CexCachingSolver::getAssignment(klee::Query const&, klee::Assignment*&) + 266
+17 klee            0x00000000005e7e86 CexCachingSolver::computeInitialValues(klee::Query const&, std::vector<klee::Array const*, std::allocator<klee::Array const*> > const&, std::vector<std::vector<unsigned char, std::allocator<unsigned char> >, std::allocator<std::vector<unsigned char, std::allocator<unsigned char> > > >&, bool&) + 86
+18 klee            0x00000000005f9d63 IndependentSolver::computeInitialValues(klee::Query const&, std::vector<klee::Array const*, std::allocator<klee::Array const*> > const&, std::vector<std::vector<unsigned char, std::allocator<unsigned char> >, std::allocator<std::vector<unsigned char, std::allocator<unsigned char> > > >&, bool&) + 9619
+19 klee            0x0000000000601793 klee::Solver::getInitialValues(klee::Query const&, std::vector<klee::Array const*, std::allocator<klee::Array const*> > const&, std::vector<std::vector<unsigned char, std::allocator<unsigned char> >, std::allocator<std::vector<unsigned char, std::allocator<unsigned char> > > >&) + 35
+20 klee            0x00000000005b7912 klee::TimingSolver::getInitialValues(klee::ExecutionState const&, std::vector<klee::Array const*, std::allocator<klee::Array const*> > const&, std::vector<std::vector<unsigned char, std::allocator<unsigned char> >, std::allocator<std::vector<unsigned char, std::allocator<unsigned char> > > >&, bool) + 274
+21 klee            0x0000000000560281 klee::Executor::getSymbolicSolution(klee::ExecutionState const&, std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::vector<unsigned char, std::allocator<unsigned char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::vector<unsigned char, std::allocator<unsigned char> > > > >&) + 817
+22 klee            0x0000000000554a1f KleeHandler::processTestCase(klee::ExecutionState const&, char const*, char const*) + 287
+23 klee            0x0000000000561458 klee::Executor::terminateStateOnError(klee::ExecutionState&, llvm::Twine const&, char const*, llvm::Twine const&) + 1528
+24 klee            0x00000000005aa93b klee::SpecialFunctionHandler::handleAbort(klee::ExecutionState&, klee::KInstruction*, std::vector<klee::ref<klee::Expr>, std::allocator<klee::ref<klee::Expr> > >&) + 91
+25 klee            0x00000000005aae22 klee::SpecialFunctionHandler::handle(klee::ExecutionState&, llvm::Function*, klee::KInstruction*, std::vector<klee::ref<klee::Expr>, std::allocator<klee::ref<klee::Expr> > >&) + 226
+26 klee            0x000000000057405b klee::Executor::callExternalFunction(klee::ExecutionState&, klee::KInstruction*, llvm::Function*, std::vector<klee::ref<klee::Expr>, std::allocator<klee::ref<klee::Expr> > >&) + 91
+27 klee            0x000000000057a1b5 klee::Executor::executeCall(klee::ExecutionState&, klee::KInstruction*, llvm::Function*, std::vector<klee::ref<klee::Expr>, std::allocator<klee::ref<klee::Expr> > >&) + 3173
+28 klee            0x0000000000588a2f klee::Executor::executeInstruction(klee::ExecutionState&, klee::KInstruction*) + 42767
+29 klee            0x000000000058da44 klee::Executor::run(klee::ExecutionState&) + 1300
+30 klee            0x000000000058fc68 klee::Executor::runFunctionAsMain(llvm::Function*, int, char**, char**) + 1896
+31 klee            0x000000000053ff5e main + 12670
+32 libc.so.6       0x00007fe08b0deb97 __libc_start_main + 231
+33 klee            0x0000000000551faa _start + 42
+ERROR: STP did not return successfully.  Most likely you forgot to run 'ulimit -s unlimited'

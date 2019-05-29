@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee-uclibc/libc/string/strcmp.c
+Line: 34
+assembly.ll line: 8377
+Stack: 
+	#000008377 in strcmp (s1, s2=43662064) at /home/jl/deploy/klee-uclibc/libc/string/strcmp.c:34
+	#100000204 in tail_file (f=59351376, n_units) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:1533
+	#200005769 in __user_main (=1, =63040704)
+	#300008765 in __uClibc_main (argc=1, argv=63040704) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400010338 in macke_tail_file_main (=1, =63040704)
+Info: 
+	address: (ReadLSB w64 0 argno0)
+	example: 0
+	range: [0, 18446744073709551615]
+	next: object at 42202768 of size 10
+		MO184[10] allocated at global:.str234

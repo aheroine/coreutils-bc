@@ -1,0 +1,7 @@
+Error: ERROR FROM /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-196/test000002.ptr.err
+Stack: 
+	#000001034 in __macke_error_quote (argno0=58227920)
+	#100000217 in set_acl (name=58227920, desc, mode) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/lib/acl.c:403
+	#200000977 in __user_main (=1, =58940752)
+	#300003533 in __uClibc_main (argc=1, argv=58940752) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400005128 in macke_set_acl_main (=1, =58940752)

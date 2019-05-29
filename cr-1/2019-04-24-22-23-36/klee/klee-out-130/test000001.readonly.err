@@ -1,0 +1,11 @@
+Error: memory error: object read only
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c
+Line: 631
+assembly.ll line: 2547
+Stack: 
+	#000002547 in AD_push_initial (ds=26253088) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:631
+	#100004546 in __macke_error_AD_push_initial (argno0=26253088)
+	#200000441 in rm_1 (ds=26253088, filename=46072912, x=42262032) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1604
+	#300004520 in __user_main (=1, =38874896)
+	#400009484 in __uClibc_main (argc=1, argv=38874896) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500011207 in macke_rm_1_main (=1, =38874896)

@@ -1,0 +1,25 @@
+Error: memory error: invalid pointer: klee_get_obj_size
+Stack: 
+	#000006246 in __macke_error_xlseek (argno0=0, argno1=0, argno3)
+	#100000642 in recheck (f=42664928, blocking=false) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:988
+	#200000257 in tail_forever (f=42664928, n_files, sleep_interval) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/src/tail.c:1046
+	#300006202 in __user_main (=1, =62511024)
+	#400008953 in __uClibc_main (argc=1, argv=62511024) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500010526 in macke_tail_forever_main (=1, =62511024)
+Info: 
+	address: (ReadLSB w64 0 U0:[87=0, 86=0, 85=0, 84=0, 80=1, 79=0, 78=0, 77=0, 76=0, 75=0, 74=0, 73=0, 72=0, 64=0, 63=(Extract w8 24 N0:(Select w32 (Eq 0
+                                                                                                                                             (Read w8 (Extract w32 0 (Add w64 18446744073666886689
+                                                                                                                                                                              (ReadLSB w64 0 argno0)))
+                                                                                                                                                      argno0))
+                                                                                                                                         4294967295
+                                                                                                                                         0)),
+                    62=(Extract w8 16 N0),
+                    61=(Extract w8 8 N0),
+                    60=(Extract w8 0 N0),
+                    59=0, 58=0, 57=33, 56=144, 55=0, 54=0, 53=0, 52=0, 51=0, 50=0, 49=0, 48=21, 47=0, 46=0, 45=0, 44=0, 43=0, 42=0, 41=0, 40=21, 39=171, 38=171, 37=171, 36=171, 35=171, 34=171, 33=171, 32=171, 31=0, 30=0, 29=0, 28=0, 27=92, 26=193, 25=44, 24=56, 23=0, 22=0, 21=0, 20=0, 19=0, 18=0, 17=0, 16=0, 11=0, 10=0, 9=0, 8=0] @ argno0)
+	example: 42664962
+	range: [42664944, 42665008]
+	next: object at 42744512 of size 0
+		MO783[0] allocated at klee_init_fds():  %7 = call noalias i8* @malloc(i64 %6) #2, !dbg !5571
+	prev: object at 42664928 of size 104
+		MO799[104] allocated at __user_main():  %6 = call i8* @malloc(i64 %5)

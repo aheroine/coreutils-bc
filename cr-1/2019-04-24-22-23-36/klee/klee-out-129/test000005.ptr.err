@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/Intrinsic/memset.c
+Line: 14
+assembly.ll line: 13289
+Stack: 
+	#000013289 in memset (dst, s=255, count=16) at /home/jl/deploy/klee22/runtime/Intrinsic/memset.c:14
+	#100002553 in AD_push_initial (ds=31160016) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:638
+	#200000444 in rm_1 (ds=31160016, filename=48180016, x=32204976) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:1604
+	#300004523 in __user_main (=1, =34581840)
+	#400008001 in __uClibc_main (argc=1, argv=34581840) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#500009724 in macke_rm_1_main (=1, =34581840)
+Info: 
+	address: (Add w64 16
+          (ReadLSB w64 200 argno0))
+	example: 29288512
+	range: [29288512, 29288514]
+	next: object at 29289040 of size 18
+		MO39[18] allocated at macke_rm_1_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)
+	prev: object at 29288496 of size 10
+		MO37[10] allocated at macke_rm_1_main():  tail call fastcc void @__uClibc_main(i32 %0, i8** %1)

@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/./inttostr.c
+Line: 37
+assembly.ll line: 9299
+Stack: 
+	#000009299 in offtostr (i, buf=32756352) at /home/shadowvm/shadow/shadow-test/coreutils/cr-5/lib/./inttostr.c:37
+	#100020398 in main (=1, =22701056)
+Info: 
+	address: 32756372
+	next: object at 32757408 of size 8
+		MO724[8] addr [32757408]:  allocated at offtostr():  %i.addr = alloca i64, align 8
+	prev: object at 32756352 of size 1
+		MO720[1] addr [32756352]:  allocated at main():  %8 = call i8* @malloc(i64 %7)

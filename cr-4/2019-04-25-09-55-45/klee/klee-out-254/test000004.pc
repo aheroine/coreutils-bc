@@ -1,0 +1,11 @@
+array argno0[320] : w32 -> w8 = symbolic
+array macke_sizeof_argno0[4] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Eq 4
+             (ReadLSB w32 0 macke_sizeof_argno0))
+         (Ult (Add w64 18446744073686878704
+                       (ReadLSB w64 40 argno0))
+              31)]
+        false)

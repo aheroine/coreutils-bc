@@ -1,0 +1,15 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/src/cut.c
+Line: 377
+assembly.ll line: 533
+Stack: 
+	#000000533 in set_fields (fieldstr=70425104) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/src/cut.c:377
+	#100001508 in __user_main (=1, =60644224)
+	#200004483 in __uClibc_main (argc=1, argv=60644224) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#300006105 in macke_set_fields_main (=1, =60644224)
+Info: 
+	address: 70425105
+	next: object at 70475568 of size 7
+		MO154[7] allocated at global:.str5259
+	prev: object at 70425104 of size 1
+		MO791[1] allocated at __user_main():  %5 = tail call i8* @malloc(i64 %4)

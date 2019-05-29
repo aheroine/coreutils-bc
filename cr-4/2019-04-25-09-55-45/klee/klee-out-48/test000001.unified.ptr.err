@@ -1,0 +1,20 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/localcharset.c
+Line: 542
+assembly.ll line: 15615
+Stack: 
+	#000015615 in locale_charset () at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/localcharset.c:542
+	#100012474 in gettext_quote (msgid=47660512, s=6) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:219
+	#200011039 in quotearg_buffer_restyled (buffer=47657744, buffersize=256, arg=48057152, argsize=18446744073709551615, quoting_style=6, flags=1, quote_these_too=47659368, left_quote=0, right_quote=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:312
+	#300012361 in quotearg_n_options (n=0, arg=48057152, argsize=18446744073709551615, options=47659360) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:797
+	#400010869 in quote_n_mem (n=0, arg=48057152, argsize=18446744073709551615) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:944
+	#500010895 in quote_n (n=0, arg=48057152) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:956
+	#600010905 in quote (arg=48057152) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/quotearg.c:962
+	#700004254 in dump_remainder (pretty_filename=48057152, fd, n_bytes) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/tail.c:413
+	#800017089 in main (=1, =44222816)
+Info: 
+	address: 140497921386440
+	next: object at 140497921280960 of size 1536
+		MO81[1536] addr [140497921280960]:  (no allocation info)
+	prev: object at 48713888 of size 4
+		MO907[4] addr [48713888]:  allocated at quote_n_mem():  %n.addr = alloca i32, align 4

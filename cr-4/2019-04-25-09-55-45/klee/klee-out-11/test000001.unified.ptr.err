@@ -1,0 +1,12 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/basename-lgpl.c
+Line: 36
+assembly.ll line: 7379
+Stack: 
+	#000007379 in last_component (name=0) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/basename-lgpl.c:36
+	#100000998 in emit_ancillary_info () at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/src/system.h:579
+	#200016466 in main (=1, =44026208)
+Info: 
+	address: 0
+	next: object at 38667264 of size 15
+		MO6[15] addr [38667264]:  allocated at main():  call void @klee_mark_arg_symbolic(i32 %0, i8** %1)

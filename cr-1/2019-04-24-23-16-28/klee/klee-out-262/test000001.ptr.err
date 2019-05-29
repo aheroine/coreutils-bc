@@ -1,0 +1,19 @@
+Error: memory error: out of bound pointer
+File: /home/jl/deploy/klee22/runtime/POSIX/fd.c
+Line: 43
+assembly.ll line: 13048
+Stack: 
+	#000013048 in fstatat (fd, path=38940704, buf=62556672) at /home/jl/deploy/klee22/runtime/POSIX/fd.c:43
+	#100000698 in cache_fstatat (fd, file=38940704, st=62556672) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:174
+	#200000534 in write_protected_non_symlink (fd_cwd, file=38940704, ds=37613648, buf=62556672) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:762
+	#300001698 in __macke_error_write_protected_non_symlink (argno0, argno1=38940704, argno2=37613648, argno3=62556672)
+	#400000357 in prompt (fd_cwd, ds=37613648, filename=38940704, sbuf=62556672, x=39089456, mode, is_empty=39936208) at /home/shadowvm/shadow/shadow-test/coreutils/cr-1/src/remove.c:851
+	#500001669 in __user_main (=1, =39683440)
+	#600010113 in __uClibc_main (argc=1, argv=39683440) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#700011836 in macke_prompt_main (=1, =39683440)
+Info: 
+	address: 38940705
+	next: object at 38959392 of size 16
+		MO239[16] allocated at global:.str2557
+	prev: object at 38940704 of size 1
+		MO849[1] allocated at __user_main():  %12 = call i8* @malloc(i64 %11)

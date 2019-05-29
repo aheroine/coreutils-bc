@@ -1,0 +1,41 @@
+/home/jl/deploy/use/build/Release+Asserts/bin/klee --output-dir=/home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/klee/klee-out-86 --max-time=120 --max-instruction-time=12 -use --stats-write-interval=238 --istats-write-interval=238 /home/jl/testspace/coreutils-bc/cr-1/2019-04-24-23-16-28/bitcode/symmains.bc_fchmod_or_lchmod_ChangeEntry.bc
+PID: 31900
+Started: 2019-04-24 23:17:02
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2019-04-24 23:17:02
+Elapsed: 00:00:00
+KLEE: done: explored paths = 1
+KLEE: done: avg. constructs per query = 21
+KLEE: done: total queries = 2
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 2
+KLEE: done: query cex = 2
+
+KLEE: done: total instructions = 63
+KLEE: done: completed paths = 2
+KLEE: done: generated tests = 0
+KLEE: data flow divergences discovered in concerned functions:
+function __main_old in level 9 founded 0 data divergence
+function do_move in level 7 founded 0 data divergence
+function macke_do_move_main in level 8 founded 0 data divergence
+function macke_klee_change_main in level 1 founded 0 data divergence
+function macke_movefile_main in level 9 founded 0 data divergence
+function macke_prompt_main in level 2 founded 0 data divergence
+function macke_remove_dir_main in level 5 founded 0 data divergence
+function macke_remove_entry_main in level 3 founded 0 data divergence
+function macke_rm_1_main in level 6 founded 0 data divergence
+function macke_rm_option_init_main in level 2 founded 0 data divergence
+function movefile in level 8 founded 0 data divergence
+function prompt in level 1 founded 0 data divergence
+function remove_cwd_entries in level 3 founded 0 data divergence
+function remove_dir in level 4 founded 0 data divergence
+function remove_entry in level 2 founded 0 data divergence
+function rm in level 6 founded 0 data divergence
+function rm_1 in level 5 founded 0 data divergence
+function rm_option_init in level 1 founded 0 data divergence
+KLEE: control flow divergences discovered:
+Total data divergences:0
+0   of data divergences are affected by control divergences
+Total control divergences:0

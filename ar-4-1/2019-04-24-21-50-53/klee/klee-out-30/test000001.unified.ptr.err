@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/hash.c
+Line: 710
+assembly.ll line: 4726
+Stack: 
+	#000004726 in allocate_entry (table=31580848) at /home/shadowvm/shadow/shadow-test/coreutils/ar-4-1/lib/hash.c:710
+	#100007527 in main (=1, =27139728)
+Info: 
+	address: (Add w64 8
+          (ReadLSB w64 72 argno0))
+	example: 12370169555311111091
+	range: [12370169555311111091, 12370169555311111091]
+	next: object at 139968872201152 of size 1536
+		MO81[1536] addr [139968872201152]:  (no allocation info)
+	prev: object at 31581840 of size 8
+		MO444[8] addr [31581840]:  allocated at allocate_entry():  %table.addr = alloca %struct.hash_table*, align 8

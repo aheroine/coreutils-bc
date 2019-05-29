@@ -1,0 +1,36 @@
+array argno0[496] : w32 -> w8 = symbolic
+array macke_sizeof_argno0[4] : w32 -> w8 = symbolic
+array model_version[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 model_version))
+         (Sle 1
+              N0:(ReadLSB w32 0 macke_sizeof_argno0))
+         (Slt N0 1025)
+         (Eq false (Eq 4 N0))
+         (Eq false (Eq 16 N0))
+         (Eq false (Eq 128 N0))
+         (Eq false (Eq 2 N0))
+         (Eq false
+             (Eq N1:(ReadLSB w64 24 argno0)
+                 N2:(ReadLSB w64 16 argno0)))
+         (Eq false
+             (Slt (Sub w64 N3:(ReadLSB w64 32 argno0)
+                           N4:(ReadLSB w64 8 argno0))
+                  (Sub w64 (And w64 (Add w64 (SExt w64 N5:(ReadLSB w32 48 argno0))
+                                             N1)
+                                    (SExt w64 (Xor w32 4294967295 N5)))
+                           N4)))
+         (Ult N4 N2)
+         (Ult N2 N3)
+         (Eq false
+             (Eq N6:(ReadLSB w64 112 argno0)
+                 N7:(ReadLSB w64 104 argno0)))
+         (Eq false
+             (Slt (Sub w64 (ReadLSB w64 120 argno0)
+                           N8:(ReadLSB w64 96 argno0))
+                  (Sub w64 (And w64 (Add w64 (SExt w64 N9:(ReadLSB w32 136 argno0))
+                                             N6)
+                                    (SExt w64 (Xor w32 4294967295 N9)))
+                           N8)))
+         (Eq false (Ult N8 N7))]
+        false)

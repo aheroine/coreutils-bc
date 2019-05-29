@@ -1,0 +1,14 @@
+Error: memory error: object read only
+File: /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c
+Line: 83
+assembly.ll line: 3661
+Stack: 
+	#000003661 in __stdio_WRITE (stream=71547904, buf, bufsize) at /home/jl/deploy/klee-uclibc/libc/stdio/_WRITE.c:83
+	#100003173 in __stdio_wcommit (stream=71547904) at /home/jl/deploy/klee-uclibc/libc/stdio/_wcommit.c:25
+	#200003274 in fflush_unlocked (stream=71547904) at /home/jl/deploy/klee-uclibc/libc/stdio/fflush.c:125
+	#300000217 in rpl_fflush (stream=71547904) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fflush.c:146
+	#400000366 in __macke_error_rpl_fflush (argno0=71547904)
+	#500000178 in rpl_fclose (fp=71547904) at /home/shadowvm/shadow/shadow-test/coreutils/cr-4/lib/fclose.c:71
+	#600000340 in __user_main (=1, =53941504)
+	#700003520 in __uClibc_main (argc=1, argv=53941504) at /home/jl/deploy/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#800003730 in macke_rpl_fclose_main (=1, =53941504)

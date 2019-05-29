@@ -1,0 +1,8 @@
+Error: overshift error
+File: /home/shadowvm/shadow/shadow-test/coreutils/cr-3/./lib/bitrotate.h
+Line: 57
+assembly.ll line: 10214
+Stack: 
+	#000013876 in klee_overshift_check (bitWidth=32, shift) at /home/jl/deploy/use/src/runtime/Intrinsic/klee_overshift_check.c:27
+	#100010214 in rotl32 (x, n) at /home/shadowvm/shadow/shadow-test/coreutils/cr-3/./lib/bitrotate.h:57
+	#200013548 in main (=1, =52757936)
